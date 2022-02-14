@@ -4,6 +4,7 @@ This will be used as an information hub for Joel Wikströms master thesis work.
 
 ## Contact Info
 Name:   Joel Wikström
+
 Email:  jwikstrom56@gmail.com
 
 ## Links
