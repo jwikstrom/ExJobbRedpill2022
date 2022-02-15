@@ -8,7 +8,7 @@ Name:   Joel Wikström
 Email:  jwikstrom56@gmail.com
 
 ## Links
-**Time plan estimate**,_Download as xlsx and open in Excel in order to see timeplan more graphically_  
+**Time plan estimate**       _Download as xlsx and open in Excel in order to see timeplan more graphically_  
 https://docs.google.com/spreadsheets/d/1fKdJfQEaT_y2-8T0ydb-VEI5REFZ_G1FLOkROoiaKC8/edit?usp=sharing  
 **Thesis**  
 https://www.overleaf.com/read/kgpqgwnrvggh  
