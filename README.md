@@ -9,7 +9,7 @@ Email:  jwikstrom56@gmail.com
 
 ## Links
 **Time plan estimate**  
-https://1drv.ms/x/s!Aikkg5kMZXm9qSQ-fL7r2ffo3zXK?e=8xyqx1
+https://1drv.ms/x/s!Aikkg5kMZXm9qSQ-fL7r2ffo3zXK?e=8xyqx1  
 **Thesis**  
 https://www.overleaf.com/read/kgpqgwnrvggh  
 **Implementation mindmap**  
