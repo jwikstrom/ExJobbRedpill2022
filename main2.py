@@ -1,11 +1,9 @@
 from curses.ascii import isspace
-from distutils.command.clean import clean
 import os
-from sre_parse import State
+from pickle import FALSE, TRUE
 import sys
 from itertools import tee
 import re
-from sqlalchemy import false, true
 import fileCleaner as cleaner
 import constants
 import log
@@ -50,9 +48,27 @@ def portScan(lines):
             se = pss[2].strip()
             tmpList = (p, st, se)
             portList.append(tmpList)
-    log.out("----- FINISHED portScan -----")
     print(portList)
+    log.out("----- FINISHED portScan -----")
     return
+
+def scriptRecurs(line, nextLine, lines):
+    pList = []
+    if (re.match('^\s', nextLine)):
+        print(f'NXTLN:{nextLine}')
+        line, nextLine = next(lines)
+        pList.append(line)
+        nextSpaces = len(nextLine) - len(nextLine.lstrip(" "))
+        currSpaces = len(line) - len(line.lstrip(" "))
+        if nextSpaces > currSpaces:
+            lvl = lvl +1
+        elif nextSpaces == currSpaces:
+            lvl = lvl -1
+            pass
+        else:
+            pass
+    else:
+        return pList
 def scriptScan(lines):
     #do stuff
     log.out("----- STARTING scriptScan -----")
@@ -62,34 +78,26 @@ def scriptScan(lines):
     lvl = 0
     lines = pairwise(iter(lines))
     for line, nextLine in lines:
-        while (true):
+        while (TRUE):
             print(f'L:{line}, NL:{nextLine}')
             if(line[:1].isdigit()):
-                lvl = 0
                 pss = line.split(maxsplit=3)
                 p = pss[0].strip()
                 st = pss[1].strip()
                 se = pss[2].strip()
                 v = pss[3].strip()
                 tmpList = (p, st, se, v)
-                portList.append(tmpList)
+                
                 #re.match(' +[^\s]+.*')
-                if (re.match('^\s', nextLine)):
-                    print(f'NXTLN:{nextLine}')
-                    line, nextLine = next(lines)
-                    break
-                    currSpaces = len(nextLine) - len(nextLine.lstrip(" "))
-                    if currSpaces > prevSpaces:
-                        lvl = lvl +1
-                    elif currSpaces == prevSpaces:
-                        lvl = lvl -1
-                        continue
-                    else:
-                        continue
-                else:
-                    break
+                continue
+                rtrn = scriptRecurs(line, nextLine, lines)
+                if len(rtrn) > 0:
+                    tmpList.append(rtrn)
+                portList.append(tmpList)
             else:
-                break
+                continue
+                
+        
     print(portList)
     log.out("----- FINISHED scriptScan -----")
     return
@@ -148,17 +156,16 @@ def stateChange(line):
     for s in constants.Scans:
         if s in line.strip():
             state = s
-            return true
+            return TRUE
     
-    return false
+    return FALSE
 
 def run():
     with open (cdir + "/" +cleaned, "rt" ) as fin:
         with open(fileout, "wt") as fout:
             lines = []
             for line in fin:
-                #print(newLine)
-                if stateChange(line) is false:
+                if stateChange(line) == FALSE:
                     lines.append(line)
                 else:
                     log.out2(f'State is {state}')

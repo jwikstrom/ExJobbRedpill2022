@@ -11,6 +11,7 @@ NC='\033[0m'
 K2 = '\033[2K'
 A2 = '[2A'#\e[2A
 L = '|'
+U = '\t_'
 
 def replacer(line):    
     if(line.startswith('[#') or "In progress" in line):
