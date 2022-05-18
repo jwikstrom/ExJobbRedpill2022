@@ -1,0 +1,22 @@
+# Nmap 7.92 scan initiated Mon Apr 11 11:11:12 2022 as: /usr/bin/nmap -p- --max-retries 1 --max-rate 500 --max-scan-delay 20 -T4 -v --open -oN nmap/Full_192.168.56.0.nmap --system-dns --stats-every 3s 192.168.56.0
+Nmap scan report for 192.168.56.0
+Host is up (0.00047s latency).
+Not shown: 65521 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+80/tcp    open  http
+111/tcp   open  rpcbind
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+631/tcp   open  ipp
+3306/tcp  open  mysql
+3500/tcp  open  rtmp-port
+6667/tcp  open  irc
+6697/tcp  open  ircs-u
+8067/tcp  open  infi-async
+8080/tcp  open  http-proxy
+49094/tcp open  unknown
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Mon Apr 11 11:13:23 2022 -- 1 IP address (1 host up) scanned in 131.18 seconds

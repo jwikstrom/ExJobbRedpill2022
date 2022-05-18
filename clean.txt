@@ -1,0 +1,1782 @@
+
+Running all scans on 192.168.56.0
+
+Host is likely running Linux
+
+---------------------Starting Port Scan-----------------------
+
+
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+631/tcp  open  ipp
+3306/tcp open  mysql
+6667/tcp open  irc
+8080/tcp open  http-proxy
+
+---------------------Starting Script Scan-----------------------
+
+
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         ProFTPD 1.3.5
+22/tcp   open  ssh         OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+	 ssh-hostkey: 
+	   1024 2b:2e:1f:a4:54:26:87:76:12:26:59:58:0d:da:3b:04 (DSA)
+	   2048 c9:ac:70:ef:f8:de:8b:a3:a3:44:ab:3d:32:0a:5c:6a (RSA)
+	   256 c0:49:cc:18:7b:27:a4:07:0d:2a:0d:bb:42:4c:36:17 (ECDSA)
+	_  256 a0:76:f3:76:f8:f0:70:4d:09:ca:e1:10:fd:a9:cc:0a (ED25519)
+80/tcp   open  http        Apache httpd 2.4.7
+	 http-ls: Volume /
+	 SIZE  TIME              FILENAME
+	 -     2020-10-29 19:37  chat/
+	 -     2011-07-27 20:17  drupal/
+	 1.7K  2020-10-29 19:37  payroll_app.php
+	 -     2013-04-08 12:06  phpmyadmin/
+	_
+	_http-server-header: Apache/2.4.7 (Ubuntu)
+	_http-title: Index of /
+111/tcp  open  rpcbind     2-4 (RPC #100000)
+	 rpcinfo: 
+	   program version    port/proto  service
+	   100000  2,3,4        111/tcp   rpcbind
+	   100000  2,3,4        111/udp   rpcbind
+	   100000  3,4          111/tcp6  rpcbind
+	   100000  3,4          111/udp6  rpcbind
+	   100024  1          36437/udp   status
+	   100024  1          39290/udp6  status
+	   100024  1          49094/tcp   status
+	_  100024  1          53248/tcp6  status
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+631/tcp  open  ipp         CUPS 1.7
+	 http-methods: 
+	_  Potentially risky methods: PUT
+	_http-server-header: CUPS/1.7 IPP/2.1
+	 http-robots.txt: 1 disallowed entry 
+	_/
+	_http-title: Home - CUPS 1.7.2
+3306/tcp open  mysql       MySQL (unauthorized)
+	_ssl-date: ERROR: Script execution failed (use -d to debug)
+	_sslv2: ERROR: Script execution failed (use -d to debug)
+	_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+	_tls-alpn: ERROR: Script execution failed (use -d to debug)
+	_ssl-cert: ERROR: Script execution failed (use -d to debug)
+6667/tcp open  irc         UnrealIRCd
+8080/tcp open  http        Jetty 8.1.7.v20120910
+	_http-server-header: Jetty(8.1.7.v20120910)
+	_http-title: Error 404 - Not Found
+Service Info: Hosts: 127.0.1.1, UBUNTU, irc.TestIRC.net; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+	_nbstat: NetBIOS name: UBUNTU, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+	_clock-skew: mean: -1m33s, deviation: 0s, median: -1m33s
+	 smb2-security-mode: 
+	   3.1.1: 
+	_    Message signing enabled but not required
+	 smb-os-discovery: 
+	   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+	   Computer name: metasploitable3-ub1404
+	   NetBIOS computer name: UBUNTU\x00
+	   Domain name: \x00
+	   FQDN: metasploitable3-ub1404
+	_  System time: 2022-04-11T09:08:36+00:00
+	 smb2-time: 
+	   date: 2022-04-11T09:08:36
+	_  start_date: N/A
+	 smb-security-mode: 
+	   account_used: guest
+	   authentication_level: user
+	   challenge_response: supported
+	_  message_signing: disabled (dangerous, but default)
+
+---------------------Starting Full Scan------------------------
+
+
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+80/tcp    open  http
+111/tcp   open  rpcbind
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+631/tcp   open  ipp
+3306/tcp  open  mysql
+3500/tcp  open  rtmp-port
+6667/tcp  open  irc
+6697/tcp  open  ircs-u
+8067/tcp  open  infi-async
+8080/tcp  open  http-proxy
+49094/tcp open  unknown
+
+Making a script scan on extra ports: 3500, 6697, 8067, 49094
+
+
+PORT      STATE SERVICE VERSION
+3500/tcp  open  http    WEBrick httpd 1.3.1 (Ruby 2.3.8 (2018-10-18))
+	_http-title: Ruby on Rails: Welcome aboard
+	 http-robots.txt: 1 disallowed entry 
+	_/
+	_http-server-header: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
+6697/tcp  open  irc     UnrealIRCd
+8067/tcp  open  irc     UnrealIRCd
+49094/tcp open  status  1 (RPC #100024)
+Service Info: Host: irc.TestIRC.net
+
+----------------------Starting UDP Scan------------------------
+
+UDP needs to be run as root, running with sudo...
+
+
+PORT     STATE SERVICE
+111/udp  open  rpcbind
+137/udp  open  netbios-ns
+5353/udp open  zeroconf
+MAC Address: 08:00:27:B1:8A:D5 (Oracle VirtualBox virtual NIC)
+
+Making a script scan on UDP ports: 111, 137, 5353
+
+
+PORT     STATE SERVICE    VERSION
+111/udp  open  rpcbind    2-4 (RPC #100000)
+	 rpcinfo: 
+	   program version    port/proto  service
+	   100000  2,3,4        111/tcp   rpcbind
+	   100000  2,3,4        111/udp   rpcbind
+	   100000  3,4          111/tcp6  rpcbind
+	   100000  3,4          111/udp6  rpcbind
+	   100024  1          36437/udp   status
+	   100024  1          39290/udp6  status
+	   100024  1          49094/tcp   status
+	_  100024  1          53248/tcp6  status
+137/udp  open  netbios-ns Samba nmbd netbios-ns (workgroup: WORKGROUP)
+5353/udp open  mdns       DNS-based service discovery
+MAC Address: 08:00:27:B1:8A:D5 (Oracle VirtualBox virtual NIC)
+Service Info: Host: UBUNTU
+
+---------------------Starting Vulns Scan-----------------------
+
+Running CVE scan on all ports
+
+
+PORT      STATE SERVICE     VERSION
+21/tcp    open  ftp         ProFTPD 1.3.5
+	 vulners: 
+	   cpe:/a:proftpd:proftpd:1.3.5: 
+	     	SAINT:FD1752E124A72FD3A26EEB9B315E8382	10.0	https://vulners.com/saint/SAINT:FD1752E124A72FD3A26EEB9B315E8382	*EXPLOIT*
+	     	SAINT:950EB68D408A40399926A4CCAD3CC62E	10.0	https://vulners.com/saint/SAINT:950EB68D408A40399926A4CCAD3CC62E	*EXPLOIT*
+	     	SAINT:63FB77B9136D48259E4F0D4CDA35E957	10.0	https://vulners.com/saint/SAINT:63FB77B9136D48259E4F0D4CDA35E957	*EXPLOIT*
+	     	SAINT:1B08F4664C428B180EEC9617B41D9A2C	10.0	https://vulners.com/saint/SAINT:1B08F4664C428B180EEC9617B41D9A2C	*EXPLOIT*
+	     	PROFTPD_MOD_COPY	10.0	https://vulners.com/canvas/PROFTPD_MOD_COPY	*EXPLOIT*
+	     	PACKETSTORM:162777	10.0	https://vulners.com/packetstorm/PACKETSTORM:162777	*EXPLOIT*
+	     	PACKETSTORM:132218	10.0	https://vulners.com/packetstorm/PACKETSTORM:132218	*EXPLOIT*
+	     	PACKETSTORM:131567	10.0	https://vulners.com/packetstorm/PACKETSTORM:131567	*EXPLOIT*
+	     	PACKETSTORM:131555	10.0	https://vulners.com/packetstorm/PACKETSTORM:131555	*EXPLOIT*
+	     	PACKETSTORM:131505	10.0	https://vulners.com/packetstorm/PACKETSTORM:131505	*EXPLOIT*
+	     	MSF:EXPLOIT/UNIX/FTP/PROFTPD_MODCOPY_EXEC	10.0	https://vulners.com/metasploit/MSF:EXPLOIT/UNIX/FTP/PROFTPD_MODCOPY_EXEC	*EXPLOIT*
+	     	EDB-ID:49908	10.0	https://vulners.com/exploitdb/EDB-ID:49908	*EXPLOIT*
+	     	CVE-2015-3306	10.0	https://vulners.com/cve/CVE-2015-3306
+	     	1337DAY-ID-36298	10.0	https://vulners.com/zdt/1337DAY-ID-36298	*EXPLOIT*
+	     	1337DAY-ID-23720	10.0	https://vulners.com/zdt/1337DAY-ID-23720	*EXPLOIT*
+	     	1337DAY-ID-23544	10.0	https://vulners.com/zdt/1337DAY-ID-23544	*EXPLOIT*
+	     	SSV:61050	5.0	https://vulners.com/seebug/SSV:61050	*EXPLOIT*
+	_    	MSF:ILITIES/SUSE-CVE-2019-18217/	5.0	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-18217/	*EXPLOIT*
+22/tcp    open  ssh         OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+	 vulners: 
+	   cpe:/a:openbsd:openssh:6.6.1p1: 
+	     	CVE-2015-5600	8.5	https://vulners.com/cve/CVE-2015-5600
+	     	MSF:ILITIES/GENTOO-LINUX-CVE-2015-6564/	6.9	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2015-6564/	*EXPLOIT*
+	     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	*EXPLOIT*
+	     	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
+	_    	MSF:ILITIES/ALPINE-LINUX-CVE-2015-6563/	1.9	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2015-6563/	*EXPLOIT*
+80/tcp    open  http        Apache httpd 2.4.7
+	_http-server-header: Apache/2.4.7 (Ubuntu)
+	 vulners: 
+	   cpe:/a:apache:http_server:2.4.7: 
+	     	E899CC4B-A3FD-5288-BB62-A4201F93FDCC	10.0	https://vulners.com/githubexploit/E899CC4B-A3FD-5288-BB62-A4201F93FDCC	*EXPLOIT*
+	     	5DE1B404-0368-5986-856A-306EA0FE0C09	10.0	https://vulners.com/githubexploit/5DE1B404-0368-5986-856A-306EA0FE0C09	*EXPLOIT*
+	     	CVE-2022-23943	7.5	https://vulners.com/cve/CVE-2022-23943
+	     	CVE-2022-22720	7.5	https://vulners.com/cve/CVE-2022-22720
+	     	CVE-2021-44790	7.5	https://vulners.com/cve/CVE-2021-44790
+	     	CVE-2021-39275	7.5	https://vulners.com/cve/CVE-2021-39275
+	     	CVE-2021-26691	7.5	https://vulners.com/cve/CVE-2021-26691
+	     	CVE-2017-7679	7.5	https://vulners.com/cve/CVE-2017-7679
+	     	CVE-2017-3167	7.5	https://vulners.com/cve/CVE-2017-3167
+	     	PACKETSTORM:127546	6.8	https://vulners.com/packetstorm/PACKETSTORM:127546	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/SUSE-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/REDHAT_LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE_LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ORACLE_LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/GENTOO-LINUX-CVE-2014-0226/	6.8	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2014-0226/	*EXPLOIT*
+	     	MSF:ILITIES/FREEBSD-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/FREEBSD-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/DEBIAN-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/	6.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/	*EXPLOIT*
+	     	MSF:ILITIES/CENTOS_LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/APACHE-HTTPD-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/AMAZON_LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/ALPINE-LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	6.8	https://vulners.com/githubexploit/FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	*EXPLOIT*
+	     	8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	6.8	https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	*EXPLOIT*
+	     	4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	6.8	https://vulners.com/githubexploit/4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	*EXPLOIT*
+	     	1337DAY-ID-22451	6.8	https://vulners.com/zdt/1337DAY-ID-22451	*EXPLOIT*
+	     	MSF:ILITIES/REDHAT_LINUX-CVE-2019-0217/	6.0	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-0217/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2019-0217/	6.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2019-0217/	*EXPLOIT*
+	     	1337DAY-ID-33577	5.8	https://vulners.com/zdt/1337DAY-ID-33577	*EXPLOIT*
+	     	SSV:96537	5.0	https://vulners.com/seebug/SSV:96537	*EXPLOIT*
+	     	SSV:61874	5.0	https://vulners.com/seebug/SSV:61874	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1303/	5.0	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1303/	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/SUSE-CVE-2014-0231/	5.0	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2014-0231/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2020-1934/	5.0	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2020-1934/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-8743/	5.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-8743/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-2161/	5.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-2161/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-0736/	5.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-0736/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/CENTOS_LINUX-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED	5.0	https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED	*EXPLOIT*
+	     	EXPLOITPACK:DAED9B9E8D259B28BF72FC7FDC4755A7	5.0	https://vulners.com/exploitpack/EXPLOITPACK:DAED9B9E8D259B28BF72FC7FDC4755A7	*EXPLOIT*
+	     	EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	5.0	https://vulners.com/exploitpack/EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	*EXPLOIT*
+	     	EDB-ID:42745	5.0	https://vulners.com/exploitdb/EDB-ID:42745	*EXPLOIT*
+	     	EDB-ID:40961	5.0	https://vulners.com/exploitdb/EDB-ID:40961	*EXPLOIT*
+	     	1337DAY-ID-28573	5.0	https://vulners.com/zdt/1337DAY-ID-28573	*EXPLOIT*
+	     	1337DAY-ID-26574	5.0	https://vulners.com/zdt/1337DAY-ID-26574	*EXPLOIT*
+	     	SSV:87152	4.3	https://vulners.com/seebug/SSV:87152	*EXPLOIT*
+	     	PACKETSTORM:127563	4.3	https://vulners.com/packetstorm/PACKETSTORM:127563	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1302/	4.3	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1302/	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1301/	4.3	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1301/	*EXPLOIT*
+	     	MSF:ILITIES/SUSE-CVE-2014-0118/	4.3	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2014-0118/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/	*EXPLOIT*
+	     	MSF:ILITIES/DEBIAN-CVE-2019-10092/	4.3	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-10092/	*EXPLOIT*
+	     	MSF:ILITIES/APACHE-HTTPD-CVE-2020-11985/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2020-11985/	*EXPLOIT*
+	     	MSF:ILITIES/APACHE-HTTPD-CVE-2019-10092/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2019-10092/	*EXPLOIT*
+	     	MSF:ILITIES/AMAZON-LINUX-AMI-ALAS-2014-389/	4.3	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-ALAS-2014-389/	*EXPLOIT*
+	     	MSF:ILITIES/ALPINE-LINUX-CVE-2014-0117/	4.3	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2014-0117/	*EXPLOIT*
+	     	4013EC74-B3C1-5D95-938A-54197A58586D	4.3	https://vulners.com/githubexploit/4013EC74-B3C1-5D95-938A-54197A58586D	*EXPLOIT*
+	     	1337DAY-ID-33575	4.3	https://vulners.com/zdt/1337DAY-ID-33575	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/REDHAT_LINUX-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/CENTOS_LINUX-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2018-1283/	*EXPLOIT*
+	_    	PACKETSTORM:140265	0.0	https://vulners.com/packetstorm/PACKETSTORM:140265	*EXPLOIT*
+111/tcp   open  rpcbind     2-4 (RPC #100000)
+	 rpcinfo: 
+	   program version    port/proto  service
+	   100000  2,3,4        111/tcp   rpcbind
+	   100000  2,3,4        111/udp   rpcbind
+	   100000  3,4          111/tcp6  rpcbind
+	   100000  3,4          111/udp6  rpcbind
+	   100024  1          36437/udp   status
+	   100024  1          39290/udp6  status
+	   100024  1          49094/tcp   status
+	_  100024  1          53248/tcp6  status
+139/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+631/tcp   open  ipp         CUPS 1.7
+	_http-server-header: CUPS/1.7 IPP/2.1
+	 vulners: 
+	   cpe:/a:apple:cups:1.7: 
+	     	MSF:POST/MULTI/ESCALATE/CUPS_ROOT_FILE_READ	7.2	https://vulners.com/metasploit/MSF:POST/MULTI/ESCALATE/CUPS_ROOT_FILE_READ	*EXPLOIT*
+	_    	CVE-2012-5519	7.2	https://vulners.com/cve/CVE-2012-5519
+3306/tcp  open  mysql       MySQL (unauthorized)
+3500/tcp  open  http        WEBrick httpd 1.3.1 (Ruby 2.3.8 (2018-10-18))
+	_http-server-header: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
+	 vulners: 
+	   cpe:/a:ruby-lang:ruby:2.3.8: 
+	_    	MSF:ILITIES/APPLE-OSX-RUBY-CVE-2015-7551/	7.5	https://vulners.com/metasploit/MSF:ILITIES/APPLE-OSX-RUBY-CVE-2015-7551/	*EXPLOIT*
+6667/tcp  open  irc         UnrealIRCd (Admin email admin@TestIRC.net)
+6697/tcp  open  irc         UnrealIRCd (Admin email admin@TestIRC.net)
+8067/tcp  open  irc         UnrealIRCd (Admin email admin@TestIRC.net)
+8080/tcp  open  http        Jetty 8.1.7.v20120910
+	_http-server-header: Jetty(8.1.7.v20120910)
+49094/tcp open  status      1 (RPC #100024)
+Service Info: Hosts: 127.0.1.1, UBUNTU; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Running Vuln scan on all ports
+This may take a while, depending on the number of detected services..
+
+
+PORT      STATE SERVICE     VERSION
+21/tcp    open  ftp         ProFTPD 1.3.5
+	 vulners: 
+	   cpe:/a:proftpd:proftpd:1.3.5: 
+	     	SAINT:FD1752E124A72FD3A26EEB9B315E8382	10.0	https://vulners.com/saint/SAINT:FD1752E124A72FD3A26EEB9B315E8382	*EXPLOIT*
+	     	SAINT:950EB68D408A40399926A4CCAD3CC62E	10.0	https://vulners.com/saint/SAINT:950EB68D408A40399926A4CCAD3CC62E	*EXPLOIT*
+	     	SAINT:63FB77B9136D48259E4F0D4CDA35E957	10.0	https://vulners.com/saint/SAINT:63FB77B9136D48259E4F0D4CDA35E957	*EXPLOIT*
+	     	SAINT:1B08F4664C428B180EEC9617B41D9A2C	10.0	https://vulners.com/saint/SAINT:1B08F4664C428B180EEC9617B41D9A2C	*EXPLOIT*
+	     	PROFTPD_MOD_COPY	10.0	https://vulners.com/canvas/PROFTPD_MOD_COPY	*EXPLOIT*
+	     	PACKETSTORM:162777	10.0	https://vulners.com/packetstorm/PACKETSTORM:162777	*EXPLOIT*
+	     	PACKETSTORM:132218	10.0	https://vulners.com/packetstorm/PACKETSTORM:132218	*EXPLOIT*
+	     	PACKETSTORM:131567	10.0	https://vulners.com/packetstorm/PACKETSTORM:131567	*EXPLOIT*
+	     	PACKETSTORM:131555	10.0	https://vulners.com/packetstorm/PACKETSTORM:131555	*EXPLOIT*
+	     	PACKETSTORM:131505	10.0	https://vulners.com/packetstorm/PACKETSTORM:131505	*EXPLOIT*
+	     	MSF:EXPLOIT/UNIX/FTP/PROFTPD_MODCOPY_EXEC	10.0	https://vulners.com/metasploit/MSF:EXPLOIT/UNIX/FTP/PROFTPD_MODCOPY_EXEC	*EXPLOIT*
+	     	EDB-ID:49908	10.0	https://vulners.com/exploitdb/EDB-ID:49908	*EXPLOIT*
+	     	CVE-2015-3306	10.0	https://vulners.com/cve/CVE-2015-3306
+	     	1337DAY-ID-36298	10.0	https://vulners.com/zdt/1337DAY-ID-36298	*EXPLOIT*
+	     	1337DAY-ID-23720	10.0	https://vulners.com/zdt/1337DAY-ID-23720	*EXPLOIT*
+	     	1337DAY-ID-23544	10.0	https://vulners.com/zdt/1337DAY-ID-23544	*EXPLOIT*
+	     	SSV:61050	5.0	https://vulners.com/seebug/SSV:61050	*EXPLOIT*
+	     	MSF:ILITIES/SUSE-CVE-2019-18217/	5.0	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-18217/	*EXPLOIT*
+	     	CVE-2020-9272	5.0	https://vulners.com/cve/CVE-2020-9272
+	     	CVE-2019-19272	5.0	https://vulners.com/cve/CVE-2019-19272
+	     	CVE-2019-19271	5.0	https://vulners.com/cve/CVE-2019-19271
+	     	CVE-2019-19270	5.0	https://vulners.com/cve/CVE-2019-19270
+	     	CVE-2019-18217	5.0	https://vulners.com/cve/CVE-2019-18217
+	     	CVE-2016-3125	5.0	https://vulners.com/cve/CVE-2016-3125
+	     	CVE-2013-4359	5.0	https://vulners.com/cve/CVE-2013-4359
+	_    	CVE-2017-7418	2.1	https://vulners.com/cve/CVE-2017-7418
+22/tcp    open  ssh         OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+	 vulners: 
+	   cpe:/a:openbsd:openssh:6.6.1p1: 
+	     	CVE-2015-5600	8.5	https://vulners.com/cve/CVE-2015-5600
+	     	MSF:ILITIES/GENTOO-LINUX-CVE-2015-6564/	6.9	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2015-6564/	*EXPLOIT*
+	     	CVE-2015-6564	6.9	https://vulners.com/cve/CVE-2015-6564
+	     	CVE-2018-15919	5.0	https://vulners.com/cve/CVE-2018-15919
+	     	CVE-2021-41617	4.4	https://vulners.com/cve/CVE-2021-41617
+	     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	*EXPLOIT*
+	     	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
+	     	CVE-2020-14145	4.3	https://vulners.com/cve/CVE-2020-14145
+	     	CVE-2015-5352	4.3	https://vulners.com/cve/CVE-2015-5352
+	     	MSF:ILITIES/ALPINE-LINUX-CVE-2015-6563/	1.9	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2015-6563/	*EXPLOIT*
+	_    	CVE-2015-6563	1.9	https://vulners.com/cve/CVE-2015-6563
+80/tcp    open  http        Apache httpd 2.4.7
+	_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+	 vulners: 
+	   cpe:/a:apache:http_server:2.4.7: 
+	     	E899CC4B-A3FD-5288-BB62-A4201F93FDCC	10.0	https://vulners.com/githubexploit/E899CC4B-A3FD-5288-BB62-A4201F93FDCC	*EXPLOIT*
+	     	5DE1B404-0368-5986-856A-306EA0FE0C09	10.0	https://vulners.com/githubexploit/5DE1B404-0368-5986-856A-306EA0FE0C09	*EXPLOIT*
+	     	CVE-2022-23943	7.5	https://vulners.com/cve/CVE-2022-23943
+	     	CVE-2022-22720	7.5	https://vulners.com/cve/CVE-2022-22720
+	     	CVE-2021-44790	7.5	https://vulners.com/cve/CVE-2021-44790
+	     	CVE-2021-39275	7.5	https://vulners.com/cve/CVE-2021-39275
+	     	CVE-2021-26691	7.5	https://vulners.com/cve/CVE-2021-26691
+	     	CVE-2017-7679	7.5	https://vulners.com/cve/CVE-2017-7679
+	     	CVE-2017-3167	7.5	https://vulners.com/cve/CVE-2017-3167
+	     	PACKETSTORM:127546	6.8	https://vulners.com/packetstorm/PACKETSTORM:127546	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/SUSE-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/REDHAT_LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE_LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ORACLE_LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/GENTOO-LINUX-CVE-2014-0226/	6.8	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2014-0226/	*EXPLOIT*
+	     	MSF:ILITIES/FREEBSD-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/FREEBSD-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/DEBIAN-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/	6.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/	*EXPLOIT*
+	     	MSF:ILITIES/CENTOS_LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/APACHE-HTTPD-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/AMAZON_LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/	*EXPLOIT*
+	     	MSF:ILITIES/ALPINE-LINUX-CVE-2017-15715/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2017-15715/	*EXPLOIT*
+	     	FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	6.8	https://vulners.com/githubexploit/FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	*EXPLOIT*
+	     	CVE-2022-22721	6.8	https://vulners.com/cve/CVE-2022-22721
+	     	CVE-2021-40438	6.8	https://vulners.com/cve/CVE-2021-40438
+	     	CVE-2020-35452	6.8	https://vulners.com/cve/CVE-2020-35452
+	     	CVE-2018-1312	6.8	https://vulners.com/cve/CVE-2018-1312
+	     	CVE-2017-15715	6.8	https://vulners.com/cve/CVE-2017-15715
+	     	CVE-2014-0226	6.8	https://vulners.com/cve/CVE-2014-0226
+	     	8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	6.8	https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	*EXPLOIT*
+	     	4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	6.8	https://vulners.com/githubexploit/4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	*EXPLOIT*
+	     	1337DAY-ID-22451	6.8	https://vulners.com/zdt/1337DAY-ID-22451	*EXPLOIT*
+	     	CVE-2021-44224	6.4	https://vulners.com/cve/CVE-2021-44224
+	     	CVE-2017-9788	6.4	https://vulners.com/cve/CVE-2017-9788
+	     	MSF:ILITIES/REDHAT_LINUX-CVE-2019-0217/	6.0	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-0217/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2019-0217/	6.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2019-0217/	*EXPLOIT*
+	     	CVE-2019-0217	6.0	https://vulners.com/cve/CVE-2019-0217
+	     	CVE-2020-1927	5.8	https://vulners.com/cve/CVE-2020-1927
+	     	CVE-2019-10098	5.8	https://vulners.com/cve/CVE-2019-10098
+	     	1337DAY-ID-33577	5.8	https://vulners.com/zdt/1337DAY-ID-33577	*EXPLOIT*
+	     	CVE-2016-5387	5.1	https://vulners.com/cve/CVE-2016-5387
+	     	SSV:96537	5.0	https://vulners.com/seebug/SSV:96537	*EXPLOIT*
+	     	SSV:61874	5.0	https://vulners.com/seebug/SSV:61874	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1303/	5.0	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1303/	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/SUSE-CVE-2014-0231/	5.0	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2014-0231/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2020-1934/	5.0	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2020-1934/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-8743/	5.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-8743/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-2161/	5.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-2161/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-0736/	5.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2016-0736/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:ILITIES/CENTOS_LINUX-CVE-2017-15710/	5.0	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-15710/	*EXPLOIT*
+	     	MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED	5.0	https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED	*EXPLOIT*
+	     	EXPLOITPACK:DAED9B9E8D259B28BF72FC7FDC4755A7	5.0	https://vulners.com/exploitpack/EXPLOITPACK:DAED9B9E8D259B28BF72FC7FDC4755A7	*EXPLOIT*
+	     	EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	5.0	https://vulners.com/exploitpack/EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	*EXPLOIT*
+	     	EDB-ID:42745	5.0	https://vulners.com/exploitdb/EDB-ID:42745	*EXPLOIT*
+	     	EDB-ID:40961	5.0	https://vulners.com/exploitdb/EDB-ID:40961	*EXPLOIT*
+	     	CVE-2022-22719	5.0	https://vulners.com/cve/CVE-2022-22719
+	     	CVE-2021-34798	5.0	https://vulners.com/cve/CVE-2021-34798
+	     	CVE-2021-26690	5.0	https://vulners.com/cve/CVE-2021-26690
+	     	CVE-2020-1934	5.0	https://vulners.com/cve/CVE-2020-1934
+	     	CVE-2019-17567	5.0	https://vulners.com/cve/CVE-2019-17567
+	     	CVE-2019-0220	5.0	https://vulners.com/cve/CVE-2019-0220
+	     	CVE-2018-17199	5.0	https://vulners.com/cve/CVE-2018-17199
+	     	CVE-2018-1303	5.0	https://vulners.com/cve/CVE-2018-1303
+	     	CVE-2017-9798	5.0	https://vulners.com/cve/CVE-2017-9798
+	     	CVE-2017-15710	5.0	https://vulners.com/cve/CVE-2017-15710
+	     	CVE-2016-8743	5.0	https://vulners.com/cve/CVE-2016-8743
+	     	CVE-2016-2161	5.0	https://vulners.com/cve/CVE-2016-2161
+	     	CVE-2016-0736	5.0	https://vulners.com/cve/CVE-2016-0736
+	     	CVE-2015-3183	5.0	https://vulners.com/cve/CVE-2015-3183
+	     	CVE-2015-0228	5.0	https://vulners.com/cve/CVE-2015-0228
+	     	CVE-2014-0231	5.0	https://vulners.com/cve/CVE-2014-0231
+	     	CVE-2014-0098	5.0	https://vulners.com/cve/CVE-2014-0098
+	     	CVE-2013-6438	5.0	https://vulners.com/cve/CVE-2013-6438
+	     	1337DAY-ID-28573	5.0	https://vulners.com/zdt/1337DAY-ID-28573	*EXPLOIT*
+	     	1337DAY-ID-26574	5.0	https://vulners.com/zdt/1337DAY-ID-26574	*EXPLOIT*
+	     	SSV:87152	4.3	https://vulners.com/seebug/SSV:87152	*EXPLOIT*
+	     	PACKETSTORM:127563	4.3	https://vulners.com/packetstorm/PACKETSTORM:127563	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1302/	4.3	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1302/	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1301/	4.3	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1301/	*EXPLOIT*
+	     	MSF:ILITIES/SUSE-CVE-2014-0118/	4.3	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2014-0118/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/	*EXPLOIT*
+	     	MSF:ILITIES/DEBIAN-CVE-2019-10092/	4.3	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-10092/	*EXPLOIT*
+	     	MSF:ILITIES/APACHE-HTTPD-CVE-2020-11985/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2020-11985/	*EXPLOIT*
+	     	MSF:ILITIES/APACHE-HTTPD-CVE-2019-10092/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2019-10092/	*EXPLOIT*
+	     	MSF:ILITIES/AMAZON-LINUX-AMI-ALAS-2014-389/	4.3	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-ALAS-2014-389/	*EXPLOIT*
+	     	MSF:ILITIES/ALPINE-LINUX-CVE-2014-0117/	4.3	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2014-0117/	*EXPLOIT*
+	     	CVE-2020-11985	4.3	https://vulners.com/cve/CVE-2020-11985
+	     	CVE-2019-10092	4.3	https://vulners.com/cve/CVE-2019-10092
+	     	CVE-2018-1302	4.3	https://vulners.com/cve/CVE-2018-1302
+	     	CVE-2018-1301	4.3	https://vulners.com/cve/CVE-2018-1301
+	     	CVE-2016-4975	4.3	https://vulners.com/cve/CVE-2016-4975
+	     	CVE-2015-3185	4.3	https://vulners.com/cve/CVE-2015-3185
+	     	CVE-2014-8109	4.3	https://vulners.com/cve/CVE-2014-8109
+	     	CVE-2014-0118	4.3	https://vulners.com/cve/CVE-2014-0118
+	     	CVE-2014-0117	4.3	https://vulners.com/cve/CVE-2014-0117
+	     	4013EC74-B3C1-5D95-938A-54197A58586D	4.3	https://vulners.com/githubexploit/4013EC74-B3C1-5D95-938A-54197A58586D	*EXPLOIT*
+	     	1337DAY-ID-33575	4.3	https://vulners.com/zdt/1337DAY-ID-33575	*EXPLOIT*
+	     	MSF:ILITIES/UBUNTU-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/REDHAT_LINUX-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1283/	*EXPLOIT*
+	     	MSF:ILITIES/CENTOS_LINUX-CVE-2018-1283/	3.5	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2018-1283/	*EXPLOIT*
+	     	CVE-2018-1283	3.5	https://vulners.com/cve/CVE-2018-1283
+	     	CVE-2016-8612	3.3	https://vulners.com/cve/CVE-2016-8612
+	_    	PACKETSTORM:140265	0.0	https://vulners.com/packetstorm/PACKETSTORM:140265	*EXPLOIT*
+	 http-slowloris-check: 
+	   VULNERABLE:
+	   Slowloris DOS attack
+	     State: LIKELY VULNERABLE
+	     IDs:  CVE:CVE-2007-6750
+	       Slowloris tries to keep many connections to the target web server open and hold
+	       them open as long as possible.  It accomplishes this by opening connections to
+	       the target web server and sending a partial request. By doing so, it starves
+	       the http server's resources causing Denial Of Service.
+	       
+	     Disclosure date: 2009-09-17
+	     References:
+	       http://ha.ckers.org/slowloris/
+	_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+	 http-enum: 
+	   /: Root directory w/ listing on 'apache/2.4.7 (ubuntu)'
+	   /phpmyadmin/: phpMyAdmin
+	_  /uploads/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+	_http-dombased-xss: Couldn't find any DOM based XSS.
+	 http-sql-injection: 
+	   Possible sqli for queries:
+	     http://192.168.56.0:80/?C=D%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=S%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=N%3BO%3DD%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=M%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=D%3BO%3DD%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=S%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=M%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=N%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=S%3BO%3DD%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=D%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=N%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=M%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=D%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=S%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=N%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=M%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=D%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=S%3BO%3DA%27%20OR%20sqlspider
+	     http://192.168.56.0:80/?C=N%3BO%3DA%27%20OR%20sqlspider
+	_    http://192.168.56.0:80/?C=M%3BO%3DD%27%20OR%20sqlspider
+	 http-csrf: 
+	 Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.56.0
+	   Found the following possible CSRF vulnerabilities: 
+	     
+	     Path: http://192.168.56.0:80/chat/
+	     Form id: name
+	     Form action: index.php
+	     
+	     Path: http://192.168.56.0:80/drupal/
+	     Form id: user-login-form
+	     Form action: /drupal/?q=node&destination=node
+	     
+	     Path: http://192.168.56.0:80/payroll_app.php
+	     Form id: 
+	     Form action: 
+	     
+	     Path: http://192.168.56.0:80/chat/index.php
+	     Form id: name
+	     Form action: index.php
+	     
+	     Path: http://192.168.56.0:80/drupal/?q=node&amp;destination=node
+	     Form id: user-login-form
+	     Form action: /drupal/?q=node&destination=node%3Famp%253Bdestination%3Dnode
+	     
+	     Path: http://192.168.56.0:80/drupal/?q=user/password
+	     Form id: user-pass
+	     Form action: /drupal/?q=user/password
+	     
+	     Path: http://192.168.56.0:80/drupal/?q=node/1
+	     Form id: user-login-form
+	     Form action: /drupal/?q=node/1&destination=node/1
+	     
+	     Path: http://192.168.56.0:80/drupal/?q=user/register
+	     Form id: user-register-form
+	_    Form action: /drupal/?q=user/register
+	_http-server-header: Apache/2.4.7 (Ubuntu)
+111/tcp   open  rpcbind     2-4 (RPC #100000)
+	 rpcinfo: 
+	   program version    port/proto  service
+	   100000  2,3,4        111/tcp   rpcbind
+	   100000  2,3,4        111/udp   rpcbind
+	   100000  3,4          111/tcp6  rpcbind
+	   100000  3,4          111/udp6  rpcbind
+	   100024  1          36437/udp   status
+	   100024  1          39290/udp6  status
+	   100024  1          49094/tcp   status
+	_  100024  1          53248/tcp6  status
+139/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+631/tcp   open  ipp         CUPS 1.7
+	 vulners: 
+	   cpe:/a:apple:cups:1.7: 
+	     	MSF:POST/MULTI/ESCALATE/CUPS_ROOT_FILE_READ	7.2	https://vulners.com/metasploit/MSF:POST/MULTI/ESCALATE/CUPS_ROOT_FILE_READ	*EXPLOIT*
+	     	CVE-2012-5519	7.2	https://vulners.com/cve/CVE-2012-5519
+	     	SECURITYVULNS:VULN:13879	5.0	https://vulners.com/securityvulns/SECURITYVULNS:VULN:13879
+	     	CVE-2014-5031	5.0	https://vulners.com/cve/CVE-2014-5031
+	     	SECURITYVULNS:VULN:13707	4.3	https://vulners.com/securityvulns/SECURITYVULNS:VULN:13707
+	     	CVE-2014-2856	4.3	https://vulners.com/cve/CVE-2014-2856
+	     	CVE-2014-5030	1.9	https://vulners.com/cve/CVE-2014-5030
+	     	SECURITYVULNS:VULN:13530	1.2	https://vulners.com/securityvulns/SECURITYVULNS:VULN:13530
+	     	CVE-2014-3537	1.2	https://vulners.com/cve/CVE-2014-3537
+	_    	CVE-2013-6891	1.2	https://vulners.com/cve/CVE-2013-6891
+	_http-server-header: CUPS/1.7 IPP/2.1
+	 http-enum: 
+	   /admin.php: Possible admin folder
+	   /admin/: Possible admin folder
+	   /admin/admin/: Possible admin folder
+	   /administrator/: Possible admin folder
+	   /adminarea/: Possible admin folder
+	   /adminLogin/: Possible admin folder
+	   /admin_area/: Possible admin folder
+	   /administratorlogin/: Possible admin folder
+	   /admin/account.php: Possible admin folder
+	   /admin/index.php: Possible admin folder
+	   /admin/login.php: Possible admin folder
+	   /admin/admin.php: Possible admin folder
+	   /admin_area/admin.php: Possible admin folder
+	   /admin_area/login.php: Possible admin folder
+	   /admin/index.html: Possible admin folder
+	   /admin/login.html: Possible admin folder
+	   /admin/admin.html: Possible admin folder
+	   /admin_area/index.php: Possible admin folder
+	   /admin/home.php: Possible admin folder
+	   /admin_area/login.html: Possible admin folder
+	   /admin_area/index.html: Possible admin folder
+	   /admin/controlpanel.php: Possible admin folder
+	   /admincp/: Possible admin folder
+	   /admincp/index.asp: Possible admin folder
+	   /admincp/index.html: Possible admin folder
+	   /admincp/login.php: Possible admin folder
+	   /admin/account.html: Possible admin folder
+	   /adminpanel.html: Possible admin folder
+	   /admin/admin_login.html: Possible admin folder
+	   /admin_login.html: Possible admin folder
+	   /admin/cp.php: Possible admin folder
+	   /administrator/index.php: Possible admin folder
+	   /administrator/login.php: Possible admin folder
+	   /admin/admin_login.php: Possible admin folder
+	   /admin_login.php: Possible admin folder
+	   /administrator/account.php: Possible admin folder
+	   /administrator.php: Possible admin folder
+	   /admin_area/admin.html: Possible admin folder
+	   /admin/admin-login.php: Possible admin folder
+	   /admin-login.php: Possible admin folder
+	   /admin/home.html: Possible admin folder
+	   /admin/admin-login.html: Possible admin folder
+	   /admin-login.html: Possible admin folder
+	   /admincontrol.php: Possible admin folder
+	   /admin/adminLogin.html: Possible admin folder
+	   /adminLogin.html: Possible admin folder
+	   /adminarea/index.html: Possible admin folder
+	   /adminarea/admin.html: Possible admin folder
+	   /admin/controlpanel.html: Possible admin folder
+	   /admin.html: Possible admin folder
+	   /admin/cp.html: Possible admin folder
+	   /adminpanel.php: Possible admin folder
+	   /administrator/index.html: Possible admin folder
+	   /administrator/login.html: Possible admin folder
+	   /administrator/account.html: Possible admin folder
+	   /administrator.html: Possible admin folder
+	   /adminarea/login.html: Possible admin folder
+	   /admincontrol/login.html: Possible admin folder
+	   /admincontrol.html: Possible admin folder
+	   /adminLogin.php: Possible admin folder
+	   /admin/adminLogin.php: Possible admin folder
+	   /adminarea/index.php: Possible admin folder
+	   /adminarea/admin.php: Possible admin folder
+	   /adminarea/login.php: Possible admin folder
+	   /admincontrol/login.php: Possible admin folder
+	   /admin2.php: Possible admin folder
+	   /admin2/login.php: Possible admin folder
+	   /admin2/index.php: Possible admin folder
+	   /administratorlogin.php: Possible admin folder
+	   /admin/account.cfm: Possible admin folder
+	   /admin/index.cfm: Possible admin folder
+	   /admin/login.cfm: Possible admin folder
+	   /admin/admin.cfm: Possible admin folder
+	   /admin.cfm: Possible admin folder
+	   /admin/admin_login.cfm: Possible admin folder
+	   /admin_login.cfm: Possible admin folder
+	   /adminpanel.cfm: Possible admin folder
+	   /admin/controlpanel.cfm: Possible admin folder
+	   /admincontrol.cfm: Possible admin folder
+	   /admin/cp.cfm: Possible admin folder
+	   /admincp/index.cfm: Possible admin folder
+	   /admincp/login.cfm: Possible admin folder
+	   /admin_area/admin.cfm: Possible admin folder
+	   /admin_area/login.cfm: Possible admin folder
+	   /administrator/login.cfm: Possible admin folder
+	   /administratorlogin.cfm: Possible admin folder
+	   /administrator.cfm: Possible admin folder
+	   /administrator/account.cfm: Possible admin folder
+	   /adminLogin.cfm: Possible admin folder
+	   /admin2/index.cfm: Possible admin folder
+	   /admin_area/index.cfm: Possible admin folder
+	   /admin2/login.cfm: Possible admin folder
+	   /admincontrol/login.cfm: Possible admin folder
+	   /administrator/index.cfm: Possible admin folder
+	   /adminarea/login.cfm: Possible admin folder
+	   /adminarea/admin.cfm: Possible admin folder
+	   /adminarea/index.cfm: Possible admin folder
+	   /admin/adminLogin.cfm: Possible admin folder
+	   /admin-login.cfm: Possible admin folder
+	   /admin/admin-login.cfm: Possible admin folder
+	   /admin/home.cfm: Possible admin folder
+	   /admin/account.asp: Possible admin folder
+	   /admin/index.asp: Possible admin folder
+	   /admin/login.asp: Possible admin folder
+	   /admin/admin.asp: Possible admin folder
+	   /admin_area/admin.asp: Possible admin folder
+	   /admin_area/login.asp: Possible admin folder
+	   /admin_area/index.asp: Possible admin folder
+	   /admin/home.asp: Possible admin folder
+	   /admin/controlpanel.asp: Possible admin folder
+	   /admin.asp: Possible admin folder
+	   /admin/admin-login.asp: Possible admin folder
+	   /admin-login.asp: Possible admin folder
+	   /admin/cp.asp: Possible admin folder
+	   /administrator/account.asp: Possible admin folder
+	   /administrator.asp: Possible admin folder
+	   /administrator/login.asp: Possible admin folder
+	   /admincp/login.asp: Possible admin folder
+	   /admincontrol.asp: Possible admin folder
+	   /adminpanel.asp: Possible admin folder
+	   /admin/admin_login.asp: Possible admin folder
+	   /admin_login.asp: Possible admin folder
+	   /adminLogin.asp: Possible admin folder
+	   /admin/adminLogin.asp: Possible admin folder
+	   /adminarea/index.asp: Possible admin folder
+	   /adminarea/admin.asp: Possible admin folder
+	   /adminarea/login.asp: Possible admin folder
+	   /administrator/index.asp: Possible admin folder
+	   /admincontrol/login.asp: Possible admin folder
+	   /admin2.asp: Possible admin folder
+	   /admin2/login.asp: Possible admin folder
+	   /admin2/index.asp: Possible admin folder
+	   /administratorlogin.asp: Possible admin folder
+	   /admin/account.aspx: Possible admin folder
+	   /admin/index.aspx: Possible admin folder
+	   /admin/login.aspx: Possible admin folder
+	   /admin/admin.aspx: Possible admin folder
+	   /admin_area/admin.aspx: Possible admin folder
+	   /admin_area/login.aspx: Possible admin folder
+	   /admin_area/index.aspx: Possible admin folder
+	   /admin/home.aspx: Possible admin folder
+	   /admin/controlpanel.aspx: Possible admin folder
+	   /admin.aspx: Possible admin folder
+	   /admin/admin-login.aspx: Possible admin folder
+	   /admin-login.aspx: Possible admin folder
+	   /admin/cp.aspx: Possible admin folder
+	   /administrator/account.aspx: Possible admin folder
+	   /administrator.aspx: Possible admin folder
+	   /administrator/login.aspx: Possible admin folder
+	   /admincp/index.aspx: Possible admin folder
+	   /admincp/login.aspx: Possible admin folder
+	   /admincontrol.aspx: Possible admin folder
+	   /adminpanel.aspx: Possible admin folder
+	   /admin/admin_login.aspx: Possible admin folder
+	   /admin_login.aspx: Possible admin folder
+	   /adminLogin.aspx: Possible admin folder
+	   /admin/adminLogin.aspx: Possible admin folder
+	   /adminarea/index.aspx: Possible admin folder
+	   /adminarea/admin.aspx: Possible admin folder
+	   /adminarea/login.aspx: Possible admin folder
+	   /administrator/index.aspx: Possible admin folder
+	   /admincontrol/login.aspx: Possible admin folder
+	   /admin2.aspx: Possible admin folder
+	   /admin2/login.aspx: Possible admin folder
+	   /admin2/index.aspx: Possible admin folder
+	   /administratorlogin.aspx: Possible admin folder
+	   /admin/index.jsp: Possible admin folder
+	   /admin/login.jsp: Possible admin folder
+	   /admin/admin.jsp: Possible admin folder
+	   /admin_area/admin.jsp: Possible admin folder
+	   /admin_area/login.jsp: Possible admin folder
+	   /admin_area/index.jsp: Possible admin folder
+	   /admin/home.jsp: Possible admin folder
+	   /admin/controlpanel.jsp: Possible admin folder
+	   /admin.jsp: Possible admin folder
+	   /admin/admin-login.jsp: Possible admin folder
+	   /admin-login.jsp: Possible admin folder
+	   /admin/cp.jsp: Possible admin folder
+	   /administrator/account.jsp: Possible admin folder
+	   /administrator.jsp: Possible admin folder
+	   /administrator/login.jsp: Possible admin folder
+	   /admincp/index.jsp: Possible admin folder
+	   /admincp/login.jsp: Possible admin folder
+	   /admincontrol.jsp: Possible admin folder
+	   /admin/account.jsp: Possible admin folder
+	   /adminpanel.jsp: Possible admin folder
+	   /admin/admin_login.jsp: Possible admin folder
+	   /admin_login.jsp: Possible admin folder
+	   /adminLogin.jsp: Possible admin folder
+	   /admin/adminLogin.jsp: Possible admin folder
+	   /adminarea/index.jsp: Possible admin folder
+	   /adminarea/admin.jsp: Possible admin folder
+	   /adminarea/login.jsp: Possible admin folder
+	   /administrator/index.jsp: Possible admin folder
+	   /admincontrol/login.jsp: Possible admin folder
+	   /admin2.jsp: Possible admin folder
+	   /admin2/login.jsp: Possible admin folder
+	   /admin2/index.jsp: Possible admin folder
+	   /administratorlogin.jsp: Possible admin folder
+	   /admin1.php: Possible admin folder
+	   /administr8.asp: Possible admin folder
+	   /administr8.php: Possible admin folder
+	   /administr8.jsp: Possible admin folder
+	   /administr8.aspx: Possible admin folder
+	   /administr8.cfm: Possible admin folder
+	   /administr8/: Possible admin folder
+	   /administer/: Possible admin folder
+	   /administracao.php: Possible admin folder
+	   /administracao.asp: Possible admin folder
+	   /administracao.aspx: Possible admin folder
+	   /administracao.cfm: Possible admin folder
+	   /administracao.jsp: Possible admin folder
+	   /administracion.php: Possible admin folder
+	   /administracion.asp: Possible admin folder
+	   /administracion.aspx: Possible admin folder
+	   /administracion.jsp: Possible admin folder
+	   /administracion.cfm: Possible admin folder
+	   /administrators/: Possible admin folder
+	   /adminpro/: Possible admin folder
+	   /admins/: Possible admin folder
+	   /admins.cfm: Possible admin folder
+	   /admins.php: Possible admin folder
+	   /admins.jsp: Possible admin folder
+	   /admins.asp: Possible admin folder
+	   /admins.aspx: Possible admin folder
+	   /administracion-sistema/: Possible admin folder
+	   /admin108/: Possible admin folder
+	   /admin_cp.asp: Possible admin folder
+	   /admin/backup/: Possible backup
+	   /admin/download/backup.sql: Possible database backup
+	   /robots.txt: Robots file
+	   /admin/upload.php: Admin File Upload
+	   /admin/CiscoAdmin.jhtml: Cisco Collaboration Server
+	   /admin-console/: JBoss Console
+	   /admin4.nsf: Lotus Domino
+	   /admin5.nsf: Lotus Domino
+	   /admin.nsf: Lotus Domino
+	   /administrator/wp-login.php: Wordpress login page.
+	   /admin/libraries/ajaxfilemanager/ajaxfilemanager.php: Log1 CMS
+	   /admin/view/javascript/fckeditor/editor/filemanager/connectors/test.html: OpenCart/FCKeditor File upload
+	   /admin/includes/tiny_mce/plugins/tinybrowser/upload.php: CompactCMS or B-Hind CMS/FCKeditor File upload
+	   /admin/includes/FCKeditor/editor/filemanager/upload/test.html: ASP Simple Blog / FCKeditor File Upload
+	   /admin/jscript/upload.php: Lizard Cart/Remote File upload
+	   /admin/jscript/upload.html: Lizard Cart/Remote File upload
+	   /admin/jscript/upload.pl: Lizard Cart/Remote File upload
+	   /admin/jscript/upload.asp: Lizard Cart/Remote File upload
+	   /admin/environment.xml: Moodle files
+	   /classes/: Potentially interesting folder
+	   /es/: Potentially interesting folder
+	   /helpdesk/: Potentially interesting folder
+	   /help/: Potentially interesting folder
+	_  /printers/: Potentially interesting folder
+3306/tcp  open  mysql       MySQL (unauthorized)
+	_rsa-vuln-roca: ERROR: Script execution failed (use -d to debug)
+	_sslv2-drown: ERROR: Script execution failed (use -d to debug)
+	_ssl-poodle: ERROR: Script execution failed (use -d to debug)
+	_ssl-ccs-injection: ERROR: Script execution failed (use -d to debug)
+	_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+	_ssl-dh-params: ERROR: Script execution failed (use -d to debug)
+	_ssl-heartbleed: ERROR: Script execution failed (use -d to debug)
+3500/tcp  open  http        WEBrick httpd 1.3.1 (Ruby 2.3.8 (2018-10-18))
+	 http-slowloris-check: 
+	   VULNERABLE:
+	   Slowloris DOS attack
+	     State: LIKELY VULNERABLE
+	     IDs:  CVE:CVE-2007-6750
+	       Slowloris tries to keep many connections to the target web server open and hold
+	       them open as long as possible.  It accomplishes this by opening connections to
+	       the target web server and sending a partial request. By doing so, it starves
+	       the http server's resources causing Denial Of Service.
+	       
+	     Disclosure date: 2009-09-17
+	     References:
+	       http://ha.ckers.org/slowloris/
+	_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+	_http-csrf: Couldn't find any CSRF vulnerabilities.
+	_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+	 vulners: 
+	   cpe:/a:ruby-lang:ruby:2.3.8: 
+	     	MSF:ILITIES/APPLE-OSX-RUBY-CVE-2015-7551/	7.5	https://vulners.com/metasploit/MSF:ILITIES/APPLE-OSX-RUBY-CVE-2015-7551/	*EXPLOIT*
+	     	SMNTC-110992	0.0	https://vulners.com/symantec/SMNTC-110992
+	     	RUBY:RUBY-2018-8780	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-8780
+	     	RUBY:RUBY-2018-8779	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-8779
+	     	RUBY:RUBY-2018-8778	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-8778
+	     	RUBY:RUBY-2018-8777	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-8777
+	     	RUBY:RUBY-2018-6914	0.0	https://vulners.com/rubygems/RUBY:RUBY-2018-6914
+	     	RUBY:RUBY-2017-17742	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-17742
+	     	RUBY:RUBY-2017-17405	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-17405
+	     	RUBY:RUBY-2017-14064	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-14064
+	     	RUBY:RUBY-2017-14033	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-14033
+	     	RUBY:RUBY-2017-10784	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-10784
+	     	RUBY:RUBY-2017-0898	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-0898
+	_    	RUBY:RUBY-2015-7551	0.0	https://vulners.com/rubygems/RUBY:RUBY-2015-7551
+	 http-enum: 
+	   /robots.txt: Robots file
+	_  /readme.html: Interesting, a readme.
+	_http-server-header: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
+	_http-dombased-xss: Couldn't find any DOM based XSS.
+6667/tcp  open  irc         UnrealIRCd
+	 irc-botnet-channels: 
+	_  ERROR: Closing Link: [192.168.56.1] (Throttled: Reconnecting too fast) -Email admin@TestIRC.net for more information.
+6697/tcp  open  irc         UnrealIRCd
+	_ssl-ccs-injection: No reply from server (TIMEOUT)
+	 irc-botnet-channels: 
+	_  ERROR: Closing Link: [192.168.56.1] (Throttled: Reconnecting too fast) -Email admin@TestIRC.net for more information.
+8067/tcp  open  irc         UnrealIRCd
+	 irc-botnet-channels: 
+	_  ERROR: Closing Link: [192.168.56.1] (Throttled: Reconnecting too fast) -Email admin@TestIRC.net for more information.
+8080/tcp  open  http        Jetty 8.1.7.v20120910
+	 http-slowloris-check: 
+	   VULNERABLE:
+	   Slowloris DOS attack
+	     State: LIKELY VULNERABLE
+	     IDs:  CVE:CVE-2007-6750
+	       Slowloris tries to keep many connections to the target web server open and hold
+	       them open as long as possible.  It accomplishes this by opening connections to
+	       the target web server and sending a partial request. By doing so, it starves
+	       the http server's resources causing Denial Of Service.
+	       
+	     Disclosure date: 2009-09-17
+	     References:
+	       http://ha.ckers.org/slowloris/
+	_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+	_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+	_http-dombased-xss: Couldn't find any DOM based XSS.
+	 http-csrf: 
+	 Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.56.0
+	   Found the following possible CSRF vulnerabilities: 
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/login.action;jsessionid=29wpxp07cdlxcgzju3horx0p
+	     Form id: loginform
+	     Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/register.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     Form id: registerform
+	     Form action: /continuum/security/register_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/login.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     Form id: loginform
+	     Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     Form id: loginform
+	     Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/login.action;jsessionid=29wpxp07cdlxcgzju3horx0p
+	     Form id: loginform
+	     Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/passwordReset.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     Form id: passwordresetform
+	     Form action: /continuum/security/passwordReset_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/login.action;jsessionid=29wpxp07cdlxcgzju3horx0p
+	     Form id: loginform
+	     Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/register_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     Form id: registerform
+	     Form action: /continuum/security/register_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     
+	     Path: http://192.168.56.0:8080/continuum/security/passwordReset_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	     Form id: passwordresetform
+	_    Form action: /continuum/security/passwordReset_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+	_http-server-header: Jetty(8.1.7.v20120910)
+49094/tcp open  status      1 (RPC #100024)
+Service Info: Hosts: 127.0.1.1, UBUNTU, irc.TestIRC.net; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+	 smb-vuln-regsvc-dos: 
+	   VULNERABLE:
+	   Service regsvc in Microsoft Windows systems vulnerable to denial of service
+	     State: VULNERABLE
+	       The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference
+	       pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes
+	       while working on smb-enum-sessions.
+	_          
+	_smb-vuln-ms10-054: false
+	_smb-vuln-ms10-061: false
+
+---------------------Recon Recommendations---------------------
+
+Web Servers Recon:
+
+nikto -host "http://192.168.56.0:3500" 	 tee "recon/nikto_192.168.56.0_3500.txt"
+gobuster dir -w /usr/share/wordlists/dirb/common.txt -t 30 -ekx '' -u "http://192.168.56.0:3500" -o "recon/gobuster_192.168.56.0_3500.txt"
+
+nikto -host "http://192.168.56.0:8080" 	 tee "recon/nikto_192.168.56.0_8080.txt"
+gobuster dir -w /usr/share/wordlists/dirb/common.txt -t 30 -ekx '' -u "http://192.168.56.0:8080" -o "recon/gobuster_192.168.56.0_8080.txt"
+
+nikto -host "http://192.168.56.0:80" 	 tee "recon/nikto_192.168.56.0_80.txt"
+gobuster dir -w /usr/share/wordlists/dirb/common.txt -t 30 -ekx '' -u "http://192.168.56.0:80" -o "recon/gobuster_192.168.56.0_80.txt"
+
+SMB Recon:
+
+smbmap -H "192.168.56.0" 	 tee "recon/smbmap_192.168.56.0.txt"
+smbclient -L "//192.168.56.0/" -U "guest"% 	 tee "recon/smbclient_192.168.56.0.txt"
+enum4linux -a "192.168.56.0" 	 tee "recon/enum4linux_192.168.56.0.txt"
+
+Which commands would you like to run?
+All (Default), enum4linux, gobuster, nikto, smbclient, smbmap, Skip <!>
+
+Running Default in (30)s: 
+Running Default in (29)s: 
+Running Default in (28)s: 
+Running Default in (27)s: 
+Running Default in (26)s: 
+Running Default in (25)s: 
+Running Default in (24)s: 
+Running Default in (23)s: 
+Running Default in (22)s: 
+Running Default in (21)s: 
+Running Default in (20)s: 
+Running Default in (19)s: 
+Running Default in (18)s: 
+Running Default in (17)s: 
+Running Default in (16)s: 
+Running Default in (15)s: 
+Running Default in (14)s: 
+Running Default in (13)s: 
+Running Default in (12)s: 
+Running Default in (11)s: 
+Running Default in (10)s: 
+Running Default in (9)s: 
+Running Default in (8)s: 
+Running Default in (7)s: 
+Running Default in (6)s: 
+Running Default in (5)s: 
+Running Default in (4)s: 
+Running Default in (3)s: 
+Running Default in (2)s: 
+Running Default in (1)s: 
+
+---------------------Running Recon Commands--------------------
+
+Starting nikto scan
+
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          192.168.56.0
++ Target Hostname:    192.168.56.0
++ Target Port:        3500
++ Start Time:         2022-04-11 11:22:53 (GMT2)
+---------------------------------------------------------------------------
++ Server: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
++ Server leaks inodes via ETags, header found with file /, fields: 0xW/b56dd5f9363ed0f7bd4d11c36d9471dd 
++ Uncommon header 'x-request-id' found, with contents: 7d8ee2cf-44eb-4934-95ca-32b5e66ef319
++ Uncommon header 'x-runtime' found, with contents: 0.003849
++ Uncommon header 'x-xss-protection' found, with contents: 1; mode=block
++ Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN
++ Uncommon header 'x-content-type-options' found, with contents: nosniff
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ "robots.txt" retrieved but it does not contain any 'disallow' entries (which is odd).
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ Cookie _readme_session created without the httponly flag
++ /readme.eml: Remote server may be infected with the Nimda virus.
++ /trace.axd: The .NET IIS server has application tracing enabled. This could allow an attacker to view the last 50 web requests.
++ OSVDB-2400: /admin-serv/tasks/configuration/ViewLog?file=passwd&num=5000&str=&directories=admin-serv%2Flogs%2f..%2f..%2f..%2f..%2f..%2f..%2fetc&id=admin-serv: iPlanet Administration Server 5.1 allows remote users to download any file from the server. Upgrade to SunOne DS5.2 and in iDS5.1 SP2 Hotfix 2.
++ OSVDB-5553: /netget?sid=user&msg=300&file=../../../../../../../../../../etc/passwd: Sybex E-Trainer allows arbitrary files to be retrieved.
++ ///etc/passwd: The server install allows reading of any system file by adding an extra '/' to the URL.
++ OSVDB-50624: /albums/userpics/Copperminer.jpg.php?cat%20/etc/passwd: Coppermine 1.0 RC3 may have been compromised to allow arbitrary file retreival. Upgrade to the latest at http://www.chezgreg.net/coppermine/
++ OSVDB-9028: /autohtml.php?op=modload&mainfile=x&name=/etc/passwd: php-proxima 6.0 and below allows arbitrary files to be retrieved.
++ OSVDB-49354: /atomicboard/index.php?location=../../../../../../../../../../etc/passwd: AtomicBoard v0.6.2 allows remote users to read arbitrary files.
++ OSVDB-54099: /current/modules.php?mod=fm&file=../../../../../../../../../../etc/passwd%00&bn=fm_d1: w-agora 4.1.5 allows any file to be retrieved from the remote host.
++ OSVDB-3012: /current/index.php?site=demos&bn=../../../../../../../../../../etc/passwd%00: w-agora 4.1.5 allows any file to be retrieved from the remote host.
++ OSVDB-54058: /dev/translations.php?ONLY=%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd%00: Typo3 allows any file to be retrieved remotely. Upgrade to the latest version.
++ OSVDB-59600: /ezhttpbench.php?AnalyseSite=/etc/passwd&NumLoops=1: eZ httpbench version 1.1 allows any file on the remote server to be retrieved.
++ OSVDB-2870: /index.php?download=/etc/passwd: Snif 1.2.4 allows any file to be retrieved from the web server.
++ OSVDB-59085: /index.php?	=../../../../../../../../../etc/passwd: Portix-PHP Portal allows retrieval of arbitrary files via the '..' type filtering problem.
++ /index.php?page=../../../../../../../../../../etc/passwd: The PHP-Nuke Rocket add-in is vulnerable to file traversal, allowing an attacker to view any file on the host. (probably Rocket, but could be any index.php)
++ OSVDB-59085: /index.php?l=forum/view.php&topic=../../../../../../../../../etc/passwd: Portix-PHP Portal allows retrieval of arbitrary files via the '..' type filtering problem.
++ /jsp/jspsamp/jspexamples/viewsource.jsp?source=../../../../../../../../../../etc/passwd: Default JRun CGI lets users read any system file.
++ OSVDB-51750: /k/home?dir=/&file=../../../../../../../../etc/passwd&lang=kor: Kebi Academy 2001 Web Solution allows any file to be retrieved from the remote system.
++ /nph-showlogs.pl?files=../../../../../../../../etc/passwd&filter=.*&submit=Go&linecnt=500&refresh=0: nCUBE Server Manage 1.0 allows any file to be read on the remote system.
++ OSVDB-2829: /phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd: phpWebFileManager v2.0.0 and prior are vulnerable to a directory traversal bug.
++ /phptonuke.php?filnavn=/etc/passwd: Photonouke or myphpnuke allows arbitrary files to be retrieved from the remote host.
++ /put/cgi-bin/putport.exe?SWAP&BOM&OP=none&Lang=en-US&PutHtml=../../../../../../../../etc/passwd: NCR's Terradata server contains a CGI that allows any file to be retrieved remotely.
++ OSVDB-521: /ROADS/cgi-bin/search.pl?form=../../../../../../../../../../etc/passwd%00: The ROADS search.pl allows attackers to retrieve system files.
++ /support/common.php?f=0&ForumLang=../../../../../../../../../../etc/passwd: This CGI allows attackers to read files on the host.
++ /viewpage.php?file=/etc/passwd: PHP-Nuke script viewpage.php allows any file to be retrieved from the remote system.
++ OSVDB-431: /Web_Store/web_store.cgi?page=../../../../../../../../../../etc/passwd%00.html: eXtropia's Web Store lets attackers read any file on the system by appending a %00.html to the name.
++ OSVDB-9055: /webMathematica/MSP?MSPStoreID=../../../../../../../../../../etc/passwd&MSPStoreType=image/gif: Wolfram Research's webMathematica allows any file to be read on the remote system. Upgrade to the latest version on http://www.wolfram.com/
++ OSVDB-17110: /servlet/webacc?User.html=../../../../../../../../../../../../../../../../../../etc/passwd%00: The Novell Groupwise WebAcc Servlet allows attackers to view arbitrary files on the server.
++ /webcalendar/forum.php?user_inc=../../../../../../../../../../etc/passwd: Webcalendar 0.9.41 and below allow remote users to read arbitrary files.
++ OSVDB-15392: /logbook.pl?file=../../../../../../../bin/cat%20/etc/passwd%00	: Wordit Limited 2000 allows command execution.
++ OSVDB-59084: /page.cgi?../../../../../../../../../../etc/passwd: WWWeBBB Forum up to version 3.82beta allow arbitrary file retrieval.
++ OSVDB-56290: /edittag/edittag.cgi?file=%2F..%2F..%2F..%2F..%2F..%2Fetc/passwd: EditTag allows arbitrary file retrieval.
++ OSVDB-8983: /base/webmail/readmsg.php?mailbox=../../../../../../../../../../../../../../etc/passwd&id=1: Remote file retrieval.
++ OSVDB-16861: /athenareg.php?pass=%20;cat%20/etc/passwd: Athena web registration remote command execution.
++ OSVDB-278: /PSUser/PSCOErrPage.htm?errPagePath=/etc/passwd: This default Netscape file allows an attacker to read arbitrary files on the host.
++ /search?NS-query-pat=../../../../../../../../../../etc/passwd: The iPlanet server allows arbitrary files to be retrieved through the search functionality. Install 4.1 SP10+ or 6.0 SP3+
++ /................../etc/passwd: The web server allows the password file to be retrieved.
++ OSVDB-27071: /phpimageview.php?pic=javascript:alert(8754): PHP Image View 1.0 is vulnerable to Cross Site Scripting (XSS).  http://www.cert.org/advisories/CA-2000-02.html.
++ OSVDB-3931: /myphpnuke/links.php?op=MostPopular&ratenum=[script]alert(document.cookie);[/script]&ratetype=percent: myphpnuke is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ /modules.php?op=modload&name=FAQ&file=index&myfaq=yes&id_cat=1&categories=%3Cimg%20src=javascript:alert(9456);%3E&parent_id=0: Post Nuke 0.7.2.3-Phoenix is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ OSVDB-4598: /members.asp?SF=%22;}alert(223344);function%20x(){v%20=%22: Web Wiz Forums ver. 7.01 and below is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ OSVDB-2946: /forum_members.asp?find=%22;}alert(9823);function%20x(){v%20=%22: Web Wiz Forums ver. 7.01 and below is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ OSVDB-8956: /basilix.php3?request_id[DUMMY]=../../../../etc/passwd&RequestID=DUMMY&username=sec&password=secu: Remote file retrieval.
++ OSVDB-8193: /index.php?module=ew_filemanager&type=admin&func=manager&pathext=../../../etc/&view=passwd: EW FileManager for PostNuke allows arbitrary file retrieval.
++ OSVDB-2713: /jsp/jspsamp/jspexamples/viewsource.jsp?source=/../../../../../../../../../etc/passwd: The JRUN view_source.jsp allows arbitrary file retrieval from the host. Upgrade to JRUN 2.3.3 or higher, or remove all default scripts. CVE-2000-0540. http://www.securityfocus.com/bid/1386.
++ OSVDB-2793: /.../.../.../.../.../.../.../.../.../.../etc/passwd: TelCondex SimpleWebserver 2.13.31027 and below allows directory traversal.
++ OSVDB-3092: /readme: This might be interesting...
++ OSVDB-3092: /etc/passwd: An '/etc/passwd' file is available via the web site.
++ OSVDB-3092: /readme.nsf: This database can be read without authentication, which may reveal sensitive information.
++ OSVDB-3093: /forum-ra.asp?n=....//....//....//....//....//....//....//etc.passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra.asp?n=../../../../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra.asp?n=../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra.asp?n=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra.asp?n=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra_professionnel.asp?n=%60/etc/passwd%60: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra_professionnel.asp?n=../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra_professionnel.asp?n=/../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra_professionnel.asp?n=/../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra_professionnel.asp?n=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum-ra_professionnel.asp?n=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=%60/etc/passwd%60&amp;nn=269	200	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=....//....//....//....//....//....//....//etc.passwd&amp;nn=269	200	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=../../../../../../../../../etc/passwd%00&amp;nn=269	200	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=/../../../../../../etc/passwd&amp;nn=269	200	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=/../../../etc/passwd&amp;nn=269	200	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=/etc/passwd%00&amp;nn=269	200	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=/etc/passwd&amp;nn=269	200	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=1753&amp;nn=%60/etc/passwd%60: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=1753&amp;nn=....//....//....//....//....//....//....//etc.passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=1753&amp;nn=../../../../../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=1753&amp;nn=../../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=1753&amp;nn=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1.asp?n=1753&amp;nn=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=%60/etc/passwd%60&amp;nn=100&amp;page=1	234	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=....//....//....//....//....//....//....//etc.passwd&amp;nn=100&amp;page=1	234	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=../../../../../../../../../etc/passwd%00&amp;nn=100&amp;page=1	234	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=/../../../../../../../../etc/passwd&amp;nn=100&amp;page=1	234	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=/etc/passwd%00&amp;nn=100&amp;page=1	234	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=/etc/passwd&amp;nn=100&amp;page=1	234	800a0bcd	Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=%60/etc/passwd%60&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=....//....//....//....//....//....//....//etc.passwd&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=../../../../../../../../../etc/passwd%00&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=/../../../../../../../../etc/passwd&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=/etc/passwd%00&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=/etc/passwd&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=%60/etc/passwd%60: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=....//....//....//....//....//....//....//etc.passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=/../../../../../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /mailview.cgi?cmd=view&amp;fldrname=inbox&amp;select=1&amp;html=../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /modif_infos.asp?n=%60/etc/passwd%60: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /modif_infos.asp?n=....//....//....//....//....//....//....//etc.passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /modif_infos.asp?n=../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /modif_infos.asp?n=/../../../../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /modif_infos.asp?n=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /modif_infos.asp?n=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /setpasswd.cgi: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /shoutbox/expanded.php?conf=../../../../../../../etc/passwd%20: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /tmp_view.php?file=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /userreg.cgi?cmd=insert&amp;lang=eng&amp;tnum=3&amp;fld1=test999%0acat&lt;/var/spool/mail/login&gt;&gt;/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3396: /mylog.html?screen=/etc/passwd: Remote file read vulnerability 1999-0068
++ OSVDB-3396: /mylog.phtml?screen=/etc/passwd: Remote file read vulnerability 1999-0068
++ OSVDB-3396: /php/mylog.html?screen=/etc/passwd: Remote file read vulnerability 1999-0346
++ OSVDB-3396: /php/mylog.phtml?screen=/etc/passwd: Remote file read vulnerability 1999-0346
++ OSVDB-3407: /directory.php?dir=%3Bcat%20/etc/passwd: Marcus S. Xenakis directory.php script allows for command execution. CVE-2002-0434.
++ OSVDB-3410: /content/base/build/explorer/none.php?..:..:..:..:..:..:..:etc:passwd:: SunPS iRunbook Version 2.5.2 allows files to be read remotely.
++ OSVDB-3410: /content/base/build/explorer/none.php?/etc/passwd: SunPS iRunbook Version 2.5.2 allows files to be read remotely.
++ OSVDB-3412: /bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412: /postnuke/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412: /postnuke/html/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412: /modules/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412: /phpBB/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412: /forum/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3566: /shop/normal_html.cgi?file=../../../../../../etc/issue%00: Happymail E-Commerce 4.3/4.4 allows arbitrary files to be retrieved remotely. CVE-2003-0243.
++ OSVDB-3566: /shop/normal_html.cgi?file=;cat%20/etc/passwd	: Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
++ OSVDB-3566: /shop/normal_html.cgi?file=	cat%20/etc/passwd	: Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
++ OSVDB-3567: /shop/member_html.cgi?file=;cat%20/etc/passwd	: Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
++ OSVDB-3567: /shop/member_html.cgi?file=	cat%20/etc/passwd	: Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
++ OSVDB-3800: /3rdparty/phpMyAdmin/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-3800: /phpMyAdmin/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-3800: /3rdparty/phpmyadmin/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-3800: /phpmyadmin/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-3800: /pma/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-383: /~nobody/etc/passwd: Apache is misconfigured to view files by accessing ~nobody/filename. Change UserDir from './' to something else in httpd.conf.
++ OSVDB-3861: /dcforum/dcforum.cgi?az=list&forum=../../../../../../../../../../etc/passwd%00: This install of DCForum allows attackers to read arbitrary files on the host.
++ OSVDB-4191: /viewimg.php?path=../../../../../../../../../../etc/passwd&form=1&var=1: KorWebLog from http://weblog.kldp.org/ allows any file to be read on the system.
++ OSVDB-4775: /shoutbox.php?conf=../../../../../../../etc/passwd: Webfroot Shoutbox 2.32 and below allows any file to be read from the system.
++ OSVDB-5089: /admin/system.php3?cmd=cat%20/etc/passwd: DotBr 0.1 allows remote command execution.
++ OSVDB-5090: /admin/exec.php3?cmd=cat%20/etc/passwd: DotBr 0.1 allows remote command execution.
++ OSVDB-524: /bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524: /postnuke/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524: /postnuke/html/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524: /modules/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524: /phpBB/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524: /forum/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-543: /opendir.php?/etc/passwd: This PHP-Nuke CGI allows attackers to read any file on the web server. CVE-2001-0321
++ OSVDB-543: /opendir.php?requesturl=/etc/passwd: This PHP-Nuke CGI allows attackers to read any file on the web server. CVE-2001-0321
++ OSVDB-677: /gallery/index.php?include=../../../../../../../../../etc/passwd: Gallery allows files to be read remotely. CVE-2001-0900.
++ OSVDB-677: /modules.php?set_albumName=album01&id=aaw&op=modload&name=gallery&file=index&include=../../../../../../../../../etc/passwd: Gallery Addon for PHP-Nuke allows files to be read remotely. CVE-2001-0900.
++ OSVDB-694: /phprocketaddin/?page=../../../../../../../../../../etc/passwd: The PHP-Nuke Rocket add-in is vulnerable to file traversal, allowing an attacker to view any file on the host.
++ /wp-app.log: Wordpress' wp-app.log may leak application/system details.
++ OSVDB-59001: /axis2/services/Version?xsd=../../../../../../../../../../../etc/passwd: Apache Axis2 contains a directory traversal in the Version program.
++ 6544 items checked: 0 error(s) and 153 item(s) reported on remote host
++ End Time:           2022-04-11 11:28:38 (GMT2) (345 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+Finished nikto scan
+
+=========================
+
+Starting gobuster scan
+
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.56.0:3500
+[+] Method:                  GET
+[+] Threads:                 30
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Expanded:                true
+[+] Timeout:                 10s
+===============================================================
+2022/04/11 11:28:38 Starting gobuster in directory enumeration mode
+===============================================================
+
+http://192.168.56.0:3500/404                  (Status: 200) [Size: 1564]
+
+http://192.168.56.0:3500/500                  (Status: 200) [Size: 1477]
+
+http://192.168.56.0:3500/favicon.ico          (Status: 200) [Size: 0]   
+
+http://192.168.56.0:3500/readme               (Status: 200) [Size: 1746]
+
+http://192.168.56.0:3500/robots.txt           (Status: 200) [Size: 202] 
+===============================================================
+2022/04/11 11:32:59 Finished
+===============================================================
+
+Finished gobuster scan
+
+=========================
+
+Starting nikto scan
+
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          192.168.56.0
++ Target Hostname:    192.168.56.0
++ Target Port:        8080
++ Start Time:         2022-04-11 11:32:59 (GMT2)
+---------------------------------------------------------------------------
++ Server: Jetty(8.1.7.v20120910)
++ The anti-clickjacking X-Frame-Options header is not present.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ 6544 items checked: 0 error(s) and 1 item(s) reported on remote host
++ End Time:           2022-04-11 11:33:12 (GMT2) (13 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+Finished nikto scan
+
+=========================
+
+Starting gobuster scan
+
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.56.0:8080
+[+] Method:                  GET
+[+] Threads:                 30
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Expanded:                true
+[+] Timeout:                 10s
+===============================================================
+2022/04/11 11:33:12 Starting gobuster in directory enumeration mode
+===============================================================
+
+http://192.168.56.0:8080/favicon.ico          (Status: 200) [Size: 1150]
+===============================================================
+2022/04/11 11:33:12 Finished
+===============================================================
+
+Finished gobuster scan
+
+=========================
+
+Starting nikto scan
+
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          192.168.56.0
++ Target Hostname:    192.168.56.0
++ Target Port:        80
++ Start Time:         2022-04-11 11:33:13 (GMT2)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.7 (Ubuntu)
++ The anti-clickjacking X-Frame-Options header is not present.
++ OSVDB-3268: /: Directory indexing found.
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ OSVDB-3268: /./: Directory indexing found.
++ OSVDB-3268: /?mod=node&nid=some_thing&op=view: Directory indexing found.
++ OSVDB-3268: /?mod=some_thing&op=browse: Directory indexing found.
++ /./: Appending '/./' to a directory allows indexing
++ OSVDB-3268: //: Directory indexing found.
++ //: Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.
++ OSVDB-3268: /?Open: Directory indexing found.
++ OSVDB-3268: /?OpenServer: Directory indexing found.
++ OSVDB-3268: /%2e/: Directory indexing found.
++ OSVDB-576: /%2e/: Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher. http://www.securityfocus.com/bid/2513.
++ OSVDB-3268: /?mod=<script>alert(document.cookie)</script>&op=browse: Directory indexing found.
++ OSVDB-3268: /?sql_debug=1: Directory indexing found.
++ OSVDB-3268: ///: Directory indexing found.
++ OSVDB-3268: /?PageServices: Directory indexing found.
++ OSVDB-119: /?PageServices: The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled. CVE-1999-0269.
++ OSVDB-3268: /?wp-cs-dump: Directory indexing found.
++ OSVDB-119: /?wp-cs-dump: The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled. CVE-1999-0269.
++ Cookie phpMyAdmin created without the httponly flag
++ Retrieved x-powered-by header: PHP/5.4.5
++ OSVDB-3268: ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////: Directory indexing found.
++ OSVDB-3288: ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////: Abyss 1.03 reveals directory listing when 	 /'s are requested.
++ OSVDB-3268: /?pattern=/etc/*&sort=name: Directory indexing found.
++ OSVDB-3268: /?D=A: Directory indexing found.
++ OSVDB-3268: /?N=D: Directory indexing found.
++ OSVDB-3268: /?S=A: Directory indexing found.
++ OSVDB-3268: /?M=A: Directory indexing found.
++ OSVDB-3268: /?\"><script>alert('Vulnerable');</script>: Directory indexing found.
++ Server leaks inodes via ETags, header found with file /icons/README, fields: 0x13f4 0x438c034968a80 
++ OSVDB-3233: /icons/README: Apache default file found.
++ OSVDB-3268: /?_CONFIG[files][functions_page]=http://cirt.net/rfiinc.txt?: Directory indexing found.
++ OSVDB-3268: /?npage=-1&content_dir=http://cirt.net/rfiinc.txt?%00&cmd=ls: Directory indexing found.
++ OSVDB-3268: /?npage=1&content_dir=http://cirt.net/rfiinc.txt?%00&cmd=ls: Directory indexing found.
++ OSVDB-3268: /?show=http://cirt.net/rfiinc.txt??: Directory indexing found.
++ /phpmyadmin/: phpMyAdmin directory found
++ OSVDB-3268: /?-s: Directory indexing found.
++ 6544 items checked: 0 error(s) and 38 item(s) reported on remote host
++ End Time:           2022-04-11 11:33:26 (GMT2) (13 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+Finished nikto scan
+
+=========================
+
+Starting gobuster scan
+
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.56.0:80
+[+] Method:                  GET
+[+] Threads:                 30
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Expanded:                true
+[+] Timeout:                 10s
+===============================================================
+2022/04/11 11:33:26 Starting gobuster in directory enumeration mode
+===============================================================
+
+http://192.168.56.0:80/.htaccess            (Status: 403) [Size: 288]
+
+http://192.168.56.0:80/.htpasswd            (Status: 403) [Size: 288]
+
+http://192.168.56.0:80/cgi-bin/             (Status: 403) [Size: 287]
+
+http://192.168.56.0:80/chat                 (Status: 301) [Size: 310] [--> http://192.168.56.0/chat/]
+
+http://192.168.56.0:80/drupal               (Status: 301) [Size: 312] [--> http://192.168.56.0/drupal/]
+
+http://192.168.56.0:80/.hta                 (Status: 403) [Size: 283]                                  
+
+http://192.168.56.0:80/phpmyadmin           (Status: 301) [Size: 316] [--> http://192.168.56.0/phpmyadmin/]
+
+http://192.168.56.0:80/server-status        (Status: 403) [Size: 292]                                      
+
+http://192.168.56.0:80/uploads              (Status: 301) [Size: 313] [--> http://192.168.56.0/uploads/]   
+===============================================================
+2022/04/11 11:33:31 Finished
+===============================================================
+
+Finished gobuster scan
+
+=========================
+
+Starting smbmap scan
+
+[\] Working on it...
+[+] Guest session   	IP: 192.168.56.0:445	Name: 192.168.56.0                                      
+[	] Working on it...
+[/] Working on it...
+[-] Working on it...
+[\] Working on it...
+[	] Working on it...
+[/] Working on it...
+[-] Working on it...
+                                
+	Disk                                                  	Permissions	Comment
+	----                                                  	-----------	-------
+	print$                                            	NO ACCESS	Printer Drivers
+	public                                            	NO ACCESS	WWW
+	IPC$                                              	NO ACCESS	IPC Service (metasploitable3-ub1404 server (Samba, Ubuntu))
+
+Finished smbmap scan
+
+=========================
+
+Starting smbclient scan
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	public          Disk      WWW
+	IPC$            IPC       IPC Service (metasploitable3-ub1404 server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available
+
+Finished smbclient scan
+
+=========================
+
+Starting enum4linux scan
+
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Mon Apr 11 11:33:33 2022
+
+ ========================== 
+	    Target Information    	
+ ========================== 
+Target ........... 192.168.56.0
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+ ==================================================== 
+	    Enumerating Workgroup/Domain on 192.168.56.0    	
+ ==================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ============================================ 
+	    Nbtstat Information for 192.168.56.0    	
+ ============================================ 
+Looking up status of 192.168.56.0
+	UBUNTU          <00> -         B <ACTIVE>  Workstation Service
+	UBUNTU          <03> -         B <ACTIVE>  Messenger Service
+	UBUNTU          <20> -         B <ACTIVE>  File Server Service
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+	WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+
+	MAC Address = 00-00-00-00-00-00
+
+ ===================================== 
+	    Session Check on 192.168.56.0    	
+ ===================================== 
+[+] Server 192.168.56.0 allows sessions using username '', password ''
+
+ =========================================== 
+	    Getting domain SID for 192.168.56.0    	
+ =========================================== 
+Domain Name: WORKGROUP
+Domain Sid: (NULL SID)
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ====================================== 
+	    OS information on 192.168.56.0    	
+ ====================================== 
+[+] Got OS info for 192.168.56.0 from smbclient: 
+[+] Got OS info for 192.168.56.0 from srvinfo:
+	UBUNTU         Wk Sv PrQ Unx NT SNT metasploitable3-ub1404 server (Samba, Ubuntu)
+	platform_id     :	500
+	os version      :	6.1
+	server type     :	0x809a03
+
+ ============================= 
+	    Users on 192.168.56.0    	
+ ============================= 
+index: 0x1 RID: 0x3e8 acb: 0x00000010 Account: chewbacca	Name: 	Desc: 
+
+user:[chewbacca] rid:[0x3e8]
+
+ ========================================= 
+	    Share Enumeration on 192.168.56.0    	
+ ========================================= 
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	public          Disk      WWW
+	IPC$            IPC       IPC Service (metasploitable3-ub1404 server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available
+
+[+] Attempting to map shares on 192.168.56.0
+//192.168.56.0/print$	Mapping: DENIED, Listing: N/A
+//192.168.56.0/public	Mapping: DENIED, Listing: N/A
+//192.168.56.0/IPC$	[E] Can't understand response:
+NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
+
+ ==================================================== 
+	    Password Policy Information for 192.168.56.0    	
+ ==================================================== 
+
+[+] Attaching to 192.168.56.0 using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+[+] Found domain(s):
+
+	[+] UBUNTU
+	[+] Builtin
+
+[+] Password Info for Domain: UBUNTU
+
+	[+] Minimum password length: 5
+	[+] Password history length: None
+	[+] Maximum password age: 37 days 6 hours 21 minutes 
+	[+] Password Complexity Flags: 000000
+
+		[+] Domain Refuse Password Change: 0
+		[+] Domain Password Store Cleartext: 0
+		[+] Domain Password Lockout Admins: 0
+		[+] Domain Password No Clear Change: 0
+		[+] Domain Password No Anon Change: 0
+		[+] Domain Password Complex: 0
+
+	[+] Minimum password age: None
+	[+] Reset Account Lockout Counter: 30 minutes 
+	[+] Locked Account Duration: 30 minutes 
+	[+] Account Lockout Threshold: None
+	[+] Forced Log off Time: 37 days 6 hours 21 minutes 
+
+[+] Retieved partial password policy with rpcclient:
+
+Password Complexity: Disabled
+Minimum Password Length: 5
+
+ ============================== 
+	    Groups on 192.168.56.0    	
+ ============================== 
+
+[+] Getting builtin groups:
+
+[+] Getting builtin group memberships:
+
+[+] Getting local groups:
+
+[+] Getting local group memberships:
+
+[+] Getting domain groups:
+
+[+] Getting domain group memberships:
+
+ ======================================================================= 
+	    Users on 192.168.56.0 via RID cycling (RIDS: 500-550,1000-1050)    	
+ ======================================================================= 
+[I] Found new SID: S-1-22-1
+[I] Found new SID: S-1-5-21-3428177880-3385132058-989088200
+[I] Found new SID: S-1-5-32
+[+] Enumerating users using SID S-1-22-1 and logon username '', password ''
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''
+S-1-5-32-500 *unknown*\*unknown* (8)
+S-1-5-32-501 *unknown*\*unknown* (8)
+S-1-5-32-502 *unknown*\*unknown* (8)
+S-1-5-32-503 *unknown*\*unknown* (8)
+S-1-5-32-504 *unknown*\*unknown* (8)
+S-1-5-32-505 *unknown*\*unknown* (8)
+S-1-5-32-506 *unknown*\*unknown* (8)
+S-1-5-32-507 *unknown*\*unknown* (8)
+S-1-5-32-508 *unknown*\*unknown* (8)
+S-1-5-32-509 *unknown*\*unknown* (8)
+S-1-5-32-510 *unknown*\*unknown* (8)
+S-1-5-32-511 *unknown*\*unknown* (8)
+S-1-5-32-512 *unknown*\*unknown* (8)
+S-1-5-32-513 *unknown*\*unknown* (8)
+S-1-5-32-514 *unknown*\*unknown* (8)
+S-1-5-32-515 *unknown*\*unknown* (8)
+S-1-5-32-516 *unknown*\*unknown* (8)
+S-1-5-32-517 *unknown*\*unknown* (8)
+S-1-5-32-518 *unknown*\*unknown* (8)
+S-1-5-32-519 *unknown*\*unknown* (8)
+S-1-5-32-520 *unknown*\*unknown* (8)
+S-1-5-32-521 *unknown*\*unknown* (8)
+S-1-5-32-522 *unknown*\*unknown* (8)
+S-1-5-32-523 *unknown*\*unknown* (8)
+S-1-5-32-524 *unknown*\*unknown* (8)
+S-1-5-32-525 *unknown*\*unknown* (8)
+S-1-5-32-526 *unknown*\*unknown* (8)
+S-1-5-32-527 *unknown*\*unknown* (8)
+S-1-5-32-528 *unknown*\*unknown* (8)
+S-1-5-32-529 *unknown*\*unknown* (8)
+S-1-5-32-530 *unknown*\*unknown* (8)
+S-1-5-32-531 *unknown*\*unknown* (8)
+S-1-5-32-532 *unknown*\*unknown* (8)
+S-1-5-32-533 *unknown*\*unknown* (8)
+S-1-5-32-534 *unknown*\*unknown* (8)
+S-1-5-32-535 *unknown*\*unknown* (8)
+S-1-5-32-536 *unknown*\*unknown* (8)
+S-1-5-32-537 *unknown*\*unknown* (8)
+S-1-5-32-538 *unknown*\*unknown* (8)
+S-1-5-32-539 *unknown*\*unknown* (8)
+S-1-5-32-540 *unknown*\*unknown* (8)
+S-1-5-32-541 *unknown*\*unknown* (8)
+S-1-5-32-542 *unknown*\*unknown* (8)
+S-1-5-32-543 *unknown*\*unknown* (8)
+S-1-5-32-544 BUILTIN\Administrators (Local Group)
+S-1-5-32-545 BUILTIN\Users (Local Group)
+S-1-5-32-546 BUILTIN\Guests (Local Group)
+S-1-5-32-547 BUILTIN\Power Users (Local Group)
+S-1-5-32-548 BUILTIN\Account Operators (Local Group)
+S-1-5-32-549 BUILTIN\Server Operators (Local Group)
+S-1-5-32-550 BUILTIN\Print Operators (Local Group)
+S-1-5-32-1000 *unknown*\*unknown* (8)
+S-1-5-32-1001 *unknown*\*unknown* (8)
+S-1-5-32-1002 *unknown*\*unknown* (8)
+S-1-5-32-1003 *unknown*\*unknown* (8)
+S-1-5-32-1004 *unknown*\*unknown* (8)
+S-1-5-32-1005 *unknown*\*unknown* (8)
+S-1-5-32-1006 *unknown*\*unknown* (8)
+S-1-5-32-1007 *unknown*\*unknown* (8)
+S-1-5-32-1008 *unknown*\*unknown* (8)
+S-1-5-32-1009 *unknown*\*unknown* (8)
+S-1-5-32-1010 *unknown*\*unknown* (8)
+S-1-5-32-1011 *unknown*\*unknown* (8)
+S-1-5-32-1012 *unknown*\*unknown* (8)
+S-1-5-32-1013 *unknown*\*unknown* (8)
+S-1-5-32-1014 *unknown*\*unknown* (8)
+S-1-5-32-1015 *unknown*\*unknown* (8)
+S-1-5-32-1016 *unknown*\*unknown* (8)
+S-1-5-32-1017 *unknown*\*unknown* (8)
+S-1-5-32-1018 *unknown*\*unknown* (8)
+S-1-5-32-1019 *unknown*\*unknown* (8)
+S-1-5-32-1020 *unknown*\*unknown* (8)
+S-1-5-32-1021 *unknown*\*unknown* (8)
+S-1-5-32-1022 *unknown*\*unknown* (8)
+S-1-5-32-1023 *unknown*\*unknown* (8)
+S-1-5-32-1024 *unknown*\*unknown* (8)
+S-1-5-32-1025 *unknown*\*unknown* (8)
+S-1-5-32-1026 *unknown*\*unknown* (8)
+S-1-5-32-1027 *unknown*\*unknown* (8)
+S-1-5-32-1028 *unknown*\*unknown* (8)
+S-1-5-32-1029 *unknown*\*unknown* (8)
+S-1-5-32-1030 *unknown*\*unknown* (8)
+S-1-5-32-1031 *unknown*\*unknown* (8)
+S-1-5-32-1032 *unknown*\*unknown* (8)
+S-1-5-32-1033 *unknown*\*unknown* (8)
+S-1-5-32-1034 *unknown*\*unknown* (8)
+S-1-5-32-1035 *unknown*\*unknown* (8)
+S-1-5-32-1036 *unknown*\*unknown* (8)
+S-1-5-32-1037 *unknown*\*unknown* (8)
+S-1-5-32-1038 *unknown*\*unknown* (8)
+S-1-5-32-1039 *unknown*\*unknown* (8)
+S-1-5-32-1040 *unknown*\*unknown* (8)
+S-1-5-32-1041 *unknown*\*unknown* (8)
+S-1-5-32-1042 *unknown*\*unknown* (8)
+S-1-5-32-1043 *unknown*\*unknown* (8)
+S-1-5-32-1044 *unknown*\*unknown* (8)
+S-1-5-32-1045 *unknown*\*unknown* (8)
+S-1-5-32-1046 *unknown*\*unknown* (8)
+S-1-5-32-1047 *unknown*\*unknown* (8)
+S-1-5-32-1048 *unknown*\*unknown* (8)
+S-1-5-32-1049 *unknown*\*unknown* (8)
+S-1-5-32-1050 *unknown*\*unknown* (8)
+[+] Enumerating users using SID S-1-5-21-3428177880-3385132058-989088200 and logon username '', password ''
+S-1-5-21-3428177880-3385132058-989088200-500 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-501 UBUNTU\nobody (Local User)
+S-1-5-21-3428177880-3385132058-989088200-502 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-503 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-504 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-505 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-506 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-507 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-508 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-509 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-510 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-511 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-512 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-513 UBUNTU\None (Domain Group)
+S-1-5-21-3428177880-3385132058-989088200-514 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-515 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-516 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-517 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-518 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-519 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-520 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-521 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-522 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-523 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-524 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-525 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-526 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-527 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-528 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-529 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-530 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-531 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-532 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-533 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-534 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-535 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-536 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-537 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-538 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-539 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-540 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-541 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-542 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-543 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-544 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-545 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-546 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-547 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-548 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-549 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-550 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1000 UBUNTU\chewbacca (Local User)
+S-1-5-21-3428177880-3385132058-989088200-1001 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1002 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1003 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1004 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1005 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1006 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1007 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1008 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1009 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1010 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1011 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1012 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1013 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1014 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1015 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1016 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1017 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1018 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1019 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1020 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1021 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1022 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1023 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1024 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1025 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1026 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1027 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1028 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1029 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1030 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1031 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1032 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1033 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1034 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1035 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1036 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1037 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1038 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1039 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1040 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1041 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1042 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1043 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1044 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1045 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1046 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1047 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1048 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1049 *unknown*\*unknown* (8)
+S-1-5-21-3428177880-3385132058-989088200-1050 *unknown*\*unknown* (8)
+
+ ============================================= 
+	    Getting printer info for 192.168.56.0    	
+ ============================================= 
+No printers returned.
+
+enum4linux complete on Mon Apr 11 11:33:48 2022
+
+Finished enum4linux scan
+
+=========================
+
+---------------------Finished all scans------------------------
+
+Completed in 23 minute(s) and 52 second(s)
+

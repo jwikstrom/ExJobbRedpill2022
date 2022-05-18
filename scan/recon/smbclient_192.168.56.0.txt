@@ -1,0 +1,7 @@
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	public          Disk      WWW
+	IPC$            IPC       IPC Service (metasploitable3-ub1404 server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available

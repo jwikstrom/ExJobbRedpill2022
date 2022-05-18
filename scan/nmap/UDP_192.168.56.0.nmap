@@ -1,0 +1,12 @@
+# Nmap 7.92 scan initiated Mon Apr 11 11:13:46 2022 as: /usr/bin/nmap -sU --max-retries 1 --open --open -oN nmap/UDP_192.168.56.0.nmap --system-dns --stats-every 3s 192.168.56.0
+Warning: 192.168.56.0 giving up on port because retransmission cap hit (1).
+Nmap scan report for 192.168.56.0
+Host is up (0.00054s latency).
+Not shown: 982 open|filtered udp ports (no-response), 15 closed udp ports (port-unreach)
+PORT     STATE SERVICE
+111/udp  open  rpcbind
+137/udp  open  netbios-ns
+5353/udp open  zeroconf
+MAC Address: 08:00:27:B1:8A:D5 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Mon Apr 11 11:13:57 2022 -- 1 IP address (1 host up) scanned in 11.28 seconds

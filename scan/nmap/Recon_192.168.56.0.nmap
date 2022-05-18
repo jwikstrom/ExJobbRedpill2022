@@ -1,0 +1,24 @@
+[0;32m---------------------Recon Recommendations---------------------
+[0m
+[0m
+[0;33mWeb Servers Recon:
+[0m
+nikto -host "http://192.168.56.0:3500" | tee "recon/nikto_192.168.56.0_3500.txt"
+gobuster dir -w /usr/share/wordlists/dirb/common.txt -t 30 -ekx '' -u "http://192.168.56.0:3500" -o "recon/gobuster_192.168.56.0_3500.txt"
+
+nikto -host "http://192.168.56.0:8080" | tee "recon/nikto_192.168.56.0_8080.txt"
+gobuster dir -w /usr/share/wordlists/dirb/common.txt -t 30 -ekx '' -u "http://192.168.56.0:8080" -o "recon/gobuster_192.168.56.0_8080.txt"
+
+nikto -host "http://192.168.56.0:80" | tee "recon/nikto_192.168.56.0_80.txt"
+gobuster dir -w /usr/share/wordlists/dirb/common.txt -t 30 -ekx '' -u "http://192.168.56.0:80" -o "recon/gobuster_192.168.56.0_80.txt"
+
+[0m
+[0;33mSMB Recon:
+[0m
+smbmap -H "192.168.56.0" | tee "recon/smbmap_192.168.56.0.txt"
+smbclient -L "//192.168.56.0/" -U "guest"% | tee "recon/smbclient_192.168.56.0.txt"
+enum4linux -a "192.168.56.0" | tee "recon/enum4linux_192.168.56.0.txt"
+
+
+
+

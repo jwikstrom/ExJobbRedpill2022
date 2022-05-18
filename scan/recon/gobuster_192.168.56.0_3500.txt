@@ -1,0 +1,5 @@
+http://192.168.56.0:3500/404                  (Status: 200) [Size: 1564]
+http://192.168.56.0:3500/500                  (Status: 200) [Size: 1477]
+http://192.168.56.0:3500/favicon.ico          (Status: 200) [Size: 0]
+http://192.168.56.0:3500/readme               (Status: 200) [Size: 1746]
+http://192.168.56.0:3500/robots.txt           (Status: 200) [Size: 202]
