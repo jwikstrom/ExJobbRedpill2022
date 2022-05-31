@@ -11,13 +11,13 @@ NC='\033[0m'
 K2 = '\033[2K'
 A2 = '[2A'#\e[2A
 L = '|'
-U = '\t_'
+U = '|_'
 
 def replacer(line):    
     if(line.startswith('[#') or "In progress" in line):
         return ""
 
-    replacements = {RED:"", YELLOW:"", GREEN:"",NC:"", OK:"", A2:"", L:"\t", K2:""}
+    replacements = {RED:"", YELLOW:"", GREEN:"",NC:"", OK:"", A2:"", L:" ", K2:"", U:"  "}
     rep_sorted = sorted(replacements, key=len, reverse=True)
     rep_escaped = map(re.escape, rep_sorted)
     

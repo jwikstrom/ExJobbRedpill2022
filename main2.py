@@ -18,13 +18,45 @@ fileout = "fileout.txt"
 cdir = os.getcwd()
 state = "START"
 
-
-
 def pairwise(iterable):
     "s -> (s0,s1), (s1,s2), (s2, s3), ..."
     a, b = tee(iterable)
     next(b, None)
     return zip(a, b)
+
+def indentReader(lines):
+    indentation = []
+    data = []
+    data.append([])
+    indentation.append(0)
+    depth = 0
+
+    for line in lines:
+        line = line[:-1]
+
+        content = line.strip()
+        indent = len(line) - len(line.lstrip())
+        if indent > indentation[-1]:
+            depth += 1
+            indentation.append(indent)
+            data.append([])
+
+        elif indent < indentation[-1]:
+            while indent < indentation[-1]:
+                depth -= 1
+                indentation.pop()
+                top = data.pop()
+                data[-1].append(top)
+
+            if indent != indentation[-1]:
+                raise RuntimeError("Bad formatting")
+
+        data[-1].append(content)
+
+    while len(data) > 1:
+        top = data.pop()
+        data[-1].append(top)
+    return data[0]
 
 def likelyHost(lines):
     #do stuff
@@ -52,18 +84,20 @@ def portScan(lines):
     log.out("----- FINISHED portScan -----")
     return
 
+
+""" 
 def scriptRecurs(line, nextLine, lines):
     pList = []
     if (re.match('^\s', nextLine)):
         print(f'NXTLN:{nextLine}')
         line, nextLine = next(lines)
         pList.append(line)
-        nextSpaces = len(nextLine) - len(nextLine.lstrip(" "))
-        currSpaces = len(line) - len(line.lstrip(" "))
+        nextSpaces = tab_lvl(nextLine)
+        currSpaces = tab_lvl(line)
         if nextSpaces > currSpaces:
-            lvl = lvl +1
+            pass
         elif nextSpaces == currSpaces:
-            lvl = lvl -1
+            pass
             pass
         else:
             pass
@@ -79,7 +113,7 @@ def scriptScan(lines):
     lines = pairwise(iter(lines))
     for line, nextLine in lines:
         while (TRUE):
-            print(f'L:{line}, NL:{nextLine}')
+            #print(f'L:{line}, NL:{nextLine}')
             if(line[:1].isdigit()):
                 pss = line.split(maxsplit=3)
                 p = pss[0].strip()
@@ -95,12 +129,28 @@ def scriptScan(lines):
                     tmpList.append(rtrn)
                 portList.append(tmpList)
             else:
-                continue
+                break
                 
         
     print(portList)
     log.out("----- FINISHED scriptScan -----")
-    return
+    return """
+
+def print_list(lst, level=0):
+    for l in lst:
+        if type(l) is list:
+            print_list(l, level + 1)
+        else:
+            print('\t' * level + l)
+
+def scriptScan(lines):
+    log.out("----- STARTING scriptScan -----")
+    data = []
+
+    data.append(indentReader(lines))
+    print_list(data[0])
+    log.out("----- FINISHED scriptScan -----")
+
 def fullScan(lines):
     #do stuff
     log.out("----- STARTING fullScan -----")
@@ -166,7 +216,8 @@ def run():
             lines = []
             for line in fin:
                 if stateChange(line) == FALSE:
-                    lines.append(line)
+                    if not line.isspace():
+                        lines.append(line)
                 else:
                     log.out2(f'State is {state}')
                     if line and line.isspace():#om tom string
@@ -176,7 +227,8 @@ def run():
                     elif state == constants.SCRIPTSCAN:
                         portScan(lines)
                     elif state == constants.FULLSCAN:
-                        scriptScan(lines)
+                        scriptScanResult = scriptScan(lines)
+                        print(scriptScanResult)
                     elif state == constants.UDPSCAN:
                         fullScan(lines)
                     elif state == constants.VULNSSCAN:
