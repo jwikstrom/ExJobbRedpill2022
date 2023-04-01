@@ -61,6 +61,7 @@ def indentReader(lines):
         line = line[:-1]
 
         content = line.strip()
+        content = content.rstrip(':')
         indent = len(line) - len(line.lstrip())
         if indent > indentation[-1]:
             depth += 1
