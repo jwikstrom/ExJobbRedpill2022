@@ -1,4 +1,8 @@
+from asyncio import protocols
+from collections import defaultdict
+from ctypes import sizeof
 from curses.ascii import isspace
+from ensurepip import version
 import os
 from pickle import FALSE, TRUE
 import sys
@@ -7,7 +11,8 @@ import re
 import fileCleaner as cleaner
 import constants
 import log
-
+import pprint
+import json
 
 ip = "192.168.56.0"
 filename3 = "nmapAutomator_192.168.56.0_All.txt"
@@ -16,7 +21,28 @@ filename = "nmapAutomator_" + ip + "_All.txt"
 cleaned = "clean.txt"
 fileout = "fileout.txt"
 cdir = os.getcwd()
-state = "START"
+scanState = "START"
+
+unknown = "?"
+ports = "Ports"
+protocol = "Protocol"
+state = "State"
+service = "Service"
+vers = "Version"
+
+
+tree = lambda: defaultdict(tree)
+
+
+class Tree(defaultdict):
+    def __init__(self, value=None):
+        super(Tree, self).__init__(Tree)
+        self.value = value
+class Vividict(dict):
+    def __missing__(self, key):
+        value = self[key] = type(self)() # retain local pointer to value
+        return value                     # faster to return than dict lookup
+dict = tree()
 
 def pairwise(iterable):
     "s -> (s0,s1), (s1,s2), (s2, s3), ..."
@@ -67,20 +93,46 @@ def likelyHost(lines):
             print("LikelyHost : "+ likelyHost)
     log.out("----- FINISHED likelyHost -----")
     return
+
 def portScan(lines):
     lines = iter(lines)
     #do stuff
     log.out("----- STARTING portScan -----")
-    portList = []
+    data = []
+
+    data.append(indentReader(lines))
+    print(len(data))
+    print_list(data[0])
+    """portList = []
     for line in lines:
         if(line[:1].isdigit()):
             pss = line.split()
-            p = pss[0].strip()
+            pp = pss[0].strip().split("/")
+            prt = pp[0]
+            proto = pp[1]
             st = pss[1].strip()
             se = pss[2].strip()
-            tmpList = (p, st, se)
+            tmpList = (prt, proto, st, se)
             portList.append(tmpList)
+            
+            #ps = "portScan"
+            #dict[ports][prt][protocol][ps] = proto
+            #dict[ports][prt][state][ps] = st
+            #dict[ports][prt][service][ps] = se
+            #dict[ports][prt][vers][ps] = unknown
+            
+            #tmpDict["Protocol"].append(prot)
+            #tmpDict["State"].append(st)
+            #tmpDict["Service"].append(se)
+            #tmpDict["Version"]
+            #print("---------items------")
+            #print(tmpDict.items())
+            #dict[port] = tmpDict.items()
     print(portList)
+    """
+    #pprint.pprint(dict, indent = 1)
+    #print(dict.items())
+    #pprint.pp(json.dumps(dict))
     log.out("----- FINISHED portScan -----")
     return
 
@@ -145,10 +197,14 @@ def print_list(lst, level=0):
 
 def scriptScan(lines):
     log.out("----- STARTING scriptScan -----")
+    for line in lines:
+        print(line)
     data = []
 
     data.append(indentReader(lines))
+    print(len(data))
     print_list(data[0])
+    #Om content börjar med 
     log.out("----- FINISHED scriptScan -----")
 
 def fullScan(lines):
@@ -189,23 +245,28 @@ def clearJunk():
     with open (cdir +"/scan/"+filename, "rt" ) as fin:
         with open(cleaned, "wt") as fout:
             for line in fin:
-                newLine = cleaner.replacer(line)
-                #print(newLine)
-                
-                if newLine and newLine.isspace():#om tom string
-                    if oldLine.isspace():
-                        continue
-                else: newLine= newLine.rstrip(" ")
-                oldLine = newLine
-                fout.write(newLine)
+                newLines = []
+                updatedLine = cleaner.replacer(line)
+                if(type(updatedLine) is list):
+                    newLines.extend(updatedLine)
+                else:
+                    newLines.append(updatedLine)
+                for newLine in newLines:
+                    #print("line: " + newLine)
+                    if newLine and newLine.isspace():#om tom string
+                        if oldLine.isspace():
+                            continue
+                    else: newLine= newLine.rstrip(" ")
+                    oldLine = newLine
+                    fout.write(newLine)
             
 
 def stateChange(line):
-    #Match line with state and change state
-    global state
+    #Match line with scanState and change scanState
+    global scanState
     for s in constants.Scans:
         if s in line.strip():
-            state = s
+            scanState = s
             return TRUE
     
     return FALSE
@@ -219,23 +280,23 @@ def run():
                     if not line.isspace():
                         lines.append(line)
                 else:
-                    log.out2(f'State is {state}')
+                    log.out2(f'scanState is {scanState}')
                     if line and line.isspace():#om tom string
                         log.out("Error, line match is empty")
-                    elif state == constants.PORTSCAN:
+                    elif scanState == constants.PORTSCAN:
                         likelyHost(lines)
-                    elif state == constants.SCRIPTSCAN:
+                    elif scanState == constants.SCRIPTSCAN:
                         portScan(lines)
-                    elif state == constants.FULLSCAN:
+                    elif scanState == constants.FULLSCAN:
                         scriptScanResult = scriptScan(lines)
                         print(scriptScanResult)
-                    elif state == constants.UDPSCAN:
+                    elif scanState == constants.UDPSCAN:
                         fullScan(lines)
-                    elif state == constants.VULNSSCAN:
+                    elif scanState == constants.VULNSSCAN:
                         udpScan(lines)
-                    elif state == constants.RECONREC:
+                    elif scanState == constants.RECONREC:
                         vulnsScan(lines)
-                    elif state == constants.RUNREC:
+                    elif scanState == constants.RUNREC:
                         reconRec(lines)
                     lines = []
                     #fout.write(line)

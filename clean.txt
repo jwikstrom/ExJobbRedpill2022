@@ -30,15 +30,18 @@ PORT     STATE SERVICE     VERSION
     256 c0:49:cc:18:7b:27:a4:07:0d:2a:0d:bb:42:4c:36:17 (ECDSA)
     256 a0:76:f3:76:f8:f0:70:4d:09:ca:e1:10:fd:a9:cc:0a (ED25519)
 80/tcp   open  http        Apache httpd 2.4.7
-  http-ls: Volume /
+  http-ls
+    Volume /
   SIZE  TIME              FILENAME
   -     2020-10-29 19:37  chat/
   -     2011-07-27 20:17  drupal/
   1.7K  2020-10-29 19:37  payroll_app.php
   -     2013-04-08 12:06  phpmyadmin/
   
-  http-server-header: Apache/2.4.7 (Ubuntu)
-  http-title: Index of /
+  http-server-header
+    Apache/2.4.7 (Ubuntu)
+  http-title
+    Index of /
 111/tcp  open  rpcbind     2-4 (RPC #100000)
   rpcinfo: 
     program version    port/proto  service
@@ -54,44 +57,93 @@ PORT     STATE SERVICE     VERSION
 445/tcp  open  netbios-ssn Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
 631/tcp  open  ipp         CUPS 1.7
   http-methods: 
-    Potentially risky methods: PUT
-  http-server-header: CUPS/1.7 IPP/2.1
-  http-robots.txt: 1 disallowed entry 
+    Potentially risky methods
+      PUT
+  http-server-header
+    CUPS/1.7 IPP/2.1
+  http-robots.txt
+    1 disallowed entry 
   /
-  http-title: Home - CUPS 1.7.2
+  http-title
+    Home - CUPS 1.7.2
 3306/tcp open  mysql       MySQL (unauthorized)
-  ssl-date: ERROR: Script execution failed (use -d to debug)
-  sslv2: ERROR: Script execution failed (use -d to debug)
-  tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
-  tls-alpn: ERROR: Script execution failed (use -d to debug)
-  ssl-cert: ERROR: Script execution failed (use -d to debug)
+  ssl-date
+    ERROR
+      Script execution failed (use -d to debug)
+  sslv2
+    ERROR
+      Script execution failed (use -d to debug)
+  tls-nextprotoneg
+    ERROR
+      Script execution failed (use -d to debug)
+  tls-alpn
+    ERROR
+      Script execution failed (use -d to debug)
+  ssl-cert
+    ERROR
+      Script execution failed (use -d to debug)
 6667/tcp open  irc         UnrealIRCd
 8080/tcp open  http        Jetty 8.1.7.v20120910
-  http-server-header: Jetty(8.1.7.v20120910)
-  http-title: Error 404 - Not Found
-Service Info: Hosts: 127.0.1.1, UBUNTU, irc.TestIRC.net; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+  http-server-header
+    Jetty(8.1.7.v20120910)
+  http-title
+    Error 404 - Not Found
+Service Info
+  Hosts
+    127.0.1.1
+    UBUNTU
+    irc.TestIRC.net
+  OSs
+    Unix
+    Linux
+  CPE
+    cpe:/o:linux:linux_kernel
 
 Host script results:
-  nbstat: NetBIOS name: UBUNTU, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
-  clock-skew: mean: -1m33s, deviation: 0s, median: -1m33s
+  nbstat
+    NetBIOS name
+      UBUNTU
+    NetBIOS user
+      <unknown>
+    NetBIOS MAC
+      <unknown> (unknown)
+  clock-skew
+    mean
+      -1m33s
+    deviation
+      0s
+    median
+      -1m33s
   smb2-security-mode: 
     3.1.1: 
       Message signing enabled but not required
   smb-os-discovery: 
-    OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
-    Computer name: metasploitable3-ub1404
-    NetBIOS computer name: UBUNTU\x00
-    Domain name: \x00
-    FQDN: metasploitable3-ub1404
-    System time: 2022-04-11T09:08:36+00:00
+    OS
+      Windows 6.1 (Samba 4.3.11-Ubuntu)
+    Computer name
+      metasploitable3-ub1404
+    NetBIOS computer name
+      UBUNTU\x00
+    Domain name
+      \x00
+    FQDN
+      metasploitable3-ub1404
+    System time
+      2022-04-11T09:08:36+00:00
   smb2-time: 
-    date: 2022-04-11T09:08:36
-    start_date: N/A
+    date
+      2022-04-11T09:08:36
+    start_date
+      N/A
   smb-security-mode: 
-    account_used: guest
-    authentication_level: user
-    challenge_response: supported
-    message_signing: disabled (dangerous, but default)
+    account_used
+      guest
+    authentication_level
+      user
+    challenge_response
+      supported
+    message_signing
+      disabled (dangerous, but default)
 
 ---------------------Starting Full Scan------------------------
 
@@ -112,19 +164,29 @@ PORT      STATE SERVICE
 8080/tcp  open  http-proxy
 49094/tcp open  unknown
 
-Making a script scan on extra ports: 3500, 6697, 8067, 49094
+Making a script scan on extra ports
+  3500
+  6697
+  8067
+  49094
 
 
 PORT      STATE SERVICE VERSION
 3500/tcp  open  http    WEBrick httpd 1.3.1 (Ruby 2.3.8 (2018-10-18))
-  http-title: Ruby on Rails: Welcome aboard
-  http-robots.txt: 1 disallowed entry 
+  http-title
+    Ruby on Rails
+      Welcome aboard
+  http-robots.txt
+    1 disallowed entry 
   /
-  http-server-header: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
+  http-server-header
+    WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
 6697/tcp  open  irc     UnrealIRCd
 8067/tcp  open  irc     UnrealIRCd
 49094/tcp open  status  1 (RPC #100024)
-Service Info: Host: irc.TestIRC.net
+Service Info
+  Host
+    irc.TestIRC.net
 
 ----------------------Starting UDP Scan------------------------
 
@@ -135,9 +197,13 @@ PORT     STATE SERVICE
 111/udp  open  rpcbind
 137/udp  open  netbios-ns
 5353/udp open  zeroconf
-MAC Address: 08:00:27:B1:8A:D5 (Oracle VirtualBox virtual NIC)
+MAC Address
+  08:00:27:B1:8A:D5 (Oracle VirtualBox virtual NIC)
 
-Making a script scan on UDP ports: 111, 137, 5353
+Making a script scan on UDP ports
+  111
+  137
+  5353
 
 
 PORT     STATE SERVICE    VERSION
@@ -154,8 +220,11 @@ PORT     STATE SERVICE    VERSION
     100024  1          53248/tcp6  status
 137/udp  open  netbios-ns Samba nmbd netbios-ns (workgroup: WORKGROUP)
 5353/udp open  mdns       DNS-based service discovery
-MAC Address: 08:00:27:B1:8A:D5 (Oracle VirtualBox virtual NIC)
-Service Info: Host: UBUNTU
+MAC Address
+  08:00:27:B1:8A:D5 (Oracle VirtualBox virtual NIC)
+Service Info
+  Host
+    UBUNTU
 
 ---------------------Starting Vulns Scan-----------------------
 
@@ -196,7 +265,8 @@ PORT      STATE SERVICE     VERSION
       	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
       	MSF:ILITIES/ALPINE-LINUX-CVE-2015-6563/	1.9	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2015-6563/	*EXPLOIT*
 80/tcp    open  http        Apache httpd 2.4.7
-  http-server-header: Apache/2.4.7 (Ubuntu)
+  http-server-header
+    Apache/2.4.7 (Ubuntu)
   vulners: 
     cpe:/a:apache:http_server:2.4.7: 
       	E899CC4B-A3FD-5288-BB62-A4201F93FDCC	10.0	https://vulners.com/githubexploit/E899CC4B-A3FD-5288-BB62-A4201F93FDCC	*EXPLOIT*
@@ -293,14 +363,16 @@ PORT      STATE SERVICE     VERSION
 139/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
 445/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
 631/tcp   open  ipp         CUPS 1.7
-  http-server-header: CUPS/1.7 IPP/2.1
+  http-server-header
+    CUPS/1.7 IPP/2.1
   vulners: 
     cpe:/a:apple:cups:1.7: 
       	MSF:POST/MULTI/ESCALATE/CUPS_ROOT_FILE_READ	7.2	https://vulners.com/metasploit/MSF:POST/MULTI/ESCALATE/CUPS_ROOT_FILE_READ	*EXPLOIT*
       	CVE-2012-5519	7.2	https://vulners.com/cve/CVE-2012-5519
 3306/tcp  open  mysql       MySQL (unauthorized)
 3500/tcp  open  http        WEBrick httpd 1.3.1 (Ruby 2.3.8 (2018-10-18))
-  http-server-header: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
+  http-server-header
+    WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
   vulners: 
     cpe:/a:ruby-lang:ruby:2.3.8: 
       	MSF:ILITIES/APPLE-OSX-RUBY-CVE-2015-7551/	7.5	https://vulners.com/metasploit/MSF:ILITIES/APPLE-OSX-RUBY-CVE-2015-7551/	*EXPLOIT*
@@ -308,9 +380,18 @@ PORT      STATE SERVICE     VERSION
 6697/tcp  open  irc         UnrealIRCd (Admin email admin@TestIRC.net)
 8067/tcp  open  irc         UnrealIRCd (Admin email admin@TestIRC.net)
 8080/tcp  open  http        Jetty 8.1.7.v20120910
-  http-server-header: Jetty(8.1.7.v20120910)
+  http-server-header
+    Jetty(8.1.7.v20120910)
 49094/tcp open  status      1 (RPC #100024)
-Service Info: Hosts: 127.0.1.1, UBUNTU; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+Service Info
+  Hosts
+    127.0.1.1
+    UBUNTU
+  OSs
+    Unix
+    Linux
+  CPE
+    cpe:/o:linux:linux_kernel
 
 Running Vuln scan on all ports
 This may take a while, depending on the number of detected services..
@@ -364,7 +445,8 @@ PORT      STATE SERVICE     VERSION
       	MSF:ILITIES/ALPINE-LINUX-CVE-2015-6563/	1.9	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2015-6563/	*EXPLOIT*
       	CVE-2015-6563	1.9	https://vulners.com/cve/CVE-2015-6563
 80/tcp    open  http        Apache httpd 2.4.7
-  http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+  http-stored-xss
+    Couldn't find any stored XSS vulnerabilities.
   vulners: 
     cpe:/a:apache:http_server:2.4.7: 
       	E899CC4B-A3FD-5288-BB62-A4201F93FDCC	10.0	https://vulners.com/githubexploit/E899CC4B-A3FD-5288-BB62-A4201F93FDCC	*EXPLOIT*
@@ -491,22 +573,28 @@ PORT      STATE SERVICE     VERSION
   http-slowloris-check: 
     VULNERABLE:
     Slowloris DOS attack
-      State: LIKELY VULNERABLE
+      State
+        LIKELY VULNERABLE
       IDs:  CVE:CVE-2007-6750
         Slowloris tries to keep many connections to the target web server open and hold
         them open as long as possible.  It accomplishes this by opening connections to
         the target web server and sending a partial request. By doing so, it starves
         the http server's resources causing Denial Of Service.
         
-      Disclosure date: 2009-09-17
+      Disclosure date
+        2009-09-17
       References:
         http://ha.ckers.org/slowloris/
         https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
   http-enum: 
-    /: Root directory w/ listing on 'apache/2.4.7 (ubuntu)'
-    /phpmyadmin/: phpMyAdmin
-    /uploads/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
-  http-dombased-xss: Couldn't find any DOM based XSS.
+    /
+      Root directory w/ listing on 'apache/2.4.7 (ubuntu)'
+    /phpmyadmin/
+      phpMyAdmin
+    /uploads/
+      Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+  http-dombased-xss
+    Couldn't find any DOM based XSS.
   http-sql-injection: 
     Possible sqli for queries:
       http://192.168.56.0:80/?C=D%3BO%3DA%27%20OR%20sqlspider
@@ -530,41 +618,68 @@ PORT      STATE SERVICE     VERSION
       http://192.168.56.0:80/?C=N%3BO%3DA%27%20OR%20sqlspider
       http://192.168.56.0:80/?C=M%3BO%3DD%27%20OR%20sqlspider
   http-csrf: 
-  Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.56.0
+  Spidering limited to
+    maxdepth=3
+  maxpagecount=20
+withinhost=192.168.56.0
     Found the following possible CSRF vulnerabilities: 
       
-      Path: http://192.168.56.0:80/chat/
-      Form id: name
-      Form action: index.php
+      Path
+        http://192.168.56.0:80/chat/
+      Form id
+        name
+      Form action
+        index.php
       
-      Path: http://192.168.56.0:80/drupal/
-      Form id: user-login-form
-      Form action: /drupal/?q=node&destination=node
+      Path
+        http://192.168.56.0:80/drupal/
+      Form id
+        user-login-form
+      Form action
+        /drupal/?q=node&destination=node
       
-      Path: http://192.168.56.0:80/payroll_app.php
+      Path
+        http://192.168.56.0:80/payroll_app.php
       Form id: 
       Form action: 
       
-      Path: http://192.168.56.0:80/chat/index.php
-      Form id: name
-      Form action: index.php
+      Path
+        http://192.168.56.0:80/chat/index.php
+      Form id
+        name
+      Form action
+        index.php
       
-      Path: http://192.168.56.0:80/drupal/?q=node&amp;destination=node
-      Form id: user-login-form
-      Form action: /drupal/?q=node&destination=node%3Famp%253Bdestination%3Dnode
+      Path
+        http://192.168.56.0:80/drupal/?q=node&amp
+          destination=node
+      Form id
+        user-login-form
+      Form action
+        /drupal/?q=node&destination=node%3Famp%253Bdestination%3Dnode
       
-      Path: http://192.168.56.0:80/drupal/?q=user/password
-      Form id: user-pass
-      Form action: /drupal/?q=user/password
+      Path
+        http://192.168.56.0:80/drupal/?q=user/password
+      Form id
+        user-pass
+      Form action
+        /drupal/?q=user/password
       
-      Path: http://192.168.56.0:80/drupal/?q=node/1
-      Form id: user-login-form
-      Form action: /drupal/?q=node/1&destination=node/1
+      Path
+        http://192.168.56.0:80/drupal/?q=node/1
+      Form id
+        user-login-form
+      Form action
+        /drupal/?q=node/1&destination=node/1
       
-      Path: http://192.168.56.0:80/drupal/?q=user/register
-      Form id: user-register-form
-      Form action: /drupal/?q=user/register
-  http-server-header: Apache/2.4.7 (Ubuntu)
+      Path
+        http://192.168.56.0:80/drupal/?q=user/register
+      Form id
+        user-register-form
+      Form action
+        /drupal/?q=user/register
+  http-server-header
+    Apache/2.4.7 (Ubuntu)
 111/tcp   open  rpcbind     2-4 (RPC #100000)
   rpcinfo: 
     program version    port/proto  service
@@ -591,285 +706,556 @@ PORT      STATE SERVICE     VERSION
       	SECURITYVULNS:VULN:13530	1.2	https://vulners.com/securityvulns/SECURITYVULNS:VULN:13530
       	CVE-2014-3537	1.2	https://vulners.com/cve/CVE-2014-3537
       	CVE-2013-6891	1.2	https://vulners.com/cve/CVE-2013-6891
-  http-server-header: CUPS/1.7 IPP/2.1
+  http-server-header
+    CUPS/1.7 IPP/2.1
   http-enum: 
-    /admin.php: Possible admin folder
-    /admin/: Possible admin folder
-    /admin/admin/: Possible admin folder
-    /administrator/: Possible admin folder
-    /adminarea/: Possible admin folder
-    /adminLogin/: Possible admin folder
-    /admin_area/: Possible admin folder
-    /administratorlogin/: Possible admin folder
-    /admin/account.php: Possible admin folder
-    /admin/index.php: Possible admin folder
-    /admin/login.php: Possible admin folder
-    /admin/admin.php: Possible admin folder
-    /admin_area/admin.php: Possible admin folder
-    /admin_area/login.php: Possible admin folder
-    /admin/index.html: Possible admin folder
-    /admin/login.html: Possible admin folder
-    /admin/admin.html: Possible admin folder
-    /admin_area/index.php: Possible admin folder
-    /admin/home.php: Possible admin folder
-    /admin_area/login.html: Possible admin folder
-    /admin_area/index.html: Possible admin folder
-    /admin/controlpanel.php: Possible admin folder
-    /admincp/: Possible admin folder
-    /admincp/index.asp: Possible admin folder
-    /admincp/index.html: Possible admin folder
-    /admincp/login.php: Possible admin folder
-    /admin/account.html: Possible admin folder
-    /adminpanel.html: Possible admin folder
-    /admin/admin_login.html: Possible admin folder
-    /admin_login.html: Possible admin folder
-    /admin/cp.php: Possible admin folder
-    /administrator/index.php: Possible admin folder
-    /administrator/login.php: Possible admin folder
-    /admin/admin_login.php: Possible admin folder
-    /admin_login.php: Possible admin folder
-    /administrator/account.php: Possible admin folder
-    /administrator.php: Possible admin folder
-    /admin_area/admin.html: Possible admin folder
-    /admin/admin-login.php: Possible admin folder
-    /admin-login.php: Possible admin folder
-    /admin/home.html: Possible admin folder
-    /admin/admin-login.html: Possible admin folder
-    /admin-login.html: Possible admin folder
-    /admincontrol.php: Possible admin folder
-    /admin/adminLogin.html: Possible admin folder
-    /adminLogin.html: Possible admin folder
-    /adminarea/index.html: Possible admin folder
-    /adminarea/admin.html: Possible admin folder
-    /admin/controlpanel.html: Possible admin folder
-    /admin.html: Possible admin folder
-    /admin/cp.html: Possible admin folder
-    /adminpanel.php: Possible admin folder
-    /administrator/index.html: Possible admin folder
-    /administrator/login.html: Possible admin folder
-    /administrator/account.html: Possible admin folder
-    /administrator.html: Possible admin folder
-    /adminarea/login.html: Possible admin folder
-    /admincontrol/login.html: Possible admin folder
-    /admincontrol.html: Possible admin folder
-    /adminLogin.php: Possible admin folder
-    /admin/adminLogin.php: Possible admin folder
-    /adminarea/index.php: Possible admin folder
-    /adminarea/admin.php: Possible admin folder
-    /adminarea/login.php: Possible admin folder
-    /admincontrol/login.php: Possible admin folder
-    /admin2.php: Possible admin folder
-    /admin2/login.php: Possible admin folder
-    /admin2/index.php: Possible admin folder
-    /administratorlogin.php: Possible admin folder
-    /admin/account.cfm: Possible admin folder
-    /admin/index.cfm: Possible admin folder
-    /admin/login.cfm: Possible admin folder
-    /admin/admin.cfm: Possible admin folder
-    /admin.cfm: Possible admin folder
-    /admin/admin_login.cfm: Possible admin folder
-    /admin_login.cfm: Possible admin folder
-    /adminpanel.cfm: Possible admin folder
-    /admin/controlpanel.cfm: Possible admin folder
-    /admincontrol.cfm: Possible admin folder
-    /admin/cp.cfm: Possible admin folder
-    /admincp/index.cfm: Possible admin folder
-    /admincp/login.cfm: Possible admin folder
-    /admin_area/admin.cfm: Possible admin folder
-    /admin_area/login.cfm: Possible admin folder
-    /administrator/login.cfm: Possible admin folder
-    /administratorlogin.cfm: Possible admin folder
-    /administrator.cfm: Possible admin folder
-    /administrator/account.cfm: Possible admin folder
-    /adminLogin.cfm: Possible admin folder
-    /admin2/index.cfm: Possible admin folder
-    /admin_area/index.cfm: Possible admin folder
-    /admin2/login.cfm: Possible admin folder
-    /admincontrol/login.cfm: Possible admin folder
-    /administrator/index.cfm: Possible admin folder
-    /adminarea/login.cfm: Possible admin folder
-    /adminarea/admin.cfm: Possible admin folder
-    /adminarea/index.cfm: Possible admin folder
-    /admin/adminLogin.cfm: Possible admin folder
-    /admin-login.cfm: Possible admin folder
-    /admin/admin-login.cfm: Possible admin folder
-    /admin/home.cfm: Possible admin folder
-    /admin/account.asp: Possible admin folder
-    /admin/index.asp: Possible admin folder
-    /admin/login.asp: Possible admin folder
-    /admin/admin.asp: Possible admin folder
-    /admin_area/admin.asp: Possible admin folder
-    /admin_area/login.asp: Possible admin folder
-    /admin_area/index.asp: Possible admin folder
-    /admin/home.asp: Possible admin folder
-    /admin/controlpanel.asp: Possible admin folder
-    /admin.asp: Possible admin folder
-    /admin/admin-login.asp: Possible admin folder
-    /admin-login.asp: Possible admin folder
-    /admin/cp.asp: Possible admin folder
-    /administrator/account.asp: Possible admin folder
-    /administrator.asp: Possible admin folder
-    /administrator/login.asp: Possible admin folder
-    /admincp/login.asp: Possible admin folder
-    /admincontrol.asp: Possible admin folder
-    /adminpanel.asp: Possible admin folder
-    /admin/admin_login.asp: Possible admin folder
-    /admin_login.asp: Possible admin folder
-    /adminLogin.asp: Possible admin folder
-    /admin/adminLogin.asp: Possible admin folder
-    /adminarea/index.asp: Possible admin folder
-    /adminarea/admin.asp: Possible admin folder
-    /adminarea/login.asp: Possible admin folder
-    /administrator/index.asp: Possible admin folder
-    /admincontrol/login.asp: Possible admin folder
-    /admin2.asp: Possible admin folder
-    /admin2/login.asp: Possible admin folder
-    /admin2/index.asp: Possible admin folder
-    /administratorlogin.asp: Possible admin folder
-    /admin/account.aspx: Possible admin folder
-    /admin/index.aspx: Possible admin folder
-    /admin/login.aspx: Possible admin folder
-    /admin/admin.aspx: Possible admin folder
-    /admin_area/admin.aspx: Possible admin folder
-    /admin_area/login.aspx: Possible admin folder
-    /admin_area/index.aspx: Possible admin folder
-    /admin/home.aspx: Possible admin folder
-    /admin/controlpanel.aspx: Possible admin folder
-    /admin.aspx: Possible admin folder
-    /admin/admin-login.aspx: Possible admin folder
-    /admin-login.aspx: Possible admin folder
-    /admin/cp.aspx: Possible admin folder
-    /administrator/account.aspx: Possible admin folder
-    /administrator.aspx: Possible admin folder
-    /administrator/login.aspx: Possible admin folder
-    /admincp/index.aspx: Possible admin folder
-    /admincp/login.aspx: Possible admin folder
-    /admincontrol.aspx: Possible admin folder
-    /adminpanel.aspx: Possible admin folder
-    /admin/admin_login.aspx: Possible admin folder
-    /admin_login.aspx: Possible admin folder
-    /adminLogin.aspx: Possible admin folder
-    /admin/adminLogin.aspx: Possible admin folder
-    /adminarea/index.aspx: Possible admin folder
-    /adminarea/admin.aspx: Possible admin folder
-    /adminarea/login.aspx: Possible admin folder
-    /administrator/index.aspx: Possible admin folder
-    /admincontrol/login.aspx: Possible admin folder
-    /admin2.aspx: Possible admin folder
-    /admin2/login.aspx: Possible admin folder
-    /admin2/index.aspx: Possible admin folder
-    /administratorlogin.aspx: Possible admin folder
-    /admin/index.jsp: Possible admin folder
-    /admin/login.jsp: Possible admin folder
-    /admin/admin.jsp: Possible admin folder
-    /admin_area/admin.jsp: Possible admin folder
-    /admin_area/login.jsp: Possible admin folder
-    /admin_area/index.jsp: Possible admin folder
-    /admin/home.jsp: Possible admin folder
-    /admin/controlpanel.jsp: Possible admin folder
-    /admin.jsp: Possible admin folder
-    /admin/admin-login.jsp: Possible admin folder
-    /admin-login.jsp: Possible admin folder
-    /admin/cp.jsp: Possible admin folder
-    /administrator/account.jsp: Possible admin folder
-    /administrator.jsp: Possible admin folder
-    /administrator/login.jsp: Possible admin folder
-    /admincp/index.jsp: Possible admin folder
-    /admincp/login.jsp: Possible admin folder
-    /admincontrol.jsp: Possible admin folder
-    /admin/account.jsp: Possible admin folder
-    /adminpanel.jsp: Possible admin folder
-    /admin/admin_login.jsp: Possible admin folder
-    /admin_login.jsp: Possible admin folder
-    /adminLogin.jsp: Possible admin folder
-    /admin/adminLogin.jsp: Possible admin folder
-    /adminarea/index.jsp: Possible admin folder
-    /adminarea/admin.jsp: Possible admin folder
-    /adminarea/login.jsp: Possible admin folder
-    /administrator/index.jsp: Possible admin folder
-    /admincontrol/login.jsp: Possible admin folder
-    /admin2.jsp: Possible admin folder
-    /admin2/login.jsp: Possible admin folder
-    /admin2/index.jsp: Possible admin folder
-    /administratorlogin.jsp: Possible admin folder
-    /admin1.php: Possible admin folder
-    /administr8.asp: Possible admin folder
-    /administr8.php: Possible admin folder
-    /administr8.jsp: Possible admin folder
-    /administr8.aspx: Possible admin folder
-    /administr8.cfm: Possible admin folder
-    /administr8/: Possible admin folder
-    /administer/: Possible admin folder
-    /administracao.php: Possible admin folder
-    /administracao.asp: Possible admin folder
-    /administracao.aspx: Possible admin folder
-    /administracao.cfm: Possible admin folder
-    /administracao.jsp: Possible admin folder
-    /administracion.php: Possible admin folder
-    /administracion.asp: Possible admin folder
-    /administracion.aspx: Possible admin folder
-    /administracion.jsp: Possible admin folder
-    /administracion.cfm: Possible admin folder
-    /administrators/: Possible admin folder
-    /adminpro/: Possible admin folder
-    /admins/: Possible admin folder
-    /admins.cfm: Possible admin folder
-    /admins.php: Possible admin folder
-    /admins.jsp: Possible admin folder
-    /admins.asp: Possible admin folder
-    /admins.aspx: Possible admin folder
-    /administracion-sistema/: Possible admin folder
-    /admin108/: Possible admin folder
-    /admin_cp.asp: Possible admin folder
-    /admin/backup/: Possible backup
-    /admin/download/backup.sql: Possible database backup
-    /robots.txt: Robots file
-    /admin/upload.php: Admin File Upload
-    /admin/CiscoAdmin.jhtml: Cisco Collaboration Server
-    /admin-console/: JBoss Console
-    /admin4.nsf: Lotus Domino
-    /admin5.nsf: Lotus Domino
-    /admin.nsf: Lotus Domino
-    /administrator/wp-login.php: Wordpress login page.
-    /admin/libraries/ajaxfilemanager/ajaxfilemanager.php: Log1 CMS
-    /admin/view/javascript/fckeditor/editor/filemanager/connectors/test.html: OpenCart/FCKeditor File upload
-    /admin/includes/tiny_mce/plugins/tinybrowser/upload.php: CompactCMS or B-Hind CMS/FCKeditor File upload
-    /admin/includes/FCKeditor/editor/filemanager/upload/test.html: ASP Simple Blog / FCKeditor File Upload
-    /admin/jscript/upload.php: Lizard Cart/Remote File upload
-    /admin/jscript/upload.html: Lizard Cart/Remote File upload
-    /admin/jscript/upload.pl: Lizard Cart/Remote File upload
-    /admin/jscript/upload.asp: Lizard Cart/Remote File upload
-    /admin/environment.xml: Moodle files
-    /classes/: Potentially interesting folder
-    /es/: Potentially interesting folder
-    /helpdesk/: Potentially interesting folder
-    /help/: Potentially interesting folder
-    /printers/: Potentially interesting folder
+    /admin.php
+      Possible admin folder
+    /admin/
+      Possible admin folder
+    /admin/admin/
+      Possible admin folder
+    /administrator/
+      Possible admin folder
+    /adminarea/
+      Possible admin folder
+    /adminLogin/
+      Possible admin folder
+    /admin_area/
+      Possible admin folder
+    /administratorlogin/
+      Possible admin folder
+    /admin/account.php
+      Possible admin folder
+    /admin/index.php
+      Possible admin folder
+    /admin/login.php
+      Possible admin folder
+    /admin/admin.php
+      Possible admin folder
+    /admin_area/admin.php
+      Possible admin folder
+    /admin_area/login.php
+      Possible admin folder
+    /admin/index.html
+      Possible admin folder
+    /admin/login.html
+      Possible admin folder
+    /admin/admin.html
+      Possible admin folder
+    /admin_area/index.php
+      Possible admin folder
+    /admin/home.php
+      Possible admin folder
+    /admin_area/login.html
+      Possible admin folder
+    /admin_area/index.html
+      Possible admin folder
+    /admin/controlpanel.php
+      Possible admin folder
+    /admincp/
+      Possible admin folder
+    /admincp/index.asp
+      Possible admin folder
+    /admincp/index.html
+      Possible admin folder
+    /admincp/login.php
+      Possible admin folder
+    /admin/account.html
+      Possible admin folder
+    /adminpanel.html
+      Possible admin folder
+    /admin/admin_login.html
+      Possible admin folder
+    /admin_login.html
+      Possible admin folder
+    /admin/cp.php
+      Possible admin folder
+    /administrator/index.php
+      Possible admin folder
+    /administrator/login.php
+      Possible admin folder
+    /admin/admin_login.php
+      Possible admin folder
+    /admin_login.php
+      Possible admin folder
+    /administrator/account.php
+      Possible admin folder
+    /administrator.php
+      Possible admin folder
+    /admin_area/admin.html
+      Possible admin folder
+    /admin/admin-login.php
+      Possible admin folder
+    /admin-login.php
+      Possible admin folder
+    /admin/home.html
+      Possible admin folder
+    /admin/admin-login.html
+      Possible admin folder
+    /admin-login.html
+      Possible admin folder
+    /admincontrol.php
+      Possible admin folder
+    /admin/adminLogin.html
+      Possible admin folder
+    /adminLogin.html
+      Possible admin folder
+    /adminarea/index.html
+      Possible admin folder
+    /adminarea/admin.html
+      Possible admin folder
+    /admin/controlpanel.html
+      Possible admin folder
+    /admin.html
+      Possible admin folder
+    /admin/cp.html
+      Possible admin folder
+    /adminpanel.php
+      Possible admin folder
+    /administrator/index.html
+      Possible admin folder
+    /administrator/login.html
+      Possible admin folder
+    /administrator/account.html
+      Possible admin folder
+    /administrator.html
+      Possible admin folder
+    /adminarea/login.html
+      Possible admin folder
+    /admincontrol/login.html
+      Possible admin folder
+    /admincontrol.html
+      Possible admin folder
+    /adminLogin.php
+      Possible admin folder
+    /admin/adminLogin.php
+      Possible admin folder
+    /adminarea/index.php
+      Possible admin folder
+    /adminarea/admin.php
+      Possible admin folder
+    /adminarea/login.php
+      Possible admin folder
+    /admincontrol/login.php
+      Possible admin folder
+    /admin2.php
+      Possible admin folder
+    /admin2/login.php
+      Possible admin folder
+    /admin2/index.php
+      Possible admin folder
+    /administratorlogin.php
+      Possible admin folder
+    /admin/account.cfm
+      Possible admin folder
+    /admin/index.cfm
+      Possible admin folder
+    /admin/login.cfm
+      Possible admin folder
+    /admin/admin.cfm
+      Possible admin folder
+    /admin.cfm
+      Possible admin folder
+    /admin/admin_login.cfm
+      Possible admin folder
+    /admin_login.cfm
+      Possible admin folder
+    /adminpanel.cfm
+      Possible admin folder
+    /admin/controlpanel.cfm
+      Possible admin folder
+    /admincontrol.cfm
+      Possible admin folder
+    /admin/cp.cfm
+      Possible admin folder
+    /admincp/index.cfm
+      Possible admin folder
+    /admincp/login.cfm
+      Possible admin folder
+    /admin_area/admin.cfm
+      Possible admin folder
+    /admin_area/login.cfm
+      Possible admin folder
+    /administrator/login.cfm
+      Possible admin folder
+    /administratorlogin.cfm
+      Possible admin folder
+    /administrator.cfm
+      Possible admin folder
+    /administrator/account.cfm
+      Possible admin folder
+    /adminLogin.cfm
+      Possible admin folder
+    /admin2/index.cfm
+      Possible admin folder
+    /admin_area/index.cfm
+      Possible admin folder
+    /admin2/login.cfm
+      Possible admin folder
+    /admincontrol/login.cfm
+      Possible admin folder
+    /administrator/index.cfm
+      Possible admin folder
+    /adminarea/login.cfm
+      Possible admin folder
+    /adminarea/admin.cfm
+      Possible admin folder
+    /adminarea/index.cfm
+      Possible admin folder
+    /admin/adminLogin.cfm
+      Possible admin folder
+    /admin-login.cfm
+      Possible admin folder
+    /admin/admin-login.cfm
+      Possible admin folder
+    /admin/home.cfm
+      Possible admin folder
+    /admin/account.asp
+      Possible admin folder
+    /admin/index.asp
+      Possible admin folder
+    /admin/login.asp
+      Possible admin folder
+    /admin/admin.asp
+      Possible admin folder
+    /admin_area/admin.asp
+      Possible admin folder
+    /admin_area/login.asp
+      Possible admin folder
+    /admin_area/index.asp
+      Possible admin folder
+    /admin/home.asp
+      Possible admin folder
+    /admin/controlpanel.asp
+      Possible admin folder
+    /admin.asp
+      Possible admin folder
+    /admin/admin-login.asp
+      Possible admin folder
+    /admin-login.asp
+      Possible admin folder
+    /admin/cp.asp
+      Possible admin folder
+    /administrator/account.asp
+      Possible admin folder
+    /administrator.asp
+      Possible admin folder
+    /administrator/login.asp
+      Possible admin folder
+    /admincp/login.asp
+      Possible admin folder
+    /admincontrol.asp
+      Possible admin folder
+    /adminpanel.asp
+      Possible admin folder
+    /admin/admin_login.asp
+      Possible admin folder
+    /admin_login.asp
+      Possible admin folder
+    /adminLogin.asp
+      Possible admin folder
+    /admin/adminLogin.asp
+      Possible admin folder
+    /adminarea/index.asp
+      Possible admin folder
+    /adminarea/admin.asp
+      Possible admin folder
+    /adminarea/login.asp
+      Possible admin folder
+    /administrator/index.asp
+      Possible admin folder
+    /admincontrol/login.asp
+      Possible admin folder
+    /admin2.asp
+      Possible admin folder
+    /admin2/login.asp
+      Possible admin folder
+    /admin2/index.asp
+      Possible admin folder
+    /administratorlogin.asp
+      Possible admin folder
+    /admin/account.aspx
+      Possible admin folder
+    /admin/index.aspx
+      Possible admin folder
+    /admin/login.aspx
+      Possible admin folder
+    /admin/admin.aspx
+      Possible admin folder
+    /admin_area/admin.aspx
+      Possible admin folder
+    /admin_area/login.aspx
+      Possible admin folder
+    /admin_area/index.aspx
+      Possible admin folder
+    /admin/home.aspx
+      Possible admin folder
+    /admin/controlpanel.aspx
+      Possible admin folder
+    /admin.aspx
+      Possible admin folder
+    /admin/admin-login.aspx
+      Possible admin folder
+    /admin-login.aspx
+      Possible admin folder
+    /admin/cp.aspx
+      Possible admin folder
+    /administrator/account.aspx
+      Possible admin folder
+    /administrator.aspx
+      Possible admin folder
+    /administrator/login.aspx
+      Possible admin folder
+    /admincp/index.aspx
+      Possible admin folder
+    /admincp/login.aspx
+      Possible admin folder
+    /admincontrol.aspx
+      Possible admin folder
+    /adminpanel.aspx
+      Possible admin folder
+    /admin/admin_login.aspx
+      Possible admin folder
+    /admin_login.aspx
+      Possible admin folder
+    /adminLogin.aspx
+      Possible admin folder
+    /admin/adminLogin.aspx
+      Possible admin folder
+    /adminarea/index.aspx
+      Possible admin folder
+    /adminarea/admin.aspx
+      Possible admin folder
+    /adminarea/login.aspx
+      Possible admin folder
+    /administrator/index.aspx
+      Possible admin folder
+    /admincontrol/login.aspx
+      Possible admin folder
+    /admin2.aspx
+      Possible admin folder
+    /admin2/login.aspx
+      Possible admin folder
+    /admin2/index.aspx
+      Possible admin folder
+    /administratorlogin.aspx
+      Possible admin folder
+    /admin/index.jsp
+      Possible admin folder
+    /admin/login.jsp
+      Possible admin folder
+    /admin/admin.jsp
+      Possible admin folder
+    /admin_area/admin.jsp
+      Possible admin folder
+    /admin_area/login.jsp
+      Possible admin folder
+    /admin_area/index.jsp
+      Possible admin folder
+    /admin/home.jsp
+      Possible admin folder
+    /admin/controlpanel.jsp
+      Possible admin folder
+    /admin.jsp
+      Possible admin folder
+    /admin/admin-login.jsp
+      Possible admin folder
+    /admin-login.jsp
+      Possible admin folder
+    /admin/cp.jsp
+      Possible admin folder
+    /administrator/account.jsp
+      Possible admin folder
+    /administrator.jsp
+      Possible admin folder
+    /administrator/login.jsp
+      Possible admin folder
+    /admincp/index.jsp
+      Possible admin folder
+    /admincp/login.jsp
+      Possible admin folder
+    /admincontrol.jsp
+      Possible admin folder
+    /admin/account.jsp
+      Possible admin folder
+    /adminpanel.jsp
+      Possible admin folder
+    /admin/admin_login.jsp
+      Possible admin folder
+    /admin_login.jsp
+      Possible admin folder
+    /adminLogin.jsp
+      Possible admin folder
+    /admin/adminLogin.jsp
+      Possible admin folder
+    /adminarea/index.jsp
+      Possible admin folder
+    /adminarea/admin.jsp
+      Possible admin folder
+    /adminarea/login.jsp
+      Possible admin folder
+    /administrator/index.jsp
+      Possible admin folder
+    /admincontrol/login.jsp
+      Possible admin folder
+    /admin2.jsp
+      Possible admin folder
+    /admin2/login.jsp
+      Possible admin folder
+    /admin2/index.jsp
+      Possible admin folder
+    /administratorlogin.jsp
+      Possible admin folder
+    /admin1.php
+      Possible admin folder
+    /administr8.asp
+      Possible admin folder
+    /administr8.php
+      Possible admin folder
+    /administr8.jsp
+      Possible admin folder
+    /administr8.aspx
+      Possible admin folder
+    /administr8.cfm
+      Possible admin folder
+    /administr8/
+      Possible admin folder
+    /administer/
+      Possible admin folder
+    /administracao.php
+      Possible admin folder
+    /administracao.asp
+      Possible admin folder
+    /administracao.aspx
+      Possible admin folder
+    /administracao.cfm
+      Possible admin folder
+    /administracao.jsp
+      Possible admin folder
+    /administracion.php
+      Possible admin folder
+    /administracion.asp
+      Possible admin folder
+    /administracion.aspx
+      Possible admin folder
+    /administracion.jsp
+      Possible admin folder
+    /administracion.cfm
+      Possible admin folder
+    /administrators/
+      Possible admin folder
+    /adminpro/
+      Possible admin folder
+    /admins/
+      Possible admin folder
+    /admins.cfm
+      Possible admin folder
+    /admins.php
+      Possible admin folder
+    /admins.jsp
+      Possible admin folder
+    /admins.asp
+      Possible admin folder
+    /admins.aspx
+      Possible admin folder
+    /administracion-sistema/
+      Possible admin folder
+    /admin108/
+      Possible admin folder
+    /admin_cp.asp
+      Possible admin folder
+    /admin/backup/
+      Possible backup
+    /admin/download/backup.sql
+      Possible database backup
+    /robots.txt
+      Robots file
+    /admin/upload.php
+      Admin File Upload
+    /admin/CiscoAdmin.jhtml
+      Cisco Collaboration Server
+    /admin-console/
+      JBoss Console
+    /admin4.nsf
+      Lotus Domino
+    /admin5.nsf
+      Lotus Domino
+    /admin.nsf
+      Lotus Domino
+    /administrator/wp-login.php
+      Wordpress login page.
+    /admin/libraries/ajaxfilemanager/ajaxfilemanager.php
+      Log1 CMS
+    /admin/view/javascript/fckeditor/editor/filemanager/connectors/test.html
+      OpenCart/FCKeditor File upload
+    /admin/includes/tiny_mce/plugins/tinybrowser/upload.php
+      CompactCMS or B-Hind CMS/FCKeditor File upload
+    /admin/includes/FCKeditor/editor/filemanager/upload/test.html
+      ASP Simple Blog / FCKeditor File Upload
+    /admin/jscript/upload.php
+      Lizard Cart/Remote File upload
+    /admin/jscript/upload.html
+      Lizard Cart/Remote File upload
+    /admin/jscript/upload.pl
+      Lizard Cart/Remote File upload
+    /admin/jscript/upload.asp
+      Lizard Cart/Remote File upload
+    /admin/environment.xml
+      Moodle files
+    /classes/
+      Potentially interesting folder
+    /es/
+      Potentially interesting folder
+    /helpdesk/
+      Potentially interesting folder
+    /help/
+      Potentially interesting folder
+    /printers/
+      Potentially interesting folder
 3306/tcp  open  mysql       MySQL (unauthorized)
-  rsa-vuln-roca: ERROR: Script execution failed (use -d to debug)
-  sslv2-drown: ERROR: Script execution failed (use -d to debug)
-  ssl-poodle: ERROR: Script execution failed (use -d to debug)
-  ssl-ccs-injection: ERROR: Script execution failed (use -d to debug)
-  mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
-  ssl-dh-params: ERROR: Script execution failed (use -d to debug)
-  ssl-heartbleed: ERROR: Script execution failed (use -d to debug)
+  rsa-vuln-roca
+    ERROR
+      Script execution failed (use -d to debug)
+  sslv2-drown
+    ERROR
+      Script execution failed (use -d to debug)
+  ssl-poodle
+    ERROR
+      Script execution failed (use -d to debug)
+  ssl-ccs-injection
+    ERROR
+      Script execution failed (use -d to debug)
+  mysql-vuln-cve2012-2122
+    ERROR
+      Script execution failed (use -d to debug)
+  ssl-dh-params
+    ERROR
+      Script execution failed (use -d to debug)
+  ssl-heartbleed
+    ERROR
+      Script execution failed (use -d to debug)
 3500/tcp  open  http        WEBrick httpd 1.3.1 (Ruby 2.3.8 (2018-10-18))
   http-slowloris-check: 
     VULNERABLE:
     Slowloris DOS attack
-      State: LIKELY VULNERABLE
+      State
+        LIKELY VULNERABLE
       IDs:  CVE:CVE-2007-6750
         Slowloris tries to keep many connections to the target web server open and hold
         them open as long as possible.  It accomplishes this by opening connections to
         the target web server and sending a partial request. By doing so, it starves
         the http server's resources causing Denial Of Service.
         
-      Disclosure date: 2009-09-17
+      Disclosure date
+        2009-09-17
       References:
         http://ha.ckers.org/slowloris/
         https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
-  http-csrf: Couldn't find any CSRF vulnerabilities.
-  http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+  http-csrf
+    Couldn't find any CSRF vulnerabilities.
+  http-stored-xss
+    Couldn't find any stored XSS vulnerabilities.
   vulners: 
     cpe:/a:ruby-lang:ruby:2.3.8: 
       	MSF:ILITIES/APPLE-OSX-RUBY-CVE-2015-7551/	7.5	https://vulners.com/metasploit/MSF:ILITIES/APPLE-OSX-RUBY-CVE-2015-7551/	*EXPLOIT*
@@ -887,91 +1273,168 @@ PORT      STATE SERVICE     VERSION
       	RUBY:RUBY-2017-0898	0.0	https://vulners.com/rubygems/RUBY:RUBY-2017-0898
       	RUBY:RUBY-2015-7551	0.0	https://vulners.com/rubygems/RUBY:RUBY-2015-7551
   http-enum: 
-    /robots.txt: Robots file
-    /readme.html: Interesting, a readme.
-  http-server-header: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
-  http-dombased-xss: Couldn't find any DOM based XSS.
+    /robots.txt
+      Robots file
+    /readme.html
+      Interesting
+      a readme.
+  http-server-header
+    WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
+  http-dombased-xss
+    Couldn't find any DOM based XSS.
 6667/tcp  open  irc         UnrealIRCd
   irc-botnet-channels: 
-    ERROR: Closing Link: [192.168.56.1] (Throttled: Reconnecting too fast) -Email admin@TestIRC.net for more information.
+    ERROR
+      Closing Link
+        [192.168.56.1] (Throttled: Reconnecting too fast)-Email admin@TestIRC.net for more information.
 6697/tcp  open  irc         UnrealIRCd
-  ssl-ccs-injection: No reply from server (TIMEOUT)
+  ssl-ccs-injection
+    No reply from server (TIMEOUT)
   irc-botnet-channels: 
-    ERROR: Closing Link: [192.168.56.1] (Throttled: Reconnecting too fast) -Email admin@TestIRC.net for more information.
+    ERROR
+      Closing Link
+        [192.168.56.1] (Throttled: Reconnecting too fast)-Email admin@TestIRC.net for more information.
 8067/tcp  open  irc         UnrealIRCd
   irc-botnet-channels: 
-    ERROR: Closing Link: [192.168.56.1] (Throttled: Reconnecting too fast) -Email admin@TestIRC.net for more information.
+    ERROR
+      Closing Link
+        [192.168.56.1] (Throttled: Reconnecting too fast)-Email admin@TestIRC.net for more information.
 8080/tcp  open  http        Jetty 8.1.7.v20120910
   http-slowloris-check: 
     VULNERABLE:
     Slowloris DOS attack
-      State: LIKELY VULNERABLE
+      State
+        LIKELY VULNERABLE
       IDs:  CVE:CVE-2007-6750
         Slowloris tries to keep many connections to the target web server open and hold
         them open as long as possible.  It accomplishes this by opening connections to
         the target web server and sending a partial request. By doing so, it starves
         the http server's resources causing Denial Of Service.
         
-      Disclosure date: 2009-09-17
+      Disclosure date
+        2009-09-17
       References:
         http://ha.ckers.org/slowloris/
         https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
-  http-stored-xss: Couldn't find any stored XSS vulnerabilities.
-  http-dombased-xss: Couldn't find any DOM based XSS.
+  http-stored-xss
+    Couldn't find any stored XSS vulnerabilities.
+  http-dombased-xss
+    Couldn't find any DOM based XSS.
   http-csrf: 
-  Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.56.0
+  Spidering limited to
+    maxdepth=3
+  maxpagecount=20
+withinhost=192.168.56.0
     Found the following possible CSRF vulnerabilities: 
       
-      Path: http://192.168.56.0:8080/continuum/security/login.action;jsessionid=29wpxp07cdlxcgzju3horx0p
-      Form id: loginform
-      Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Path
+        http://192.168.56.0:8080/continuum/security/login.action
+          jsessionid=29wpxp07cdlxcgzju3horx0p
+      Form id
+        loginform
+      Form action
+        /continuum/security/login_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
       
-      Path: http://192.168.56.0:8080/continuum/security/register.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
-      Form id: registerform
-      Form action: /continuum/security/register_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Path
+        http://192.168.56.0:8080/continuum/security/register.action
+          jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Form id
+        registerform
+      Form action
+        /continuum/security/register_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
       
-      Path: http://192.168.56.0:8080/continuum/security/login.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
-      Form id: loginform
-      Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Path
+        http://192.168.56.0:8080/continuum/security/login.action
+          jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Form id
+        loginform
+      Form action
+        /continuum/security/login_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
       
-      Path: http://192.168.56.0:8080/continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
-      Form id: loginform
-      Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Path
+        http://192.168.56.0:8080/continuum/security/login_submit.action
+          jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Form id
+        loginform
+      Form action
+        /continuum/security/login_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
       
-      Path: http://192.168.56.0:8080/continuum/security/login.action;jsessionid=29wpxp07cdlxcgzju3horx0p
-      Form id: loginform
-      Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Path
+        http://192.168.56.0:8080/continuum/security/login.action
+          jsessionid=29wpxp07cdlxcgzju3horx0p
+      Form id
+        loginform
+      Form action
+        /continuum/security/login_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
       
-      Path: http://192.168.56.0:8080/continuum/security/passwordReset.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
-      Form id: passwordresetform
-      Form action: /continuum/security/passwordReset_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Path
+        http://192.168.56.0:8080/continuum/security/passwordReset.action
+          jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Form id
+        passwordresetform
+      Form action
+        /continuum/security/passwordReset_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
       
-      Path: http://192.168.56.0:8080/continuum/security/login.action;jsessionid=29wpxp07cdlxcgzju3horx0p
-      Form id: loginform
-      Form action: /continuum/security/login_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Path
+        http://192.168.56.0:8080/continuum/security/login.action
+          jsessionid=29wpxp07cdlxcgzju3horx0p
+      Form id
+        loginform
+      Form action
+        /continuum/security/login_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
       
-      Path: http://192.168.56.0:8080/continuum/security/register_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
-      Form id: registerform
-      Form action: /continuum/security/register_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Path
+        http://192.168.56.0:8080/continuum/security/register_submit.action
+          jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Form id
+        registerform
+      Form action
+        /continuum/security/register_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
       
-      Path: http://192.168.56.0:8080/continuum/security/passwordReset_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
-      Form id: passwordresetform
-      Form action: /continuum/security/passwordReset_submit.action;jsessionid=1q9ufqtsru3ba14uebrd2asl6n
-  http-server-header: Jetty(8.1.7.v20120910)
+      Path
+        http://192.168.56.0:8080/continuum/security/passwordReset_submit.action
+          jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+      Form id
+        passwordresetform
+      Form action
+        /continuum/security/passwordReset_submit.action
+      jsessionid=1q9ufqtsru3ba14uebrd2asl6n
+  http-server-header
+    Jetty(8.1.7.v20120910)
 49094/tcp open  status      1 (RPC #100024)
-Service Info: Hosts: 127.0.1.1, UBUNTU, irc.TestIRC.net; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+Service Info
+  Hosts
+    127.0.1.1
+    UBUNTU
+    irc.TestIRC.net
+  OSs
+    Unix
+    Linux
+  CPE
+    cpe:/o:linux:linux_kernel
 
 Host script results:
   smb-vuln-regsvc-dos: 
     VULNERABLE:
     Service regsvc in Microsoft Windows systems vulnerable to denial of service
-      State: VULNERABLE
+      State
+        VULNERABLE
         The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference
         pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes
         while working on smb-enum-sessions.
             
-  smb-vuln-ms10-054: false
-  smb-vuln-ms10-061: false
+  smb-vuln-ms10-054
+    false
+  smb-vuln-ms10-061
+    false
 
 ---------------------Recon Recommendations---------------------
 
@@ -1037,162 +1500,520 @@ Starting nikto scan
 + Target Port:        3500
 + Start Time:         2022-04-11 11:22:53 (GMT2)
 ---------------------------------------------------------------------------
-+ Server: WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
-+ Server leaks inodes via ETags, header found with file /, fields: 0xW/b56dd5f9363ed0f7bd4d11c36d9471dd 
-+ Uncommon header 'x-request-id' found, with contents: 7d8ee2cf-44eb-4934-95ca-32b5e66ef319
-+ Uncommon header 'x-runtime' found, with contents: 0.003849
-+ Uncommon header 'x-xss-protection' found, with contents: 1; mode=block
-+ Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN
-+ Uncommon header 'x-content-type-options' found, with contents: nosniff
++ Server
+  WEBrick/1.3.1 (Ruby/2.3.8/2018-10-18)
++ Server leaks inodes via ETags
+header found with file fields
+0xW/b56dd5f9363ed0f7bd4d11c36d9471dd 
++ Uncommon header 'x-request-id' founwith contents
+7d8ee2cf-44eb-4934-95ca-32b5e66ef319
++ Uncommon header 'x-runtime' founwith contents
+0.003849
++ Uncommon header 'x-xss-protection' founwith contents
+1
+mode=block
++ Uncommon header 'x-frame-options' founwith contents
+SAMEORIGIN
++ Uncommon header 'x-content-type-options' founwith contents
+nosniff
 + No CGI Directories found (use '-C all' to force check all possible dirs)
 + "robots.txt" retrieved but it does not contain any 'disallow' entries (which is odd).
-+ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ Allowed HTTP Methods
+  GET
+  HEAD
+  POST
+  OPTIONS 
 + Cookie _readme_session created without the httponly flag
-+ /readme.eml: Remote server may be infected with the Nimda virus.
-+ /trace.axd: The .NET IIS server has application tracing enabled. This could allow an attacker to view the last 50 web requests.
-+ OSVDB-2400: /admin-serv/tasks/configuration/ViewLog?file=passwd&num=5000&str=&directories=admin-serv%2Flogs%2f..%2f..%2f..%2f..%2f..%2f..%2fetc&id=admin-serv: iPlanet Administration Server 5.1 allows remote users to download any file from the server. Upgrade to SunOne DS5.2 and in iDS5.1 SP2 Hotfix 2.
-+ OSVDB-5553: /netget?sid=user&msg=300&file=../../../../../../../../../../etc/passwd: Sybex E-Trainer allows arbitrary files to be retrieved.
-+ ///etc/passwd: The server install allows reading of any system file by adding an extra '/' to the URL.
-+ OSVDB-50624: /albums/userpics/Copperminer.jpg.php?cat%20/etc/passwd: Coppermine 1.0 RC3 may have been compromised to allow arbitrary file retreival. Upgrade to the latest at http://www.chezgreg.net/coppermine/
-+ OSVDB-9028: /autohtml.php?op=modload&mainfile=x&name=/etc/passwd: php-proxima 6.0 and below allows arbitrary files to be retrieved.
-+ OSVDB-49354: /atomicboard/index.php?location=../../../../../../../../../../etc/passwd: AtomicBoard v0.6.2 allows remote users to read arbitrary files.
-+ OSVDB-54099: /current/modules.php?mod=fm&file=../../../../../../../../../../etc/passwd%00&bn=fm_d1: w-agora 4.1.5 allows any file to be retrieved from the remote host.
-+ OSVDB-3012: /current/index.php?site=demos&bn=../../../../../../../../../../etc/passwd%00: w-agora 4.1.5 allows any file to be retrieved from the remote host.
-+ OSVDB-54058: /dev/translations.php?ONLY=%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd%00: Typo3 allows any file to be retrieved remotely. Upgrade to the latest version.
-+ OSVDB-59600: /ezhttpbench.php?AnalyseSite=/etc/passwd&NumLoops=1: eZ httpbench version 1.1 allows any file on the remote server to be retrieved.
-+ OSVDB-2870: /index.php?download=/etc/passwd: Snif 1.2.4 allows any file to be retrieved from the web server.
-+ OSVDB-59085: /index.php? =../../../../../../../../../etc/passwd: Portix-PHP Portal allows retrieval of arbitrary files via the '..' type filtering problem.
-+ /index.php?page=../../../../../../../../../../etc/passwd: The PHP-Nuke Rocket add-in is vulnerable to file traversal, allowing an attacker to view any file on the host. (probably Rocket, but could be any index.php)
-+ OSVDB-59085: /index.php?l=forum/view.php&topic=../../../../../../../../../etc/passwd: Portix-PHP Portal allows retrieval of arbitrary files via the '..' type filtering problem.
-+ /jsp/jspsamp/jspexamples/viewsource.jsp?source=../../../../../../../../../../etc/passwd: Default JRun CGI lets users read any system file.
-+ OSVDB-51750: /k/home?dir=/&file=../../../../../../../../etc/passwd&lang=kor: Kebi Academy 2001 Web Solution allows any file to be retrieved from the remote system.
-+ /nph-showlogs.pl?files=../../../../../../../../etc/passwd&filter=.*&submit=Go&linecnt=500&refresh=0: nCUBE Server Manage 1.0 allows any file to be read on the remote system.
-+ OSVDB-2829: /phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd: phpWebFileManager v2.0.0 and prior are vulnerable to a directory traversal bug.
-+ /phptonuke.php?filnavn=/etc/passwd: Photonouke or myphpnuke allows arbitrary files to be retrieved from the remote host.
-+ /put/cgi-bin/putport.exe?SWAP&BOM&OP=none&Lang=en-US&PutHtml=../../../../../../../../etc/passwd: NCR's Terradata server contains a CGI that allows any file to be retrieved remotely.
-+ OSVDB-521: /ROADS/cgi-bin/search.pl?form=../../../../../../../../../../etc/passwd%00: The ROADS search.pl allows attackers to retrieve system files.
-+ /support/common.php?f=0&ForumLang=../../../../../../../../../../etc/passwd: This CGI allows attackers to read files on the host.
-+ /viewpage.php?file=/etc/passwd: PHP-Nuke script viewpage.php allows any file to be retrieved from the remote system.
-+ OSVDB-431: /Web_Store/web_store.cgi?page=../../../../../../../../../../etc/passwd%00.html: eXtropia's Web Store lets attackers read any file on the system by appending a %00.html to the name.
-+ OSVDB-9055: /webMathematica/MSP?MSPStoreID=../../../../../../../../../../etc/passwd&MSPStoreType=image/gif: Wolfram Research's webMathematica allows any file to be read on the remote system. Upgrade to the latest version on http://www.wolfram.com/
-+ OSVDB-17110: /servlet/webacc?User.html=../../../../../../../../../../../../../../../../../../etc/passwd%00: The Novell Groupwise WebAcc Servlet allows attackers to view arbitrary files on the server.
-+ /webcalendar/forum.php?user_inc=../../../../../../../../../../etc/passwd: Webcalendar 0.9.41 and below allow remote users to read arbitrary files.
-+ OSVDB-15392: /logbook.pl?file=../../../../../../../bin/cat%20/etc/passwd%00 : Wordit Limited 2000 allows command execution.
-+ OSVDB-59084: /page.cgi?../../../../../../../../../../etc/passwd: WWWeBBB Forum up to version 3.82beta allow arbitrary file retrieval.
-+ OSVDB-56290: /edittag/edittag.cgi?file=%2F..%2F..%2F..%2F..%2F..%2Fetc/passwd: EditTag allows arbitrary file retrieval.
-+ OSVDB-8983: /base/webmail/readmsg.php?mailbox=../../../../../../../../../../../../../../etc/passwd&id=1: Remote file retrieval.
-+ OSVDB-16861: /athenareg.php?pass=%20;cat%20/etc/passwd: Athena web registration remote command execution.
-+ OSVDB-278: /PSUser/PSCOErrPage.htm?errPagePath=/etc/passwd: This default Netscape file allows an attacker to read arbitrary files on the host.
-+ /search?NS-query-pat=../../../../../../../../../../etc/passwd: The iPlanet server allows arbitrary files to be retrieved through the search functionality. Install 4.1 SP10+ or 6.0 SP3+
-+ /................../etc/passwd: The web server allows the password file to be retrieved.
-+ OSVDB-27071: /phpimageview.php?pic=javascript:alert(8754): PHP Image View 1.0 is vulnerable to Cross Site Scripting (XSS).  http://www.cert.org/advisories/CA-2000-02.html.
-+ OSVDB-3931: /myphpnuke/links.php?op=MostPopular&ratenum=[script]alert(document.cookie);[/script]&ratetype=percent: myphpnuke is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
-+ /modules.php?op=modload&name=FAQ&file=index&myfaq=yes&id_cat=1&categories=%3Cimg%20src=javascript:alert(9456);%3E&parent_id=0: Post Nuke 0.7.2.3-Phoenix is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
-+ OSVDB-4598: /members.asp?SF=%22;}alert(223344);function%20x(){v%20=%22: Web Wiz Forums ver. 7.01 and below is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
-+ OSVDB-2946: /forum_members.asp?find=%22;}alert(9823);function%20x(){v%20=%22: Web Wiz Forums ver. 7.01 and below is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
-+ OSVDB-8956: /basilix.php3?request_id[DUMMY]=../../../../etc/passwd&RequestID=DUMMY&username=sec&password=secu: Remote file retrieval.
-+ OSVDB-8193: /index.php?module=ew_filemanager&type=admin&func=manager&pathext=../../../etc/&view=passwd: EW FileManager for PostNuke allows arbitrary file retrieval.
-+ OSVDB-2713: /jsp/jspsamp/jspexamples/viewsource.jsp?source=/../../../../../../../../../etc/passwd: The JRUN view_source.jsp allows arbitrary file retrieval from the host. Upgrade to JRUN 2.3.3 or higher, or remove all default scripts. CVE-2000-0540. http://www.securityfocus.com/bid/1386.
-+ OSVDB-2793: /.../.../.../.../.../.../.../.../.../.../etc/passwd: TelCondex SimpleWebserver 2.13.31027 and below allows directory traversal.
-+ OSVDB-3092: /readme: This might be interesting...
-+ OSVDB-3092: /etc/passwd: An '/etc/passwd' file is available via the web site.
-+ OSVDB-3092: /readme.nsf: This database can be read without authentication, which may reveal sensitive information.
-+ OSVDB-3093: /forum-ra.asp?n=....//....//....//....//....//....//....//etc.passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra.asp?n=../../../../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra.asp?n=../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra.asp?n=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra.asp?n=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra_professionnel.asp?n=%60/etc/passwd%60: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra_professionnel.asp?n=../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra_professionnel.asp?n=/../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra_professionnel.asp?n=/../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra_professionnel.asp?n=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum-ra_professionnel.asp?n=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=%60/etc/passwd%60&amp;nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=....//....//....//....//....//....//....//etc.passwd&amp;nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=../../../../../../../../../etc/passwd%00&amp;nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=/../../../../../../etc/passwd&amp;nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=/../../../etc/passwd&amp;nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=/etc/passwd%00&amp;nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=/etc/passwd&amp;nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=1753&amp;nn=%60/etc/passwd%60: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=1753&amp;nn=....//....//....//....//....//....//....//etc.passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=1753&amp;nn=../../../../../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=1753&amp;nn=../../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=1753&amp;nn=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1.asp?n=1753&amp;nn=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=%60/etc/passwd%60&amp;nn=100&amp;page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=....//....//....//....//....//....//....//etc.passwd&amp;nn=100&amp;page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=../../../../../../../../../etc/passwd%00&amp;nn=100&amp;page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=/../../../../../../../../etc/passwd&amp;nn=100&amp;page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=/etc/passwd%00&amp;nn=100&amp;page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=/etc/passwd&amp;nn=100&amp;page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=%60/etc/passwd%60&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=....//....//....//....//....//....//....//etc.passwd&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=../../../../../../../../../etc/passwd%00&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=/../../../../../../../../etc/passwd&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=/etc/passwd%00&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=/etc/passwd&amp;page=1: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=%60/etc/passwd%60: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=....//....//....//....//....//....//....//etc.passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=/../../../../../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /forum1_professionnel.asp?n=1771&amp;nn=100&amp;page=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /mailview.cgi?cmd=view&amp;fldrname=inbox&amp;select=1&amp;html=../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /modif_infos.asp?n=%60/etc/passwd%60: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /modif_infos.asp?n=....//....//....//....//....//....//....//etc.passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /modif_infos.asp?n=../../../../../../../../../etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /modif_infos.asp?n=/../../../../../../../../../etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /modif_infos.asp?n=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /modif_infos.asp?n=/etc/passwd%00: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /setpasswd.cgi: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /shoutbox/expanded.php?conf=../../../../../../../etc/passwd%20: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /tmp_view.php?file=/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3093: /userreg.cgi?cmd=insert&amp;lang=eng&amp;tnum=3&amp;fld1=test999%0acat&lt;/var/spool/mail/login&gt;&gt;/etc/passwd: This might be interesting... has been seen in web logs from an unknown scanner.
-+ OSVDB-3396: /mylog.html?screen=/etc/passwd: Remote file read vulnerability 1999-0068
-+ OSVDB-3396: /mylog.phtml?screen=/etc/passwd: Remote file read vulnerability 1999-0068
-+ OSVDB-3396: /php/mylog.html?screen=/etc/passwd: Remote file read vulnerability 1999-0346
-+ OSVDB-3396: /php/mylog.phtml?screen=/etc/passwd: Remote file read vulnerability 1999-0346
-+ OSVDB-3407: /directory.php?dir=%3Bcat%20/etc/passwd: Marcus S. Xenakis directory.php script allows for command execution. CVE-2002-0434.
-+ OSVDB-3410: /content/base/build/explorer/none.php?..:..:..:..:..:..:..:etc:passwd:: SunPS iRunbook Version 2.5.2 allows files to be read remotely.
-+ OSVDB-3410: /content/base/build/explorer/none.php?/etc/passwd: SunPS iRunbook Version 2.5.2 allows files to be read remotely.
-+ OSVDB-3412: /bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-3412: /postnuke/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-3412: /postnuke/html/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-3412: /modules/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-3412: /phpBB/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-3412: /forum/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-3566: /shop/normal_html.cgi?file=../../../../../../etc/issue%00: Happymail E-Commerce 4.3/4.4 allows arbitrary files to be retrieved remotely. CVE-2003-0243.
-+ OSVDB-3566: /shop/normal_html.cgi?file=;cat%20/etc/passwd : Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
-+ OSVDB-3566: /shop/normal_html.cgi?file= cat%20/etc/passwd : Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
-+ OSVDB-3567: /shop/member_html.cgi?file=;cat%20/etc/passwd : Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
-+ OSVDB-3567: /shop/member_html.cgi?file= cat%20/etc/passwd : Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
-+ OSVDB-3800: /3rdparty/phpMyAdmin/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
-+ OSVDB-3800: /phpMyAdmin/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
-+ OSVDB-3800: /3rdparty/phpmyadmin/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
-+ OSVDB-3800: /phpmyadmin/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
-+ OSVDB-3800: /pma/export.php?what=../../../../../../../../../../../../etc/passwd%00: phpMyAdmin is vulnerable to a directory traversal attack.
-+ OSVDB-383: /~nobody/etc/passwd: Apache is misconfigured to view files by accessing ~nobody/filename. Change UserDir from './' to something else in httpd.conf.
-+ OSVDB-3861: /dcforum/dcforum.cgi?az=list&forum=../../../../../../../../../../etc/passwd%00: This install of DCForum allows attackers to read arbitrary files on the host.
-+ OSVDB-4191: /viewimg.php?path=../../../../../../../../../../etc/passwd&form=1&var=1: KorWebLog from http://weblog.kldp.org/ allows any file to be read on the system.
-+ OSVDB-4775: /shoutbox.php?conf=../../../../../../../etc/passwd: Webfroot Shoutbox 2.32 and below allows any file to be read from the system.
-+ OSVDB-5089: /admin/system.php3?cmd=cat%20/etc/passwd: DotBr 0.1 allows remote command execution.
-+ OSVDB-5090: /admin/exec.php3?cmd=cat%20/etc/passwd: DotBr 0.1 allows remote command execution.
-+ OSVDB-524: /bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-524: /postnuke/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-524: /postnuke/html/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-524: /modules/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-524: /phpBB/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-524: /forum/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK: PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
-+ OSVDB-543: /opendir.php?/etc/passwd: This PHP-Nuke CGI allows attackers to read any file on the web server. CVE-2001-0321
-+ OSVDB-543: /opendir.php?requesturl=/etc/passwd: This PHP-Nuke CGI allows attackers to read any file on the web server. CVE-2001-0321
-+ OSVDB-677: /gallery/index.php?include=../../../../../../../../../etc/passwd: Gallery allows files to be read remotely. CVE-2001-0900.
-+ OSVDB-677: /modules.php?set_albumName=album01&id=aaw&op=modload&name=gallery&file=index&include=../../../../../../../../../etc/passwd: Gallery Addon for PHP-Nuke allows files to be read remotely. CVE-2001-0900.
-+ OSVDB-694: /phprocketaddin/?page=../../../../../../../../../../etc/passwd: The PHP-Nuke Rocket add-in is vulnerable to file traversal, allowing an attacker to view any file on the host.
-+ /wp-app.log: Wordpress' wp-app.log may leak application/system details.
-+ OSVDB-59001: /axis2/services/Version?xsd=../../../../../../../../../../../etc/passwd: Apache Axis2 contains a directory traversal in the Version program.
-+ 6544 items checked: 0 error(s) and 153 item(s) reported on remote host
++ /readme.eml
+  Remote server may be infected with the Nimda virus.
++ /trace.axd
+  The .NET IIS server has application tracing enabled. This could allow an attacker to view the last 50 web requests.
++ OSVDB-2400
+  /admin-serv/tasks/configuration/ViewLog?file=passwd&num=5000&str=&directories=admin-serv%2Flogs%2f..%2f..%2f..%2f..%2f..%2f..%2fetc&id=admin-serv
+    iPlanet Administration Server 5.1 allows remote users to download any file from the server. Upgrade to SunOne DS5.2 and in iDS5.1 SP2 Hotfix 2.
++ OSVDB-5553
+  /netget?sid=user&msg=300&file=../../../../../../../../../../etc/passwd
+    Sybex E-Trainer allows arbitrary files to be retrieved.
++ ///etc/passwd
+  The server install allows reading of any system file by adding an extra '/' to the URL.
++ OSVDB-50624
+  /albums/userpics/Copperminer.jpg.php?cat%20/etc/passwd
+    Coppermine 1.0 RC3 may have been compromised to allow arbitrary file retreival. Upgrade to the latest at http://www.chezgreg.net/coppermine/
++ OSVDB-9028
+  /autohtml.php?op=modload&mainfile=x&name=/etc/passwd
+    php-proxima 6.0 and below allows arbitrary files to be retrieved.
++ OSVDB-49354
+  /atomicboard/index.php?location=../../../../../../../../../../etc/passwd
+    AtomicBoard v0.6.2 allows remote users to read arbitrary files.
++ OSVDB-54099
+  /current/modules.php?mod=fm&file=../../../../../../../../../../etc/passwd%00&bn=fm_d1
+    w-agora 4.1.5 allows any file to be retrieved from the remote host.
++ OSVDB-3012
+  /current/index.php?site=demos&bn=../../../../../../../../../../etc/passwd%00
+    w-agora 4.1.5 allows any file to be retrieved from the remote host.
++ OSVDB-54058
+  /dev/translations.php?ONLY=%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd%00
+    Typo3 allows any file to be retrieved remotely. Upgrade to the latest version.
++ OSVDB-59600
+  /ezhttpbench.php?AnalyseSite=/etc/passwd&NumLoops=1
+    eZ httpbench version 1.1 allows any file on the remote server to be retrieved.
++ OSVDB-2870
+  /index.php?download=/etc/passwd
+    Snif 1.2.4 allows any file to be retrieved from the web server.
++ OSVDB-59085
+  /index.php? =../../../../../../../../../etc/passwd
+    Portix-PHP Portal allows retrieval of arbitrary files via the '..' type filtering problem.
++ /index.php?page=../../../../../../../../../../etc/passwd
+  The PHP-Nuke Rocket add-in is vulnerable to file traversal
+  allowing an attacker to view any file on the host. (probably Rocket, but could be any index.php)
++ OSVDB-59085
+  /index.php?l=forum/view.php&topic=../../../../../../../../../etc/passwd
+    Portix-PHP Portal allows retrieval of arbitrary files via the '..' type filtering problem.
++ /jsp/jspsamp/jspexamples/viewsource.jsp?source=../../../../../../../../../../etc/passwd
+  Default JRun CGI lets users read any system file.
++ OSVDB-51750
+  /k/home?dir=/&file=../../../../../../../../etc/passwd&lang=kor
+    Kebi Academy 2001 Web Solution allows any file to be retrieved from the remote system.
++ /nph-showlogs.pl?files=../../../../../../../../etc/passwd&filter=.*&submit=Go&linecnt=500&refresh=0
+  nCUBE Server Manage 1.0 allows any file to be read on the remote system.
++ OSVDB-2829
+  /phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd
+    phpWebFileManager v2.0.0 and prior are vulnerable to a directory traversal bug.
++ /phptonuke.php?filnavn=/etc/passwd
+  Photonouke or myphpnuke allows arbitrary files to be retrieved from the remote host.
++ /put/cgi-bin/putport.exe?SWAP&BOM&OP=none&Lang=en-US&PutHtml=../../../../../../../../etc/passwd
+  NCR's Terradata server contains a CGI that allows any file to be retrieved remotely.
++ OSVDB-521
+  /ROADS/cgi-bin/search.pl?form=../../../../../../../../../../etc/passwd%00
+    The ROADS search.pl allows attackers to retrieve system files.
++ /support/common.php?f=0&ForumLang=../../../../../../../../../../etc/passwd
+  This CGI allows attackers to read files on the host.
++ /viewpage.php?file=/etc/passwd
+  PHP-Nuke script viewpage.php allows any file to be retrieved from the remote system.
++ OSVDB-431
+  /Web_Store/web_store.cgi?page=../../../../../../../../../../etc/passwd%00.html
+    eXtropia's Web Store lets attackers read any file on the system by appending a %00.html to the name.
++ OSVDB-9055
+  /webMathematica/MSP?MSPStoreID=../../../../../../../../../../etc/passwd&MSPStoreType=image/gif
+    Wolfram Research's webMathematica allows any file to be read on the remote system. Upgrade to the latest version on http://www.wolfram.com/
++ OSVDB-17110
+  /servlet/webacc?User.html=../../../../../../../../../../../../../../../../../../etc/passwd%00
+    The Novell Groupwise WebAcc Servlet allows attackers to view arbitrary files on the server.
++ /webcalendar/forum.php?user_inc=../../../../../../../../../../etc/passwd
+  Webcalendar 0.9.41 and below allow remote users to read arbitrary files.
++ OSVDB-15392
+  /logbook.pl?file=../../../../../../../bin/cat%20/etc/passwd%00 
+    Wordit Limited 2000 allows command execution.
++ OSVDB-59084
+  /page.cgi?../../../../../../../../../../etc/passwd
+    WWWeBBB Forum up to version 3.82beta allow arbitrary file retrieval.
++ OSVDB-56290
+  /edittag/edittag.cgi?file=%2F..%2F..%2F..%2F..%2F..%2Fetc/passwd
+    EditTag allows arbitrary file retrieval.
++ OSVDB-8983
+  /base/webmail/readmsg.php?mailbox=../../../../../../../../../../../../../../etc/passwd&id=1
+    Remote file retrieval.
++ OSVDB-16861
+  /athenareg.php?pass=%20
+cat%20/etc/passwd
+  Athena web registration remote command execution.
++ OSVDB-278
+  /PSUser/PSCOErrPage.htm?errPagePath=/etc/passwd
+    This default Netscape file allows an attacker to read arbitrary files on the host.
++ /search?NS-query-pat=../../../../../../../../../../etc/passwd
+  The iPlanet server allows arbitrary files to be retrieved through the search functionality. Install 4.1 SP10+ or 6.0 SP3+
++ /................../etc/passwd
+  The web server allows the password file to be retrieved.
++ OSVDB-27071
+  /phpimageview.php?pic=javascript:alert(8754)
+      PHP Image View 1.0 is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ OSVDB-3931
+  /myphpnuke/links.php?op=MostPopular&ratenum=[script]alert(document.cookie)
+[/script]&ratetype=percent
+  myphpnuke is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ /modules.php?op=modload&name=FAQ&file=index&myfaq=yes&id_cat=1&categories=%3Cimg%20src=javascript:alert(9456)
+%3E&parent_id=0
+  Post Nuke 0.7.2.3-Phoenix is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ OSVDB-4598
+  /members.asp?SF=%22
+}alert(223344)
+function%20x(){v%20=%22
+Web Wiz Forums ver. 7.01 and below is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ OSVDB-2946
+  /forum_members.asp?find=%22
+}alert(9823)
+function%20x(){v%20=%22
+Web Wiz Forums ver. 7.01 and below is vulnerable to Cross Site Scripting (XSS). http://www.cert.org/advisories/CA-2000-02.html.
++ OSVDB-8956
+  /basilix.php3?request_id[DUMMY]=../../../../etc/passwd&RequestID=DUMMY&username=sec&password=secu
+    Remote file retrieval.
++ OSVDB-8193
+  /index.php?module=ew_filemanager&type=admin&func=manager&pathext=../../../etc/&view=passwd
+    EW FileManager for PostNuke allows arbitrary file retrieval.
++ OSVDB-2713
+  /jsp/jspsamp/jspexamples/viewsource.jsp?source=/../../../../../../../../../etc/passwd
+    The JRUN view_source.jsp allows arbitrary file retrieval from the host. Upgrade to JRUN 2.3.3 or higher
+  or remove all default scripts. CVE-2000-0540. http://www.securityfocus.com/bid/1386.
++ OSVDB-2793
+  /.../.../.../.../.../.../.../.../.../.../etc/passwd
+    TelCondex SimpleWebserver 2.13.31027 and below allows directory traversal.
++ OSVDB-3092
+  /readme
+    This might be interesting...
++ OSVDB-3092
+  /etc/passwd
+    An '/etc/passwd' file is available via the web site.
++ OSVDB-3092
+  /readme.nsf
+    This database can be read without authentication
+    which may reveal sensitive information.
++ OSVDB-3093
+  /forum-ra.asp?n=....//....//....//....//....//....//....//etc.passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra.asp?n=../../../../../../../../../etc/passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra.asp?n=../../../../../../../../../etc/passwd%00
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra.asp?n=/etc/passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra.asp?n=/etc/passwd%00
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra_professionnel.asp?n=%60/etc/passwd%60
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra_professionnel.asp?n=../../../../../../../../../etc/passwd%00
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra_professionnel.asp?n=/../../../../../../etc/passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra_professionnel.asp?n=/../../../etc/passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra_professionnel.asp?n=/etc/passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum-ra_professionnel.asp?n=/etc/passwd%00
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=%60/etc/passwd%60&amp
+nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=....//....//....//....//....//....//....//etc.passwd&amp
+nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=../../../../../../../../../etc/passwd%00&amp
+nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=/../../../../../../etc/passwd&amp
+nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=/../../../etc/passwd&amp
+nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=/etc/passwd%00&amp
+nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=/etc/passwd&amp
+nn=269 200 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=1753&amp
+nn=%60/etc/passwd%60
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=1753&amp
+nn=....//....//....//....//....//....//....//etc.passwd
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=1753&amp
+nn=../../../../../../../../../../etc/passwd
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=1753&amp
+nn=../../../../../../../../../../etc/passwd%00
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=1753&amp
+nn=/etc/passwd
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1.asp?n=1753&amp
+nn=/etc/passwd%00
+  This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=%60/etc/passwd%60&amp
+nn=100&amp
+page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=....//....//....//....//....//....//....//etc.passwd&amp
+nn=100&amp
+page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=../../../../../../../../../etc/passwd%00&amp
+nn=100&amp
+page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=/../../../../../../../../etc/passwd&amp
+nn=100&amp
+page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=/etc/passwd%00&amp
+nn=100&amp
+page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=/etc/passwd&amp
+nn=100&amp
+page=1 234 800a0bcd Either_BOF_or_EOF_is_True__or_the_current_record_has_been_deleted._Requested_operation_requires_a_current_record.
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=%60/etc/passwd%60&amp
+page=1
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=....//....//....//....//....//....//....//etc.passwd&amp
+page=1
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=../../../../../../../../../etc/passwd%00&amp
+page=1
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=/../../../../../../../../etc/passwd&amp
+page=1
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=/etc/passwd%00&amp
+page=1
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=/etc/passwd&amp
+page=1
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=100&amp
+page=%60/etc/passwd%60
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=100&amp
+page=....//....//....//....//....//....//....//etc.passwd
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=100&amp
+page=../../../../../../../../../etc/passwd%00
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=100&amp
+page=/../../../../../../../../../../etc/passwd
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=100&amp
+page=/etc/passwd
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /forum1_professionnel.asp?n=1771&amp
+nn=100&amp
+page=/etc/passwd%00
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /mailview.cgi?cmd=view&amp
+fldrname=inbox&amp
+select=1&amp
+html=../../../../../../etc/passwd
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /modif_infos.asp?n=%60/etc/passwd%60
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /modif_infos.asp?n=....//....//....//....//....//....//....//etc.passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /modif_infos.asp?n=../../../../../../../../../etc/passwd%00
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /modif_infos.asp?n=/../../../../../../../../../etc/passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /modif_infos.asp?n=/etc/passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /modif_infos.asp?n=/etc/passwd%00
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /setpasswd.cgi
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /shoutbox/expanded.php?conf=../../../../../../../etc/passwd%20
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /tmp_view.php?file=/etc/passwd
+    This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093
+  /userreg.cgi?cmd=insert&amp
+lang=eng&amp
+tnum=3&amp
+fld1=test999%0acat&lt
+/var/spool/mail/login&gt
+&gt
+/etc/passwd
+This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3396
+  /mylog.html?screen=/etc/passwd
+    Remote file read vulnerability 1999-0068
++ OSVDB-3396
+  /mylog.phtml?screen=/etc/passwd
+    Remote file read vulnerability 1999-0068
++ OSVDB-3396
+  /php/mylog.html?screen=/etc/passwd
+    Remote file read vulnerability 1999-0346
++ OSVDB-3396
+  /php/mylog.phtml?screen=/etc/passwd
+    Remote file read vulnerability 1999-0346
++ OSVDB-3407
+  /directory.php?dir=%3Bcat%20/etc/passwd
+    Marcus S. Xenakis directory.php script allows for command execution. CVE-2002-0434.
++ OSVDB-3410
+  /content/base/build/explorer/none.php?..:..:..:..:..:..:..:etc:passwd:
+                      SunPS iRunbook Version 2.5.2 allows files to be read remotely.
++ OSVDB-3410
+  /content/base/build/explorer/none.php?/etc/passwd
+    SunPS iRunbook Version 2.5.2 allows files to be read remotely.
++ OSVDB-3412
+  /bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412
+  /postnuke/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412
+  /postnuke/html/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412
+  /modules/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412
+  /phpBB/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3412
+  /forum/bbcode_ref.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-3566
+  /shop/normal_html.cgi?file=../../../../../../etc/issue%00
+    Happymail E-Commerce 4.3/4.4 allows arbitrary files to be retrieved remotely. CVE-2003-0243.
++ OSVDB-3566
+  /shop/normal_html.cgi?file=
+cat%20/etc/passwd 
+  Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
++ OSVDB-3566
+  /shop/normal_html.cgi?file= cat%20/etc/passwd 
+    Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
++ OSVDB-3567
+  /shop/member_html.cgi?file=
+cat%20/etc/passwd 
+  Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
++ OSVDB-3567
+  /shop/member_html.cgi?file= cat%20/etc/passwd 
+    Happymail E-Commerce 4.3/4.4 allows arbitrary commands to be executed remotely. CVE-2003-0243.
++ OSVDB-3800
+  /3rdparty/phpMyAdmin/export.php?what=../../../../../../../../../../../../etc/passwd%00
+    phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-3800
+  /phpMyAdmin/export.php?what=../../../../../../../../../../../../etc/passwd%00
+    phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-3800
+  /3rdparty/phpmyadmin/export.php?what=../../../../../../../../../../../../etc/passwd%00
+    phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-3800
+  /phpmyadmin/export.php?what=../../../../../../../../../../../../etc/passwd%00
+    phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-3800
+  /pma/export.php?what=../../../../../../../../../../../../etc/passwd%00
+    phpMyAdmin is vulnerable to a directory traversal attack.
++ OSVDB-383
+  /~nobody/etc/passwd
+    Apache is misconfigured to view files by accessing ~nobody/filename. Change UserDir from './' to something else in httpd.conf.
++ OSVDB-3861
+  /dcforum/dcforum.cgi?az=list&forum=../../../../../../../../../../etc/passwd%00
+    This install of DCForum allows attackers to read arbitrary files on the host.
++ OSVDB-4191
+  /viewimg.php?path=../../../../../../../../../../etc/passwd&form=1&var=1
+    KorWebLog from http://weblog.kldp.org/ allows any file to be read on the system.
++ OSVDB-4775
+  /shoutbox.php?conf=../../../../../../../etc/passwd
+    Webfroot Shoutbox 2.32 and below allows any file to be read from the system.
++ OSVDB-5089
+  /admin/system.php3?cmd=cat%20/etc/passwd
+    DotBr 0.1 allows remote command execution.
++ OSVDB-5090
+  /admin/exec.php3?cmd=cat%20/etc/passwd
+    DotBr 0.1 allows remote command execution.
++ OSVDB-524
+  /bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524
+  /postnuke/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524
+  /postnuke/html/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524
+  /modules/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524
+  /phpBB/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-524
+  /forum/bb_smilies.php?user=MToxOjE6MToxOjE6MToxOjE6Li4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAK
+    PHP-Nuke is vulnerable to a remote file retrieval vuln. It should be upgraded to the latest version. CVE-2001-0320
++ OSVDB-543
+  /opendir.php?/etc/passwd
+    This PHP-Nuke CGI allows attackers to read any file on the web server. CVE-2001-0321
++ OSVDB-543
+  /opendir.php?requesturl=/etc/passwd
+    This PHP-Nuke CGI allows attackers to read any file on the web server. CVE-2001-0321
++ OSVDB-677
+  /gallery/index.php?include=../../../../../../../../../etc/passwd
+    Gallery allows files to be read remotely. CVE-2001-0900.
++ OSVDB-677
+  /modules.php?set_albumName=album01&id=aaw&op=modload&name=gallery&file=index&include=../../../../../../../../../etc/passwd
+    Gallery Addon for PHP-Nuke allows files to be read remotely. CVE-2001-0900.
++ OSVDB-694
+  /phprocketaddin/?page=../../../../../../../../../../etc/passwd
+    The PHP-Nuke Rocket add-in is vulnerable to file traversal
+    allowing an attacker to view any file on the host.
++ /wp-app.log
+  Wordpress' wp-app.log may leak application/system details.
++ OSVDB-59001
+  /axis2/services/Version?xsd=../../../../../../../../../../../etc/passwd
+    Apache Axis2 contains a directory traversal in the Version program.
++ 6544 items checked
+  0 error(s) and 153 item(s) reported on remote host
 + End Time:           2022-04-11 11:28:38 (GMT2) (345 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
@@ -1219,15 +2040,20 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 2022/04/11 11:28:38 Starting gobuster in directory enumeration mode
 ===============================================================
 
-http://192.168.56.0:3500/404                  (Status: 200) [Size: 1564]
+http://192.168.56.0:3500/404 (Status: 200)[Size
+      1564]
 
-http://192.168.56.0:3500/500                  (Status: 200) [Size: 1477]
+http://192.168.56.0:3500/500 (Status: 200)[Size
+      1477]
 
-http://192.168.56.0:3500/favicon.ico          (Status: 200) [Size: 0]   
+http://192.168.56.0:3500/favicon.ico (Status: 200)[Size
+      0] 
 
-http://192.168.56.0:3500/readme               (Status: 200) [Size: 1746]
+http://192.168.56.0:3500/readme (Status: 200)[Size
+      1746]
 
-http://192.168.56.0:3500/robots.txt           (Status: 200) [Size: 202] 
+http://192.168.56.0:3500/robots.txt (Status: 200)[Size
+      202] 
 ===============================================================
 2022/04/11 11:32:59 Finished
 ===============================================================
@@ -1245,10 +2071,12 @@ Starting nikto scan
 + Target Port:        8080
 + Start Time:         2022-04-11 11:32:59 (GMT2)
 ---------------------------------------------------------------------------
-+ Server: Jetty(8.1.7.v20120910)
++ Server
+  Jetty(8.1.7.v20120910)
 + The anti-clickjacking X-Frame-Options header is not present.
 + No CGI Directories found (use '-C all' to force check all possible dirs)
-+ 6544 items checked: 0 error(s) and 1 item(s) reported on remote host
++ 6544 items checked
+  0 error(s) and 1 item(s) reported on remote host
 + End Time:           2022-04-11 11:33:12 (GMT2) (13 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
@@ -1275,7 +2103,8 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 2022/04/11 11:33:12 Starting gobuster in directory enumeration mode
 ===============================================================
 
-http://192.168.56.0:8080/favicon.ico          (Status: 200) [Size: 1150]
+http://192.168.56.0:8080/favicon.ico (Status: 200)[Size
+      1150]
 ===============================================================
 2022/04/11 11:33:12 Finished
 ===============================================================
@@ -1293,46 +2122,120 @@ Starting nikto scan
 + Target Port:        80
 + Start Time:         2022-04-11 11:33:13 (GMT2)
 ---------------------------------------------------------------------------
-+ Server: Apache/2.4.7 (Ubuntu)
++ Server
+  Apache/2.4.7 (Ubuntu)
 + The anti-clickjacking X-Frame-Options header is not present.
-+ OSVDB-3268: /: Directory indexing found.
-+ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
-+ OSVDB-3268: /./: Directory indexing found.
-+ OSVDB-3268: /?mod=node&nid=some_thing&op=view: Directory indexing found.
-+ OSVDB-3268: /?mod=some_thing&op=browse: Directory indexing found.
-+ /./: Appending '/./' to a directory allows indexing
-+ OSVDB-3268: //: Directory indexing found.
-+ //: Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.
-+ OSVDB-3268: /?Open: Directory indexing found.
-+ OSVDB-3268: /?OpenServer: Directory indexing found.
-+ OSVDB-3268: /%2e/: Directory indexing found.
-+ OSVDB-576: /%2e/: Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher. http://www.securityfocus.com/bid/2513.
-+ OSVDB-3268: /?mod=<script>alert(document.cookie)</script>&op=browse: Directory indexing found.
-+ OSVDB-3268: /?sql_debug=1: Directory indexing found.
-+ OSVDB-3268: ///: Directory indexing found.
-+ OSVDB-3268: /?PageServices: Directory indexing found.
-+ OSVDB-119: /?PageServices: The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled. CVE-1999-0269.
-+ OSVDB-3268: /?wp-cs-dump: Directory indexing found.
-+ OSVDB-119: /?wp-cs-dump: The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled. CVE-1999-0269.
++ OSVDB-3268
+  /
+    Directory indexing found.
++ Allowed HTTP Methods
+  GET
+  HEAD
+  POST
+  OPTIONS 
++ OSVDB-3268
+  /./
+    Directory indexing found.
++ OSVDB-3268
+  /?mod=node&nid=some_thing&op=view
+    Directory indexing found.
++ OSVDB-3268
+  /?mod=some_thing&op=browse
+    Directory indexing found.
++ /./
+  Appending '/./' to a directory allows indexing
++ OSVDB-3268
+  //
+    Directory indexing found.
++ //
+  Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.
++ OSVDB-3268
+  /?Open
+    Directory indexing found.
++ OSVDB-3268
+  /?OpenServer
+    Directory indexing found.
++ OSVDB-3268
+  /%2e/
+    Directory indexing found.
++ OSVDB-576
+  /%2e/
+    Weblogic allows source code or directory listing
+  upgrade to v6.0 SP1 or higher. http://www.securityfocus.com/bid/2513.
++ OSVDB-3268
+  /?mod=<script>alert(document.cookie)</script>&op=browse
+    Directory indexing found.
++ OSVDB-3268
+  /?sql_debug=1
+    Directory indexing found.
++ OSVDB-3268
+  ///
+    Directory indexing found.
++ OSVDB-3268
+  /?PageServices
+    Directory indexing found.
++ OSVDB-119
+  /?PageServices
+    The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled. CVE-1999-0269.
++ OSVDB-3268
+  /?wp-cs-dump
+    Directory indexing found.
++ OSVDB-119
+  /?wp-cs-dump
+    The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled. CVE-1999-0269.
 + Cookie phpMyAdmin created without the httponly flag
-+ Retrieved x-powered-by header: PHP/5.4.5
-+ OSVDB-3268: ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////: Directory indexing found.
-+ OSVDB-3288: ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////: Abyss 1.03 reveals directory listing when 	 /'s are requested.
-+ OSVDB-3268: /?pattern=/etc/*&sort=name: Directory indexing found.
-+ OSVDB-3268: /?D=A: Directory indexing found.
-+ OSVDB-3268: /?N=D: Directory indexing found.
-+ OSVDB-3268: /?S=A: Directory indexing found.
-+ OSVDB-3268: /?M=A: Directory indexing found.
-+ OSVDB-3268: /?\"><script>alert('Vulnerable');</script>: Directory indexing found.
-+ Server leaks inodes via ETags, header found with file /icons/README, fields: 0x13f4 0x438c034968a80 
-+ OSVDB-3233: /icons/README: Apache default file found.
-+ OSVDB-3268: /?_CONFIG[files][functions_page]=http://cirt.net/rfiinc.txt?: Directory indexing found.
-+ OSVDB-3268: /?npage=-1&content_dir=http://cirt.net/rfiinc.txt?%00&cmd=ls: Directory indexing found.
-+ OSVDB-3268: /?npage=1&content_dir=http://cirt.net/rfiinc.txt?%00&cmd=ls: Directory indexing found.
-+ OSVDB-3268: /?show=http://cirt.net/rfiinc.txt??: Directory indexing found.
-+ /phpmyadmin/: phpMyAdmin directory found
-+ OSVDB-3268: /?-s: Directory indexing found.
-+ 6544 items checked: 0 error(s) and 38 item(s) reported on remote host
++ Retrieved x-powered-by header
+  PHP/5.4.5
++ OSVDB-3268
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Directory indexing found.
++ OSVDB-3288
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Abyss 1.03 reveals directory listing when 	 /'s are requested.
++ OSVDB-3268
+  /?pattern=/etc/*&sort=name
+    Directory indexing found.
++ OSVDB-3268
+  /?D=A
+    Directory indexing found.
++ OSVDB-3268
+  /?N=D
+    Directory indexing found.
++ OSVDB-3268
+  /?S=A
+    Directory indexing found.
++ OSVDB-3268
+  /?M=A
+    Directory indexing found.
++ OSVDB-3268
+  /?\"><script>alert('Vulnerable')
+</script>
+  Directory indexing found.
++ Server leaks inodes via ETags
+header found with file /icons/READMfields
+0x13f4 0x438c034968a80 
++ OSVDB-3233
+  /icons/README
+    Apache default file found.
++ OSVDB-3268
+  /?_CONFIG[files][functions_page]=http://cirt.net/rfiinc.txt?
+      Directory indexing found.
++ OSVDB-3268
+  /?npage=-1&content_dir=http://cirt.net/rfiinc.txt?%00&cmd=ls
+      Directory indexing found.
++ OSVDB-3268
+  /?npage=1&content_dir=http://cirt.net/rfiinc.txt?%00&cmd=ls
+      Directory indexing found.
++ OSVDB-3268
+  /?show=http://cirt.net/rfiinc.txt??
+      Directory indexing found.
++ /phpmyadmin/
+  phpMyAdmin directory found
++ OSVDB-3268
+  /?-s
+    Directory indexing found.
++ 6544 items checked
+  0 error(s) and 38 item(s) reported on remote host
 + End Time:           2022-04-11 11:33:26 (GMT2) (13 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
@@ -1359,23 +2262,32 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 2022/04/11 11:33:26 Starting gobuster in directory enumeration mode
 ===============================================================
 
-http://192.168.56.0:80/.htaccess            (Status: 403) [Size: 288]
+http://192.168.56.0:80/.htaccess (Status: 403)[Size
+      288]
 
-http://192.168.56.0:80/.htpasswd            (Status: 403) [Size: 288]
+http://192.168.56.0:80/.htpasswd (Status: 403)[Size
+      288]
 
-http://192.168.56.0:80/cgi-bin/             (Status: 403) [Size: 287]
+http://192.168.56.0:80/cgi-bin/ (Status: 403)[Size
+      287]
 
-http://192.168.56.0:80/chat                 (Status: 301) [Size: 310] [--> http://192.168.56.0/chat/]
+http://192.168.56.0:80/chat (Status: 301)[Size
+      310] [--> http://192.168.56.0/chat/]
 
-http://192.168.56.0:80/drupal               (Status: 301) [Size: 312] [--> http://192.168.56.0/drupal/]
+http://192.168.56.0:80/drupal (Status: 301)[Size
+      312] [--> http://192.168.56.0/drupal/]
 
-http://192.168.56.0:80/.hta                 (Status: 403) [Size: 283]                                  
+http://192.168.56.0:80/.hta (Status: 403)[Size
+      283] 
 
-http://192.168.56.0:80/phpmyadmin           (Status: 301) [Size: 316] [--> http://192.168.56.0/phpmyadmin/]
+http://192.168.56.0:80/phpmyadmin (Status: 301)[Size
+      316] [--> http://192.168.56.0/phpmyadmin/]
 
-http://192.168.56.0:80/server-status        (Status: 403) [Size: 292]                                      
+http://192.168.56.0:80/server-status (Status: 403)[Size
+      292] 
 
-http://192.168.56.0:80/uploads              (Status: 301) [Size: 313] [--> http://192.168.56.0/uploads/]   
+http://192.168.56.0:80/uploads (Status: 301)[Size
+      313] [--> http://192.168.56.0/uploads/] 
 ===============================================================
 2022/04/11 11:33:31 Finished
 ===============================================================
@@ -1387,7 +2299,9 @@ Finished gobuster scan
 Starting smbmap scan
 
 [\] Working on it...
-[+] Guest session   	IP: 192.168.56.0:445	Name: 192.168.56.0                                      
+[+] Guest session 	IP
+  192.168.56.0:445	Name
+      192.168.56.0 
 [ ] Working on it...
 [/] Working on it...
 [-] Working on it...
@@ -1435,7 +2349,8 @@ Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
  ==================================================== 
      Enumerating Workgroup/Domain on 192.168.56.0     
  ==================================================== 
-[+] Got domain/workgroup name: WORKGROUP
+[+] Got domain/workgroup name
+  WORKGROUP
 
  ============================================ 
      Nbtstat Information for 192.168.56.0     
@@ -1459,8 +2374,10 @@ Looking up status of 192.168.56.0
  =========================================== 
      Getting domain SID for 192.168.56.0     
  =========================================== 
-Domain Name: WORKGROUP
-Domain Sid: (NULL SID)
+Domain Name
+  WORKGROUP
+Domain Sid
+  (NULL SID)
 [+] Can't determine if host is part of domain or part of a workgroup
 
  ====================================== 
@@ -1476,7 +2393,13 @@ Domain Sid: (NULL SID)
  ============================= 
      Users on 192.168.56.0     
  ============================= 
-index: 0x1 RID: 0x3e8 acb: 0x00000010 Account: chewbacca	Name: 	Desc: 
+index
+  0x1 RID
+    0x3e8 acb
+      0x00000010 Account
+        chewbacca	Name
+          	Desc
+            
 
 user:[chewbacca] rid:[0x3e8]
 
@@ -1492,8 +2415,14 @@ user:[chewbacca] rid:[0x3e8]
 SMB1 disabled -- no workgroup available
 
 [+] Attempting to map shares on 192.168.56.0
-//192.168.56.0/print$	Mapping: DENIED, Listing: N/A
-//192.168.56.0/public	Mapping: DENIED, Listing: N/A
+//192.168.56.0/print$	Mapping
+  DENIED
+Listing
+  N/A
+//192.168.56.0/public	Mapping
+  DENIED
+Listing
+  N/A
 //192.168.56.0/IPC$	[E] Can't understand response:
 NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
 
@@ -1510,30 +2439,48 @@ NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
 	[+] UBUNTU
 	[+] Builtin
 
-[+] Password Info for Domain: UBUNTU
+[+] Password Info for Domain
+  UBUNTU
 
-	[+] Minimum password length: 5
-	[+] Password history length: None
-	[+] Maximum password age: 37 days 6 hours 21 minutes 
-	[+] Password Complexity Flags: 000000
+ 	[+] Minimum password length
+  5
+ 	[+] Password history length
+  None
+ 	[+] Maximum password age
+  37 days 6 hours 21 minutes 
+ 	[+] Password Complexity Flags
+  000000
 
-		[+] Domain Refuse Password Change: 0
-		[+] Domain Password Store Cleartext: 0
-		[+] Domain Password Lockout Admins: 0
-		[+] Domain Password No Clear Change: 0
-		[+] Domain Password No Anon Change: 0
-		[+] Domain Password Complex: 0
+  		[+] Domain Refuse Password Change
+    0
+  		[+] Domain Password Store Cleartext
+    0
+  		[+] Domain Password Lockout Admins
+    0
+  		[+] Domain Password No Clear Change
+    0
+  		[+] Domain Password No Anon Change
+    0
+  		[+] Domain Password Complex
+    0
 
-	[+] Minimum password age: None
-	[+] Reset Account Lockout Counter: 30 minutes 
-	[+] Locked Account Duration: 30 minutes 
-	[+] Account Lockout Threshold: None
-	[+] Forced Log off Time: 37 days 6 hours 21 minutes 
+ 	[+] Minimum password age
+  None
+ 	[+] Reset Account Lockout Counter
+  30 minutes 
+ 	[+] Locked Account Duration
+  30 minutes 
+ 	[+] Account Lockout Threshold
+  None
+ 	[+] Forced Log off Time
+  37 days 6 hours 21 minutes 
 
 [+] Retieved partial password policy with rpcclient:
 
-Password Complexity: Disabled
-Minimum Password Length: 5
+Password Complexity
+  Disabled
+Minimum Password Length
+  5
 
  ============================== 
      Groups on 192.168.56.0     
@@ -1552,11 +2499,14 @@ Minimum Password Length: 5
 [+] Getting domain group memberships:
 
  ======================================================================= 
-     Users on 192.168.56.0 via RID cycling (RIDS: 500-550,1000-1050)     
+     Users on 192.168.56.0 via RID cycling (RIDS: 500-550,1000-1050)
  ======================================================================= 
-[I] Found new SID: S-1-22-1
-[I] Found new SID: S-1-5-21-3428177880-3385132058-989088200
-[I] Found new SID: S-1-5-32
+[I] Found new SID
+  S-1-22-1
+[I] Found new SID
+  S-1-5-21-3428177880-3385132058-989088200
+[I] Found new SID
+  S-1-5-32
 [+] Enumerating users using SID S-1-22-1 and logon username '', password ''
 [+] Enumerating users using SID S-1-5-32 and logon username '', password ''
 S-1-5-32-500 *unknown*\*unknown* (8)
